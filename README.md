@@ -1,11 +1,8 @@
 # YAYSUU's X-Treme Adventure
 2D Platformer made in GameMaker starring YAYSUU the Stickling.
 
-~~Made in Gamemaker Studio 2. Please DOWNLOAD the Project and edit it in gamemaker, then commit your changes Here!~~
+NOT FOR PUBLIC USAGE. CONTAINS UNFINISHED/WIP CONTENT THAT IS NOT REFLECTIVE OF THE QUALITY OF THE FULL GAME.
 
-as this is currently being worked on by ~~ME, WARIO!~~ YAYSUU and Fazmade, i do not actually recommend downloading it because it will almost certainly contain unfinished things.
+TEST COMMIT 
 
-~~dear yaysuu please give me a upwards/jumping variation of spr_yaysuu_launch~~ NO!
-and add the - character to the subtitle font :3 ok
-
-TEST COMMIT
+TEST COMMIT 2 WE'RE SO BACK
