@@ -86,7 +86,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"YAYSUU's X-Treme Adventure",
   "resources":[
@@ -557,6 +557,7 @@
     {"id":{"name":"spr_carrot","path":"sprites/spr_carrot/spr_carrot.yy",},},
     {"id":{"name":"spr_carrotmonitor","path":"sprites/spr_carrotmonitor/spr_carrotmonitor.yy",},},
     {"id":{"name":"spr_cease","path":"sprites/spr_cease/spr_cease.yy",},},
+    {"id":{"name":"spr_chilifields_border","path":"sprites/spr_chilifields_border/spr_chilifields_border.yy",},},
     {"id":{"name":"spr_chilifields","path":"sprites/spr_chilifields/spr_chilifields.yy",},},
     {"id":{"name":"spr_chilifieldsbg_3","path":"sprites/spr_chilifieldsbg_3/spr_chilifieldsbg_3.yy",},},
     {"id":{"name":"spr_chilifieldsbg","path":"sprites/spr_chilifieldsbg/spr_chilifieldsbg.yy",},},

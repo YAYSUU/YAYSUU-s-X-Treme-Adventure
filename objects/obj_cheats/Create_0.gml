@@ -3,6 +3,10 @@
 draw_set_font(global.subtitlefont)
 keyboard_string=""
 keyboard_virtual_show(kbv_type_ascii,kbv_returnkey_go,kbv_autocapitalize_none,false)
+if global.mobile
+{
+	virtual_key_add(544,384,64,64,vk_f12)
+}
 rewardstring=""
 var disclaimer = "WHAT THE FACK ARE YOU DOING! THESE ARE SECRET CODES! Actually, do what you want. I don't care."
 x=96

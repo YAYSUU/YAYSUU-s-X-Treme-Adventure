@@ -27,6 +27,13 @@ if window_get_fullscreen() && global.borders=true
 		case room_glowstickcity:
 		draw_sprite(spr_glowstickcity_border,0,0,0)
 		break;
+		case room_chilifields_a:
+		case room_chilifields_b:
+		case room_chilifields_c:
+		case room_chilifields_d:
+		case room_chilifields_e:
+		draw_sprite(spr_chilifields_border,0,0,0)
+		break;
 		case room_gameover:
 		break;
 		default:

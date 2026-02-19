@@ -486,6 +486,7 @@
     {"name":"spr_carrot","order":13,"path":"sprites/spr_carrot/spr_carrot.yy",},
     {"name":"spr_carrotmonitor","order":7,"path":"sprites/spr_carrotmonitor/spr_carrotmonitor.yy",},
     {"name":"spr_cease","order":12,"path":"sprites/spr_cease/spr_cease.yy",},
+    {"name":"spr_chilifields_border","order":5,"path":"sprites/spr_chilifields_border/spr_chilifields_border.yy",},
     {"name":"spr_chilifields","order":7,"path":"sprites/spr_chilifields/spr_chilifields.yy",},
     {"name":"spr_chilifieldsbg_3","order":16,"path":"sprites/spr_chilifieldsbg_3/spr_chilifieldsbg_3.yy",},
     {"name":"spr_chilifieldsbg","order":15,"path":"sprites/spr_chilifieldsbg/spr_chilifieldsbg.yy",},

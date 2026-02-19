@@ -68,6 +68,7 @@ else if (!obj_fadeblack.fading)
 {
 	if global.key_menuaccept
 	{
+		audio_stop_all()
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		instance_activate_object(obj_mobilecontrols)
 		if global.trial
@@ -114,6 +115,7 @@ else if (!obj_fadeblack.fading)
 	}
 	else if global.key_menuquit && global.trial
 	{
+		audio_stop_all()
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		scr_restartlevel()
 	}

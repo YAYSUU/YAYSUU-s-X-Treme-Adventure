@@ -56,7 +56,7 @@ switch chos
 	}
 	break;
 	case 3:
-	if global.key_menuaccept && global.inputtype=0
+	if global.key_menuaccept
 	{
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		instance_deactivate_object(obj_extras)

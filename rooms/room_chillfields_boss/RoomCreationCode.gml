@@ -1,4 +1,4 @@
-if global.trial || global.levelloadtype=loadtype.respawn
+if global.trial || global.arcade || global.levelloadtype=loadtype.respawn
 {
 	global.currentsong=mus_chillfields_boss
 }
