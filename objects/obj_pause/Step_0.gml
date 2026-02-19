@@ -4,7 +4,7 @@ if room=room_options_test
 {
 	return;
 }
-if global.key_start && global.inlevel && !instance_exists(obj_gameover) && !instance_exists(obj_stageclear)
+if (global.key_start || global.p2_key_start) && global.inlevel && !instance_exists(obj_gameover) && !instance_exists(obj_stageclear)
 {
 	global.pause = !global.pause
 	if global.pause
@@ -33,19 +33,19 @@ if (global.pause)
 		scroll = 0
 	if (!global.mobile)
 	{
-		if global.key_upp
+		if (global.key_upp || global.p2_key_upp)
 		{
 			cursor--
 			audio_play_sound(snd_move,1,false,global.sndvol)
 		}
-		if global.key_downp
+		if (global.key_downp || global.p2_key_downp)
 		{
 			cursor++
 			audio_play_sound(snd_move,1,false,global.sndvol)
 		}
 		cursor=clamp(cursor,0,2)
 		
-		if global.key_jumpp
+		if (global.key_jumpp || global.p2_key_jumpp)
 		{
 			switch(cursor)
 			{
