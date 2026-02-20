@@ -71,6 +71,19 @@ else if (!obj_fadeblack.fading)
 		audio_stop_all()
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		instance_activate_object(obj_mobilecontrols)
+		if global.mainplayer.issecondplayer
+		{
+			if global.char="Y"
+			{
+				global.char="T"
+				global.p2char="Y"
+			}
+			else
+			{
+				global.char="Y"
+				global.p2char="T"
+			}
+		}
 		if global.trial
 			if isextrastage()
 			{
@@ -117,6 +130,19 @@ else if (!obj_fadeblack.fading)
 	{
 		audio_stop_all()
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
+		if global.mainplayer.issecondplayer
+		{
+			if global.char="Y"
+			{
+				global.char="T"
+				global.p2char="Y"
+			}
+			else
+			{
+				global.char="Y"
+				global.p2char="T"
+			}
+		}
 		scr_restartlevel()
 	}
 }
