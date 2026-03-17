@@ -130,7 +130,10 @@ else
 global.globaltimer++
 if (windowtimer > 0)
 	windowtimer--
-
+if !window_get_fullscreen() && !(window_get_width()=640*global.screenscale)
+{
+	window_set_size(640*global.screenscale,480*global.screenscale)
+}
 if (windowtimer < 1 || newwindowname != windowname)
 {
 	if (windowpos < 1)

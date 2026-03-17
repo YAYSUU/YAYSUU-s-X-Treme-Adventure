@@ -136,6 +136,7 @@
     {"name":"obj_movingplatform_toggled","order":4,"path":"objects/obj_movingplatform_toggled/obj_movingplatform_toggled.yy",},
     {"name":"obj_movingplatform","order":2,"path":"objects/obj_movingplatform/obj_movingplatform.yy",},
     {"name":"obj_newmanager","order":5,"path":"objects/obj_newmanager/obj_newmanager.yy",},
+    {"name":"obj_newrubble","order":16,"path":"objects/obj_newrubble/obj_newrubble.yy",},
     {"name":"obj_newstrigger","order":5,"path":"objects/obj_newstrigger/obj_newstrigger.yy",},
     {"name":"obj_nocontroller","order":18,"path":"objects/obj_nocontroller/obj_nocontroller.yy",},
     {"name":"obj_nogoalflag","order":11,"path":"objects/obj_nogoalflag/obj_nogoalflag.yy",},

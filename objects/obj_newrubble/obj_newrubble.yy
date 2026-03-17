@@ -1,19 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_silverblock",
+  "%Name":"obj_newrubble",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_silverblock",
+  "name":"obj_newrubble",
   "overriddenProperties":[],
   "parent":{
     "name":"lvlassets",
     "path":"folders/Objects/levelobjs/lvlassets.yy",
   },
   "parentObjectId":{
-    "name":"obj_newrubble",
-    "path":"objects/obj_newrubble/obj_newrubble.yy",
+    "name":"obj_turnaround",
+    "path":"objects/obj_turnaround/obj_turnaround.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_silverblock",
-    "path":"sprites/spr_silverblock/spr_silverblock.yy",
+    "name":"spr_rubble",
+    "path":"sprites/spr_rubble/spr_rubble.yy",
   },
   "spriteMaskId":null,
   "visible":true,
