@@ -196,7 +196,6 @@
     {"id":{"name":"obj_movingplatform_toggled","path":"objects/obj_movingplatform_toggled/obj_movingplatform_toggled.yy",},},
     {"id":{"name":"obj_movingplatform","path":"objects/obj_movingplatform/obj_movingplatform.yy",},},
     {"id":{"name":"obj_newmanager","path":"objects/obj_newmanager/obj_newmanager.yy",},},
-    {"id":{"name":"obj_newrubble","path":"objects/obj_newrubble/obj_newrubble.yy",},},
     {"id":{"name":"obj_newstrigger","path":"objects/obj_newstrigger/obj_newstrigger.yy",},},
     {"id":{"name":"obj_nocontroller","path":"objects/obj_nocontroller/obj_nocontroller.yy",},},
     {"id":{"name":"obj_nogoalflag","path":"objects/obj_nogoalflag/obj_nogoalflag.yy",},},

@@ -1,22 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if !hascollision
+whichplayer = scr_closestplayer()
+if !(strong && whichplayer.char!="T")
 {
-	if touchingplayer(x - checkoffsetx, y - checkoffsety)
+	if !(whichplayer.vulnerable) || (whichplayer.state=playerstates.stomp) || (whichplayer.state=playerstates.slide)
 	{
-		if (global.firstplayertouch.char != "T" && strong) // how does this work (it doesn't)
-		{
-			if instance_exists(global.secondplayertouch)
-			{
-				if (global.secondplayertouch.char != "T" && strong)
-					return; //no breaky...
-				else
-					destroyedbyplayer = global.secondplayertouch // i think this was an oversight??
-			}
-		}
-		else
-			destroyedbyplayer = global.firstplayertouch
-		instance_destroy()
+		hascollision=false
+	}
+	else {
+		hascollision=true
+	}
+}
+else
+	hascollision = true
+if hascollision
+	mycollision.y=y
+else
+	mycollision.y=-2763
+
+if touchingplayer(x,y)
+{
+	with mycollision
+	{
+		if !touchingplayer(x,y)
+			instance_destroy(other)
 	}
 }

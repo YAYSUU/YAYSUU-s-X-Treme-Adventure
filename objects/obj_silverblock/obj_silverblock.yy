@@ -12,8 +12,8 @@
     "path":"folders/Objects/levelobjs/lvlassets.yy",
   },
   "parentObjectId":{
-    "name":"obj_newrubble",
-    "path":"objects/obj_newrubble/obj_newrubble.yy",
+    "name":"obj_rubble",
+    "path":"objects/obj_rubble/obj_rubble.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
