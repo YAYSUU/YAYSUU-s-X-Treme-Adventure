@@ -386,9 +386,10 @@ if (ouchies)
 	}
 }
 if (state == playerstates.hurt && grounded)
+{
 	newstate = playerstates.normal
 	visualrotation = 0
-
+}
 if (hurtt > 0)
 {
 	hurtt--
@@ -519,7 +520,8 @@ else
 if (state == playerstates.hangglide)
 {
 	facingdirection = hangglidedir
-	var yearnedvsp = (key_down - key_up) * 5
+	visualrotation = clamp(visualrotation+(key_up-key_down)*2,-45,45) // Sonic Rivals 2 my beloved
+	var yearnedvsp = -visualrotation/4
 	if yearnedvsp>vsp
 	{
 		vsp+=0.5
@@ -529,7 +531,6 @@ if (state == playerstates.hangglide)
 		vsp-=0.5
 	}
 	yearnedhsp = (facingdirection * 5) + (vsp * 0.5)
-	visualrotation = -(yearnedvsp)*2
 	if yearnedhsp>hsp
 	{
 		hsp+=0.5
@@ -557,6 +558,7 @@ if (state == playerstates.hangglide)
 		newstate=playerstates.bounce
 		state=playerstates.bounce
 		hsp=facingdirection*20
+		visualrotation=0
 	}
 }
 if (state == playerstates.debug)

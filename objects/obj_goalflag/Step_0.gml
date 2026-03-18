@@ -7,6 +7,7 @@ if touchingplayer(x, y) && !touched
 	{
 		obj_player.newstate=playerstates.normal
 		obj_player.state=playerstates.normal
+		obj_player.visualrotation=0
 	}
 	endtimer=120
 	if global.char="Y"

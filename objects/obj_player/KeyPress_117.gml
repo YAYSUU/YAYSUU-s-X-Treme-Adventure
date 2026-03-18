@@ -11,5 +11,6 @@ if (global.indev)
 	else {
 		state = playerstates.normal
 		newstate = playerstates.normal
+		visualrotation = 0
 	}
 }

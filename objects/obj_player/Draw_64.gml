@@ -51,6 +51,7 @@ switch (state)
 		actualstatename = "debug"
 		break;
 }
+draw_text(0, 480 - (16 * 0), "angle:" + string(visualrotation))
 draw_text(0, 480 - (16 * 1), "state:" + actualstatename + "(" + string(state) + ")")
 draw_text(0, 480 - (16 * 2), "vsp:" + string(vsp))
 draw_text(0, 480 - (16 * 3), "hsp:" + string(hsp))
