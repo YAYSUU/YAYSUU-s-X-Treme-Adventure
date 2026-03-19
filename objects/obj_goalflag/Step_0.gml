@@ -21,7 +21,7 @@ if touchingplayer(x, y) && !touched
 	else
 		audio_play_sound(snd_flagspin,1,false,global.sndvol)
 	global.score += global.scoreadd + obj_hud.timebonus + (global.coins * 10)
-	if (!cheatsing())
+	if (!cheatsing()) && (!global.multiplayer)
 	{
 		ini_open("savedata.ini")
 		if global.score > ini_read_real("records", string(room) + "_score", 0) && !global.inboss
