@@ -18,7 +18,7 @@ if window_get_fullscreen() && global.borders=true
 		case room_mysticmanor_1c:
 		case room_mysticmanor_2:
 		case room_mysticmanor_2b:
-		case room_mysticmanor_2c:
+		case room_mysticmanor_2d:
 		draw_sprite(spr_mysticmanor_border,0,0,0)
 		break;
 		case room_tutorial:
