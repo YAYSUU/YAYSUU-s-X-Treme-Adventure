@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.mainplayer.state=playerstates.dead
+	return;
 if touchingplayer(x, y)
 {
 	if (image_alpha > 0)
