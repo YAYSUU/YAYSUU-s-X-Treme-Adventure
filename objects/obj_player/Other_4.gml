@@ -7,7 +7,7 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			state = playerstates.inactive;
 			image_alpha=0
 		}
-		else if (state=playerstates.inactive) || (state=playerstates.dead)
+		else if (state=playerstates.inactive) || (state=playerstates.dead) || (state=playerstates.win)
 			state = playerstates.normal
 		ouchies = false
 		deathies = false

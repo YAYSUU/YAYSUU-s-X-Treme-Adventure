@@ -1098,7 +1098,7 @@ if (global.skibispin)
 			visualrotation += 360
 	}
 }
-if !(global.skibispin) && !(state=playerstates.hangglide)
+if !(global.skibispin) && !(state=playerstates.hangglide) && !(state=playerstates.dead)
 {
 	visualrotation = 0
 }
