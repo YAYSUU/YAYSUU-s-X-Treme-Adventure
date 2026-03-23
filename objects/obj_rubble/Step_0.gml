@@ -3,7 +3,7 @@
 whichplayer = scr_closestplayer()
 if !(strong && whichplayer.char!="T")
 {
-	if !(whichplayer.vulnerable) || (whichplayer.state=playerstates.stomp) || (whichplayer.state=playerstates.slide)
+	if !(whichplayer.vulnerable) || (whichplayer.state=playerstates.stomp) || (whichplayer.state=playerstates.slide) || (whichplayer.state=playerstates.hangglide)
 	{
 		hascollision=false
 	}

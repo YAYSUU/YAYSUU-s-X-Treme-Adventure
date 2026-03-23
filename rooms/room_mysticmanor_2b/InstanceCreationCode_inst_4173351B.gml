@@ -1,1 +1,1 @@
-warproom=room_mysticmanor_2d
+warproom=room_mysticmanor_2c

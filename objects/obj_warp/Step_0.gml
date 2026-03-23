@@ -18,5 +18,4 @@ if touchingplayer(x, y)
 	{
 		loadroom(warproom, warptype)
 	}
-	global.firstplayertouch.newstate=playerstates.inactive
 }
