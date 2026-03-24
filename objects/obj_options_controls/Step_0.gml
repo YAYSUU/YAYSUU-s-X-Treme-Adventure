@@ -73,7 +73,7 @@ if global.inputtype=3
 }
 else {
 	firstitem = 1
-	lastitem = 16
+	lastitem = 17
 }
 if chos > lastitem chos = firstitem else if chos < firstitem chos = lastitem
 if vibrationexample>0
@@ -167,31 +167,6 @@ if !waitingforinput
 		case 12:
 		if player=1
 		{
-			if global.key_menuaccept
-			{
-				global.p1_autorun = !global.p1_autorun
-				audio_play_sound(snd_confirm,1,false,global.sndvol)
-			}
-		}
-		if player=2
-		{
-			if global.p2_key_menuaccept
-			{
-				global.p2_autorun = !global.p2_autorun
-				audio_play_sound(snd_confirm,1,false,global.sndvol)
-			}
-		}
-		break;
-		case 13:
-		if (global.key_menuaccept && player=1) || (global.p2_key_menuaccept && player=2)
-		{
-			global.menubuttontype = !global.menubuttontype
-			audio_play_sound(snd_move,1,false,global.sndvol)
-		}
-		break;
-		case 14:
-		if player=1
-		{
 			if global.key_rightp
 			{
 				global.p1_controlslot++
@@ -219,7 +194,39 @@ if !waitingforinput
 			global.p2_controlslot=clamp(global.p2_controlslot,0,3)
 		}
 		break;
+		case 13:
+		if player=1
+		{
+			if global.key_menuaccept
+			{
+				global.p1_autorun = !global.p1_autorun
+				audio_play_sound(snd_confirm,1,false,global.sndvol)
+			}
+		}
+		if player=2
+		{
+			if global.p2_key_menuaccept
+			{
+				global.p2_autorun = !global.p2_autorun
+				audio_play_sound(snd_confirm,1,false,global.sndvol)
+			}
+		}
+		break;
+		case 14:
+		if (global.key_menuaccept && player=1) || (global.p2_key_menuaccept && player=2)
+		{
+			global.menubuttontype = !global.menubuttontype
+			audio_play_sound(snd_move,1,false,global.sndvol)
+		}
+		break;
 		case 15:
+		if (global.key_menuaccept && player=1) || (global.p2_key_menuaccept && player=2)
+		{
+			global.buttonsprite = !global.buttonsprite
+			audio_play_sound(snd_move,1,false,global.sndvol)
+		}
+		break;
+		case 16:
 		if player=1
 		{
 			if global.key_menuaccept
@@ -260,12 +267,13 @@ if !waitingforinput
 				global.menubuttontype=ini_read_real("controls","menubuttontype",false)
 				global.vibration=ini_read_real("controls","vibration",true)
 				global.sensitivity=ini_read_real("settings","sensitivity",0.35)
+				global.buttonsprite=ini_read_real("controls","buttonsprite",false)
 				ini_close()
 				audio_play_sound(snd_kablooey,1,false,global.sndvol)
 			}
 		}
 		break;
-		case 16:
+		case 17:
 		if (global.key_menuaccept && player=1) || (global.p2_key_menuaccept && player=2)
 		{
 			ini_open("savedata.ini")
@@ -292,6 +300,7 @@ if !waitingforinput
 			ini_write_real("controls","menubuttontype",global.menubuttontype)
 			ini_write_real("controls","vibration",global.vibration)
 			ini_write_real("settings","sensitivity",global.sensitivity)
+			ini_write_real("controls","buttonsprite",global.buttonsprite)
 			ini_close()
 			instance_destroy()
 			instance_activate_object(obj_options)

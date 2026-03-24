@@ -29,6 +29,7 @@ function settings_init(){
 	global.p1_autorun=ini_read_real("controls","autorun",true)
 	global.menubuttontype=ini_read_real("controls","menubuttontype",false)
 	global.vibration=ini_read_real("controls","vibration",true)
+	global.buttonsprite=ini_read_real("controls","buttonsprite",false)
 	// P2 CONTROLS SAVEDATA INITIALIZATION
 	global.p2_controlslot=ini_read_real("controls","p2controlslot",1)
 	global.p2_leftkey=ini_read_real("controls","p2leftkey",ord("J"))

@@ -10,5 +10,5 @@ if global.mobile
 	draw_sprite(spr_quit,0,544,384)
 }
 else {
-	draw_text_yxa(x,y,string("Type in a cheat code. \n") + keyboard_string + string("\nPress enter to confirm \nPress escape or `d  to leave \n") + rewardstring,"white",true,640,spr_xboxbuttons,5)
+	draw_text_yxa(x,y,string("Type in a cheat code. \n") + keyboard_string + string("\nPress enter to confirm \nPress escape or `d  to leave \n") + rewardstring,"white",true,640,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
 }

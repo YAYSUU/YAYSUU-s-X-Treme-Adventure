@@ -1,7 +1,7 @@
 if global.inputtype = 2
 {
 	subtitle = "Hold down `d  for a boost of speed!"
-	button = spr_xboxbuttons
+	button = global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 	subimg = 6
 }
 else if global.inputtype = 3

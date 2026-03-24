@@ -48,11 +48,11 @@ if display>=5
 	if global.inputtype == 2
 	{
 		//draw_sprite(spr_next,1,416,416)
-		draw_text_yxa(624,416,"`d  Next","yellow",true,,spr_xboxbuttons,4)
+		draw_text_yxa(624,416,"`d  Next","yellow",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,4)
 		if global.trial
 		{
 			//draw_sprite(spr_retry,1,512,416)
-			draw_text_yxa(624,432,"`d  Retry","orange",true,,spr_xboxbuttons,5)
+			draw_text_yxa(624,432,"`d  Retry","orange",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
 		}
 	}
 	else if global.inputtype == 1 || global.inputtype == 0

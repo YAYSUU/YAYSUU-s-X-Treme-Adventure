@@ -17,9 +17,9 @@ if global.inputtype=2
 {
 	draw_text_yxa(32, 64, string(obj_sndtest.sndname),"white",true,500)
 	draw_text_yxa(32, room_height-80, string("Left/Right: Change Song"),"white",true,500)
-	draw_text_yxa(32, room_height-64,"`d : Play","white",true,,spr_xboxbuttons,4)
-	draw_text_yxa(32, room_height-48,"`d : Stop","white",true,,spr_xboxbuttons,5)
-	draw_text_yxa(32, room_height-32,"`d : Leave","white",true,,spr_xboxbuttons,6)
+	draw_text_yxa(32, room_height-64,"`d : Play","white",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,4)
+	draw_text_yxa(32, room_height-48,"`d : Stop","white",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
+	draw_text_yxa(32, room_height-32,"`d : Leave","white",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,6)
 }
 if global.inputtype=3
 {
