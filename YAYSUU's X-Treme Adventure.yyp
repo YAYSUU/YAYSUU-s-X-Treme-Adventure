@@ -128,6 +128,7 @@
     {"id":{"name":"obj_dashpad","path":"objects/obj_dashpad/obj_dashpad.yy",},},
     {"id":{"name":"obj_debugmessage","path":"objects/obj_debugmessage/obj_debugmessage.yy",},},
     {"id":{"name":"obj_demoending","path":"objects/obj_demoending/obj_demoending.yy",},},
+    {"id":{"name":"obj_demomantf2","path":"objects/obj_demomantf2/obj_demomantf2.yy",},},
     {"id":{"name":"obj_devmenu","path":"objects/obj_devmenu/obj_devmenu.yy",},},
     {"id":{"name":"obj_devnote","path":"objects/obj_devnote/obj_devnote.yy",},},
     {"id":{"name":"obj_diagspring","path":"objects/obj_diagspring/obj_diagspring.yy",},},

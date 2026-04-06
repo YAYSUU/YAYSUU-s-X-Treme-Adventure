@@ -76,6 +76,7 @@
     {"name":"obj_dashpad","order":3,"path":"objects/obj_dashpad/obj_dashpad.yy",},
     {"name":"obj_debugmessage","order":9,"path":"objects/obj_debugmessage/obj_debugmessage.yy",},
     {"name":"obj_demoending","order":32,"path":"objects/obj_demoending/obj_demoending.yy",},
+    {"name":"obj_demomantf2","order":13,"path":"objects/obj_demomantf2/obj_demomantf2.yy",},
     {"name":"obj_devmenu","order":26,"path":"objects/obj_devmenu/obj_devmenu.yy",},
     {"name":"obj_devnote","order":1,"path":"objects/obj_devnote/obj_devnote.yy",},
     {"name":"obj_diagspring","order":4,"path":"objects/obj_diagspring/obj_diagspring.yy",},
