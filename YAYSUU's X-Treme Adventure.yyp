@@ -86,10 +86,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.1400.4.1030",
   },
   "name":"YAYSUU's X-Treme Adventure",
   "resources":[
+    {"id":{"name":"ext_demoman","path":"extensions/ext_demoman/ext_demoman.yy",},},
     {"id":{"name":"obj_achievementnotif","path":"objects/obj_achievementnotif/obj_achievementnotif.yy",},},
     {"id":{"name":"obj_achievements","path":"objects/obj_achievements/obj_achievements.yy",},},
     {"id":{"name":"obj_achievementtrigger","path":"objects/obj_achievementtrigger/obj_achievementtrigger.yy",},},
