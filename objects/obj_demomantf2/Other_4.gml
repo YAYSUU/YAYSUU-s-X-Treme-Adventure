@@ -10,7 +10,7 @@ if global.recording && global.inlevel && !recording
 	inp_dash = false
 	inp_run = false
 	
-	if !demoman_demo_open_new("testdemo.dem")
+	if !demoman_demo_open_new(game_save_id + "testdemo.dem")
 	{
 		scr_demomanhandler("open")
 		return

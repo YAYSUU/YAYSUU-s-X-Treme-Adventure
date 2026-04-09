@@ -1,7 +1,7 @@
 /// @description init demo mode
 if global.demomode && !demorunning
 {
-	if !demoman_demo_open_read("testdemo.dem")
+	if !demoman_demo_open_read(game_save_id + "testdemo.dem")
 	{
 		scr_demomanhandler("open")
 		return
