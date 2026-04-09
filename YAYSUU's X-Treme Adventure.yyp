@@ -360,6 +360,7 @@
     {"id":{"name":"scr_calcplatformdir","path":"scripts/scr_calcplatformdir/scr_calcplatformdir.yy",},},
     {"id":{"name":"scr_collectcoins","path":"scripts/scr_collectcoins/scr_collectcoins.yy",},},
     {"id":{"name":"scr_debugmessage","path":"scripts/scr_debugmessage/scr_debugmessage.yy",},},
+    {"id":{"name":"scr_demomanhandler","path":"scripts/scr_demomanhandler/scr_demomanhandler.yy",},},
     {"id":{"name":"scr_donotifchoice","path":"scripts/scr_donotifchoice/scr_donotifchoice.yy",},},
     {"id":{"name":"scr_draw_hitbox","path":"scripts/scr_draw_hitbox/scr_draw_hitbox.yy",},},
     {"id":{"name":"scr_getachievement","path":"scripts/scr_getachievement/scr_getachievement.yy",},},

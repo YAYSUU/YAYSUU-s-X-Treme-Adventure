@@ -296,6 +296,7 @@
     {"name":"scr_calcplatformdir","order":17,"path":"scripts/scr_calcplatformdir/scr_calcplatformdir.yy",},
     {"name":"scr_collectcoins","order":14,"path":"scripts/scr_collectcoins/scr_collectcoins.yy",},
     {"name":"scr_debugmessage","order":21,"path":"scripts/scr_debugmessage/scr_debugmessage.yy",},
+    {"name":"scr_demomanhandler","order":47,"path":"scripts/scr_demomanhandler/scr_demomanhandler.yy",},
     {"name":"scr_donotifchoice","order":43,"path":"scripts/scr_donotifchoice/scr_donotifchoice.yy",},
     {"name":"scr_draw_hitbox","order":19,"path":"scripts/scr_draw_hitbox/scr_draw_hitbox.yy",},
     {"name":"scr_getachievement","order":33,"path":"scripts/scr_getachievement/scr_getachievement.yy",},

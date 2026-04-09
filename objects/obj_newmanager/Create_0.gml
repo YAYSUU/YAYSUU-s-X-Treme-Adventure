@@ -97,7 +97,9 @@ instance_create_depth(0,0, 100,obj_titlecard)
 instance_create_depth(0,0, 100,obj_mobilecontrols)
 instance_create_depth(0,0, 100, obj_pause)
 instance_create_depth(0,0, 100, obj_persistentachchecker)
+instance_create_depth(0, 0, 100, obj_demomantf2)
 randomize()
+
 
 global.indev = true
 global.prevroom = room_initbruv
