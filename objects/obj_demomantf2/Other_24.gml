@@ -6,4 +6,9 @@ if global.recording && recording {
 	demoman_demo_close()
 	blink = blinkmax
 	blinkmsg = "demo saved!"
+} else if global.demomode && demorunning {
+	global.demomode = false
+	demorunning = false
+	demoman_demo_close()
+	loadroom(room_mainmenu, loadtype.menu)
 }

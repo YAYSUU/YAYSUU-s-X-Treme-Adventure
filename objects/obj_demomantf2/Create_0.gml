@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+demorunning = false
+demochar = "X"
+
+nexteventat = -1
+
 blinkmax = 30
 blink = 0
 blinkmsg = ""
