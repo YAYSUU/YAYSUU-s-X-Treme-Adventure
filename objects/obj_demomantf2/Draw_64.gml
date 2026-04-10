@@ -31,9 +31,19 @@ if global.indev
 				}
 			}
 			else
-				draw_text(0, 0, "please enter a level!")
+			{
+				if recording
+					draw_text(0, 0, "BUGGED STATE!!! (recording outside of level)")
+				else
+					draw_text(0, 0, "please enter a level!")
+			}
 		} else
-			draw_text(0, 0, "inactive")	
+		{
+			if recording
+				draw_text(0, 0, "BUGGED STATE!!! (recording while record mode is off)")
+			else
+				draw_text(0, 0, "inactive")
+		}
 	}
 	else
 	{

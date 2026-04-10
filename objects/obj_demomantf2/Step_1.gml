@@ -12,38 +12,69 @@ function inputschanged() {
 }
 if demorunning
 {
+	if (demoending) {
+		obj_player.key_upp = false
+		obj_player.key_downp = false
+		obj_player.key_leftp = false
+		obj_player.key_rightp = false
+		obj_player.key_jumpp = false
+		obj_player.key_dashp = false 
+		obj_player.key_runp = false
+		
+		obj_player.key_up = false
+		obj_player.key_down = false
+		obj_player.key_left = false
+		obj_player.key_right = false
+		obj_player.key_jump = false
+		obj_player.key_dash = false 
+		obj_player.key_run = false
+		demoendtimer--
+		if demoendtimer == 0
+			event_user(14)
+		return
+	}
+	
 	if (frameno == nexteventat) {
-		dontclearpressed = true
+		
+		obj_player.key_upp = false
+		obj_player.key_downp = false
+		obj_player.key_leftp = false
+		obj_player.key_rightp = false
+		obj_player.key_jumpp = false
+		obj_player.key_dashp = false 
+		obj_player.key_runp = false
 		
 		obj_player.key_up = demoman_event_up_pressed()
-		obj_player.key_upp = obj_player.key_up
 		obj_player.key_down = demoman_event_down_pressed()
-		obj_player.key_downp = obj_player.key_down
 		obj_player.key_left = demoman_event_left_pressed()
-		obj_player.key_leftp = obj_player.key_left
 		obj_player.key_right = demoman_event_right_pressed()
-		obj_player.key_rightp = obj_player.key_right
-		
 		obj_player.key_jump = demoman_event_jump_pressed()
-		obj_player.key_jumpp = obj_player.key_jump
 		obj_player.key_dash = demoman_event_dash_pressed()
-		obj_player.key_dashp = obj_player.key_dash
 		obj_player.key_run = demoman_event_run_pressed()
+		
+		obj_player.key_upp = obj_player.key_up
+		obj_player.key_downp = obj_player.key_down
+		obj_player.key_leftp = obj_player.key_left
+		obj_player.key_rightp = obj_player.key_right
+		obj_player.key_jumpp = obj_player.key_jump
+		obj_player.key_dashp = obj_player.key_dash
 		obj_player.key_runp = obj_player.key_run
 		
-		blinkstring = "next event at " + string(nexteventat)
+		blinkmsg  = "next event at " + string(nexteventat)
 		blink = blinkmax
 		
 		if demoman_demo_next_event() == -1
+		{
 			if demoman_get_error() != ERR_NO_NEXT_EVENT && demoman_get_error() != ERR_NO_ERROR
 				show_error("demoman error while reading next event: " + getdemomanerrorstring(demoman_get_error()), true)
-		else {
-			event_user(14)	
+			else {
+				demoending = true
+				demoendtimer = demoendtimerdefault
+			}	
 		}
 	
 		nexteventat = demoman_event_get_frame_number()
 	}
-	
 	
 	dontclearpressed = false
 	frameno++
@@ -58,7 +89,7 @@ else if recording
 	
 	if inputschanged()
 	{
-		if !demoman_demo_push_event(frameno, inp_up, inp_down, inp_left, inp_right, inp_jump, inp_dash, inp_run, false)
+		if !demoman_demo_push_event(frameno, global.key_up, global.key_down, global.key_left, global.key_right, global.key_jump, global.key_dash, global.key_run, false)
 			scr_demomanhandler("push")
 		eventcount++
 		blink = blinkmax

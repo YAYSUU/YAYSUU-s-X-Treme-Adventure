@@ -24,4 +24,10 @@ inp_run = false
 
 dontclearpressed = false
 
+firstevent = false
+
+demoending = false
+demoendtimer = -1
+demoendtimerdefault = 120
+
 show_debug_message("yay! i exist!")

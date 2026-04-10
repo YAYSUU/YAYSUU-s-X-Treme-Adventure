@@ -13,8 +13,8 @@ if global.demomode && !demorunning
 	scr_setupcharacter(demochar, 0)
 	
 	eventcount = demoman_demo_get_event_count()
-	frameno = 0
 	loadroom(demoman_demo_get_room_id(), loadtype.newlevel)
+	frameno = 0
 	demoman_demo_next_event()
 	nexteventat = demoman_event_get_frame_number()
 	demorunning = true
