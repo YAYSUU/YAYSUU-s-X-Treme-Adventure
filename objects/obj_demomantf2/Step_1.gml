@@ -33,7 +33,13 @@ if demorunning
 			event_user(14)
 		return
 	}
-	
+	var key_up_prev = obj_player.key_up
+	var key_down_prev = obj_player.key_down
+	var key_left_prev = obj_player.key_left
+	var key_right_prev = obj_player.key_right
+	var key_jump_prev = obj_player.key_jump
+	var key_dash_prev = obj_player.key_dash
+	var key_run_prev = obj_player.key_run
 	if (frameno == nexteventat) {
 		
 		obj_player.key_upp = false
@@ -51,14 +57,14 @@ if demorunning
 		obj_player.key_jump = demoman_event_jump_pressed()
 		obj_player.key_dash = demoman_event_dash_pressed()
 		obj_player.key_run = demoman_event_run_pressed()
-		
-		obj_player.key_upp = obj_player.key_up
-		obj_player.key_downp = obj_player.key_down
-		obj_player.key_leftp = obj_player.key_left
-		obj_player.key_rightp = obj_player.key_right
-		obj_player.key_jumpp = obj_player.key_jump
-		obj_player.key_dashp = obj_player.key_dash
-		obj_player.key_runp = obj_player.key_run
+		// ok so this is supposed to work but instead crashes game uhhhh You get the idea though right??
+		obj_player.key_upp = obj_player.key_up && !key_up_prev
+		obj_player.key_downp = obj_player.key_down && !key_down_prev
+		obj_player.key_leftp = obj_player.key_left && !key_left_prev
+		obj_player.key_rightp = obj_player.key_right && !key_right_prev
+		obj_player.key_jumpp = obj_player.key_jump && !key_jump_prev
+		obj_player.key_dashp = obj_player.key_dash && !key_dash_prev
+		obj_player.key_runp = obj_player.key_run && !key_run_prev
 		
 		blinkmsg  = "next event at " + string(nexteventat)
 		blink = blinkmax
