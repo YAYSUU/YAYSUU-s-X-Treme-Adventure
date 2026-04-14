@@ -4,6 +4,7 @@ demorunning = false
 demochar = "X"
 
 nexteventat = -1
+preveventat = -1
 
 blinkmax = 30
 blink = 0

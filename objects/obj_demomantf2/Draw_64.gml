@@ -42,7 +42,7 @@ if global.indev
 			if recording
 				draw_text(0, 0, "BUGGED STATE!!! (recording while record mode is off)")
 			else
-				draw_text(0, 0, "inactive")
+				draw_text(0, 0, "")
 		}
 	}
 	else

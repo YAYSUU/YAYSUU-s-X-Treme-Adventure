@@ -33,23 +33,14 @@ if demorunning
 			event_user(14)
 		return
 	}
-	var key_up_prev = obj_player.key_up
-	var key_down_prev = obj_player.key_down
-	var key_left_prev = obj_player.key_left
-	var key_right_prev = obj_player.key_right
-	var key_jump_prev = obj_player.key_jump
-	var key_dash_prev = obj_player.key_dash
-	var key_run_prev = obj_player.key_run
 	if (frameno == nexteventat) {
-		
-		obj_player.key_upp = false
-		obj_player.key_downp = false
-		obj_player.key_leftp = false
-		obj_player.key_rightp = false
-		obj_player.key_jumpp = false
-		obj_player.key_dashp = false 
-		obj_player.key_runp = false
-		
+		obj_player.key_upp = demoman_event_up_pressed()
+		obj_player.key_downp = demoman_event_down_pressed()
+		obj_player.key_leftp = demoman_event_left_pressed()
+		obj_player.key_rightp = demoman_event_right_pressed()
+		obj_player.key_jumpp = demoman_event_jump_pressed()
+		obj_player.key_dashp = demoman_event_dash_pressed()
+		obj_player.key_runp = demoman_event_run_pressed()
 		obj_player.key_up = demoman_event_up_pressed()
 		obj_player.key_down = demoman_event_down_pressed()
 		obj_player.key_left = demoman_event_left_pressed()
@@ -57,14 +48,6 @@ if demorunning
 		obj_player.key_jump = demoman_event_jump_pressed()
 		obj_player.key_dash = demoman_event_dash_pressed()
 		obj_player.key_run = demoman_event_run_pressed()
-		// ok so this is supposed to work but instead crashes game uhhhh You get the idea though right??
-		obj_player.key_upp = obj_player.key_up && !key_up_prev
-		obj_player.key_downp = obj_player.key_down && !key_down_prev
-		obj_player.key_leftp = obj_player.key_left && !key_left_prev
-		obj_player.key_rightp = obj_player.key_right && !key_right_prev
-		obj_player.key_jumpp = obj_player.key_jump && !key_jump_prev
-		obj_player.key_dashp = obj_player.key_dash && !key_dash_prev
-		obj_player.key_runp = obj_player.key_run && !key_run_prev
 		
 		blinkmsg  = "next event at " + string(nexteventat)
 		blink = blinkmax
@@ -78,10 +61,19 @@ if demorunning
 				demoendtimer = demoendtimerdefault
 			}	
 		}
-	
+		preveventat = frameno
 		nexteventat = demoman_event_get_frame_number()
 	}
-	
+	else if (frameno == preveventat+1)
+	{
+		obj_player.key_upp = false
+		obj_player.key_downp = false
+		obj_player.key_leftp = false
+		obj_player.key_rightp = false
+		obj_player.key_jumpp = false
+		obj_player.key_dashp = false
+		obj_player.key_runp = false
+	}
 	dontclearpressed = false
 	frameno++
 }
