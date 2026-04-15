@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.recording && global.inlevel && !recording
+if global.recording && global.inlevel && !recording && !demorunning
 {
 	inp_up = false
 	inp_down = false

@@ -9,6 +9,7 @@ if global.recording && recording {
 } else if global.demomode && demorunning {
 	global.demomode = false
 	demorunning = false
+	demoending = false
 	demoman_demo_close()
 	loadroom(room_mainmenu, loadtype.menu)
 }
