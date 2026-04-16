@@ -60,6 +60,12 @@ function donotifchoice(notifid){
 		case 6: // quit game
 		game_end()
 		break;
+		case 7: // load demo mode
+		global.demomode = true
+		with (obj_demomantf2) {
+			event_perform(ev_other, ev_user15)
+		}
+		break;
 		default:
 		show_error("INVALID NOTIF ID! STUPID! See scr_donotifchoice for more info.",false)
 		break;

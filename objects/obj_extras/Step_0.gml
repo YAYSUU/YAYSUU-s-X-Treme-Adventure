@@ -103,6 +103,20 @@ switch chos
 	if global.key_menuaccept
 	{
 		audio_stop_sound(mus_extras)
+		audio_play_sound(snd_ahooga,1,false,global.sndvol)
+		with instance_create_depth(0,0,depth-1,obj_notification)
+		{
+			text="demo mode is currently an extreme work in progress. please make sure you have a testdemo.dem file before you proceed"
+			color="red"
+			choicer=true
+			notifid=7
+		}
+	}
+	break;
+	case 8:
+	if global.key_menuaccept
+	{
+		audio_stop_sound(mus_extras)
 		audio_play_sound(snd_nahnvm,1,false,global.sndvol)
 		loadroom(room_mainmenu, loadtype.menu)
 	}

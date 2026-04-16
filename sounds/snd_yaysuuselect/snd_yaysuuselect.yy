@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.828571,
+  "duration":1.7768254,
   "exportDir":"",
   "name":"snd_yaysuuselect",
   "parent":{
