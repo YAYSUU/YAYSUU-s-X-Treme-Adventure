@@ -1,4 +1,3 @@
-/*
 if !global.demomode
 {
 	if global.recording {
@@ -6,4 +5,3 @@ if !global.demomode
 	}
 	else global.recording = true
 }
-*/

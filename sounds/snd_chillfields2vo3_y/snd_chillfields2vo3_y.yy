@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.8939682,
+  "duration":1.933061,
   "exportDir":"",
   "name":"snd_chillfields2vo3_y",
   "parent":{
