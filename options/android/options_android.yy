@@ -52,7 +52,7 @@
   "option_android_orient_landscape_flipped":true,
   "option_android_orient_portrait":false,
   "option_android_orient_portrait_flipped":false,
-  "option_android_package_company":"incredibledog",
+  "option_android_package_company":"fishcat",
   "option_android_package_domain":"com",
   "option_android_package_product":"yaysuusxtremeadventure",
   "option_android_permission_bluetooth":true,

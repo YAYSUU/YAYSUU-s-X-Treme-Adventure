@@ -1,2 +1,6 @@
 draw_self()
 draw_sprite_ext(spr_copyright,0,320,448,1,1,0,c_white,image_alpha)
+draw_set_alpha(image_alpha/2)
+draw_set_halign(fa_left)
+draw_text_yxa(0,448,"Version: \nEA 1.0","white",true)
+draw_set_alpha(1)

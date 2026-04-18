@@ -23,6 +23,7 @@ function scr_restartlevel(){
 			loadroom(room_mysticmanor_1, loadtype.newlevel)
 			break;
 		case room_mysticmanor_2b:
+		case room_mysticmanor_2c:
 		case room_mysticmanor_2d:
 			loadroom(room_mysticmanor_2, loadtype.newlevel)
 			break;

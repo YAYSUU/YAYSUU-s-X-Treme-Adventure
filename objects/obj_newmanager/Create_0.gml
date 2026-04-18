@@ -13,7 +13,7 @@ global.subtitlefont=font_add_sprite_ext(spr_subtitlefont, "()[]!#$%'*,.:-/+?@^ab
 global.optfont=font_add_sprite_ext(spr_text_options,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.,:!?-",false,0)
 global.smalloptfont=font_add_sprite_ext(spr_smalloptionstext,"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?:-_()+%'abcdefghijklmnopqrstuvwxyz✓✗",false,0)
 global.inlevel = false
-global.nextroom = room_idlogo
+global.nextroom = room_fclogo
 axislh = gamepad_axis_value(global.p1_controlslot,gp_axislh)
 axislv = gamepad_axis_value(global.p1_controlslot,gp_axislv)
 p2axislh = gamepad_axis_value(global.p2_controlslot,gp_axislh)
@@ -101,4 +101,4 @@ randomize()
 
 global.indev = true
 global.prevroom = room_initbruv
-room_goto(room_idlogo)
+room_goto(room_fclogo)

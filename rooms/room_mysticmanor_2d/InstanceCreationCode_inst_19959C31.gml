@@ -1,0 +1,1 @@
+topsprite=spr_secrettile_manorrooftop

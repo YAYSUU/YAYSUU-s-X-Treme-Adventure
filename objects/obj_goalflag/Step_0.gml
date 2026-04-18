@@ -9,6 +9,7 @@ if touchingplayer(x, y) && !touched
 		obj_player.state=playerstates.normal
 		obj_player.visualrotation=0
 	}
+	instance_destroy(obj_ghost2)
 	endtimer=120
 	if global.char="Y"
 		sprite_index=spr_goalflag_transition

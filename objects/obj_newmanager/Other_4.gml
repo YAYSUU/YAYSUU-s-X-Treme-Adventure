@@ -1,6 +1,6 @@
-if (global.currentsong == -1)
+if (global.currentsong == -1 && !(room=room_fclogo))
 	audio_stop_all()
-else if !audio_is_playing(global.currentsong)
+else if !audio_is_playing(global.currentsong) && !(room=room_fclogo)
 {
 	audio_stop_all()
 	if global.currentsong=mus_title

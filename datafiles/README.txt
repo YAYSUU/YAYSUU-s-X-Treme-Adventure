@@ -46,7 +46,7 @@ GETTING STARTED
 YAYSUU's X-Treme Adventure runs on Windows 10/11.
 If you're reading this, you have successfully extracted the game!
 1. Launch the executable file named 'yaysuuxtreme.exe'
-2. After a hopefully short while, the Incredible Dog Games logo will appear. You can press START to skip it if necessary!
+2. After a hopefully short while, the Fishcat Studio logo will appear. You can press START to skip it if necessary!
 3. When the YAYSUU's X-Treme Adventure logo appears, press START with your input method of choice and you are ready to play!
 =============================================================================================================================
 CONTROLS
@@ -57,11 +57,11 @@ Z - Jump/Confirm
 X - Dash/Back
 C - Run/Delete
 Enter - Start/Pause
-GAMEPAD CONTROLS (Xbox layout)
-Left Analog or D-Pad - Up, Down, Left, Right
-A - Jump/Confirm
-B - Dash/Back
-X - Run/Delete
+GAMEPAD CONTROLS
+Left Analog/D-Pad - Up, Down, Left, Right
+A/Cross - Jump/Confirm
+B/Circle - Dash/Back
+X/Square - Run/Delete
 Start - Start/Pause
 =============================================================================================================================
 MAIN MENU
@@ -89,9 +89,10 @@ CHEATS
 "opensalami" - Enable indev mode
 "bobcatblues" - Enable bobcat mode (Only 1 health)
 "iamgod" - Enable immortality (No damage)
+"skibiditoilet" - Enable skibi spin mode (Spin around when jumping)
 "gimmegimme" - Unlock post-game content early (No spoilers!)
 "findher" - ??????
 "jaspernap" - The programmer takes a nap. Hold out! Programmer!
 =============================================================================================================================
-JOIN THE INCREDIBLE DOG DISCORD
-https://discord.gg/V7m2uE2Vsc
+JOIN MY DISCORD
+https://discord.gg/8CBfRdwS53

@@ -243,6 +243,7 @@
     {"name":"inst_662646F6","path":"rooms/room_chillfields_2c/room_chillfields_2c.yy",},
     {"name":"inst_74D52AF0","path":"rooms/room_chillfields_2c/room_chillfields_2c.yy",},
     {"name":"inst_2B67150","path":"rooms/room_chillfields_2c/room_chillfields_2c.yy",},
+    {"name":"inst_353CBF30","path":"rooms/room_chillfields_2c/room_chillfields_2c.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -492,6 +493,7 @@
         {"$GMRInstance":"v4","%Name":"inst_662646F6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_662646F6","objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":6912.0,"y":896.0,},
         {"$GMRInstance":"v4","%Name":"inst_74D52AF0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74D52AF0","objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":6848.0,"y":896.0,},
         {"$GMRInstance":"v4","%Name":"inst_2B67150","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B67150","objectId":{"name":"obj_semisolid","path":"objects/obj_semisolid/obj_semisolid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":1.0,"x":5152.0,"y":1152.0,},
+        {"$GMRInstance":"v4","%Name":"inst_353CBF30","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_353CBF30","objectId":{"name":"obj_npc_parker","path":"objects/obj_npc_parker/obj_npc_parker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":1120.0,},
       ],"layers":[],"name":"game","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"tileset","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tileset","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":45,"SerialiseWidth":250,"TileCompressedData":[
           -34,0,-2,15,-65,0,-67,-2147483648,-2,15,-79,-2147483648,1,1,-34,0,-2,15,-65,0,-67,-2147483648,-2,15,
