@@ -69,7 +69,7 @@ if player=2
 if global.inputtype=3
 {
 	firstitem = 9
-	lastitem = 16
+	lastitem = 17
 }
 else {
 	firstitem = 1

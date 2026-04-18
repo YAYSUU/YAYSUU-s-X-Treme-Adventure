@@ -1,1 +1,1 @@
-scr_windowtitle("Incredible Dog Games!")
+scr_windowtitle("Fishcat Studio!")
