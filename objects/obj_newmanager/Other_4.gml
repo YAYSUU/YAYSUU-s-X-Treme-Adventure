@@ -60,7 +60,7 @@ if inwidescreen() // splitscreen check
 	view_set_yport(1, 0)
 	instance_create_depth(0,0, 100, obj_p2camera)
 }
-if !(global.inlevel) && view_camera[1]
+else if view_camera[1]
 {
 	camera_destroy(view_camera[1])
 	instance_destroy(obj_p2camera)

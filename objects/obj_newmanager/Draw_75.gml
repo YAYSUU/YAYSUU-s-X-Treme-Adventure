@@ -4,7 +4,7 @@ draw_set_color(c_black)
 draw_rectangle(0,0,-10000,480,false)
 draw_rectangle(display_get_gui_width,0,10000+display_get_gui_width,480,false)
 draw_set_color(c_white)
-if window_get_fullscreen() && global.borders && !(global.splitscreen && global.multiplayer && global.inlevel)
+if window_get_fullscreen() && global.borders && !inwidescreen()
 {
 	switch room
 	{
