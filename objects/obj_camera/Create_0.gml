@@ -24,3 +24,5 @@ actualcamx = 0
 actualcamy = 0
 deltax = 0
 deltay = 0
+playertofollow = global.mainplayer
+cameraid = 0

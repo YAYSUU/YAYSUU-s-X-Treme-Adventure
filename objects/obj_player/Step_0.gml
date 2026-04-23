@@ -434,7 +434,10 @@ if touchingplayer(x,y) && !vulnerable
 		depth=global.mainplayer.depth-1
 		with (obj_hud)
 		{
-			event_user(0)
+			if !global.splitscreen
+			{
+				event_user(0)
+			}
 		}
 	}
 	ouchies=false
@@ -833,7 +836,7 @@ if (hascollision)
 		}
 	}
 }
-if isotherplayer && offscreentimer=4*global.defaultfps && !(state=playerstates.dead || state=playerstates.inactive)
+if isotherplayer && offscreentimer=4*global.defaultfps && !global.splitscreen && !(state=playerstates.dead || state=playerstates.inactive)
 {
 	x = global.mainplayer.x
 	y = global.mainplayer.y

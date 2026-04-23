@@ -25,14 +25,35 @@ if global.inlevel && !global.inhub
 			else
 				draw_sprite(spr_yaysuucoinicon,0,32,96)
 			draw_text(64,96,global.coins)
+			if inwidescreen() // duplicate hud for player 2
+			{
+				draw_sprite(spr_scoreicon,0,32+640,32)
+				draw_text(64+640,32,string(global.score+global.scoreadd))
+				draw_sprite(spr_stopwatch,0,32+640,64)
+				draw_text(64+640, 64, timerstring)
+				if room=room_glowstickcity
+					draw_sprite(spr_uncannycoin,0,32+640,96)
+				else if (global.char == "C")
+					draw_sprite(spr_balloonicon,0,32+640,96)
+				else
+					draw_sprite(spr_yaysuucoinicon,0,32+640,96)
+				draw_text(64+640,96,global.coins)
+			}
 		}
 		if !global.multiplayer
 			health_system_hearts(spr_pizza, global.hp, global.maxhp, 32, healthheight)
 		else if global.multiplayer {
-			draw_sprite(global.mainplayer.playersprites[playersprite.lifeicon],0,32,healthheight)
-			draw_sprite(global.otherplayer.playersprites[playersprite.lifeicon],0,32,healthheight+32)
-			health_system_hearts(spr_pizza, global.hp, global.maxhp, 64, healthheight)
-			health_system_hearts(spr_pizza, global.p2hp, global.p2maxhp, 64, healthheight+32)
+			if inwidescreen()
+			{
+				health_system_hearts(spr_pizza, global.hp, global.maxhp, 32, healthheight)
+				health_system_hearts(spr_pizza, global.p2hp, global.p2maxhp, 32+640, healthheight)
+			}
+			else {
+				draw_sprite(global.mainplayer.playersprites[playersprite.lifeicon],0,32,healthheight)
+				draw_sprite(global.otherplayer.playersprites[playersprite.lifeicon],0,32,healthheight+32)
+				health_system_hearts(spr_pizza, global.hp, global.maxhp, 64, healthheight)
+				health_system_hearts(spr_pizza, global.p2hp, global.p2maxhp, 64, healthheight+32)
+			}
 		}
 		if (comboshowtimer > 0)
 		{
@@ -52,6 +73,11 @@ if global.inlevel && !global.inhub
 			{
 				draw_sprite(global.mainplayer.playersprites[playersprite.lifeicon],0,32,416)
 				draw_text(64,416,global.lives)
+				if inwidescreen()
+				{
+					draw_sprite(global.otherplayer.playersprites[playersprite.lifeicon],0,32+640,416)
+					draw_text(64+640,416,global.lives) // department of redundancy department
+				}
 			}
 			else
 			{

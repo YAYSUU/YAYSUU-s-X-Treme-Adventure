@@ -419,6 +419,8 @@
     {"name":"inst_7708585B","path":"rooms/room_mysticmanor_2d/room_mysticmanor_2d.yy",},
     {"name":"inst_661AC80B","path":"rooms/room_mysticmanor_2d/room_mysticmanor_2d.yy",},
     {"name":"inst_76EC3C3A","path":"rooms/room_mysticmanor_2d/room_mysticmanor_2d.yy",},
+    {"name":"inst_3125CE3D","path":"rooms/room_mysticmanor_2d/room_mysticmanor_2d.yy",},
+    {"name":"inst_47A96FD5","path":"rooms/room_mysticmanor_2d/room_mysticmanor_2d.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -838,6 +840,8 @@
         {"$GMRInstance":"v4","%Name":"inst_7708585B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7708585B","objectId":{"name":"obj_ghost2","path":"objects/obj_ghost2/obj_ghost2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":9728.0,"y":96.0,},
         {"$GMRInstance":"v4","%Name":"inst_661AC80B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_661AC80B","objectId":{"name":"obj_semisolid","path":"objects/obj_semisolid/obj_semisolid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":9.0,"scaleY":1.0,"x":4064.0,"y":160.0,},
         {"$GMRInstance":"v4","%Name":"inst_76EC3C3A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_76EC3C3A","objectId":{"name":"obj_semisolid","path":"objects/obj_semisolid/obj_semisolid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":12.0,"scaleY":1.0,"x":4288.0,"y":256.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3125CE3D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3125CE3D","objectId":{"name":"obj_spring","path":"objects/obj_spring/obj_spring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1984.0,"y":608.0,},
+        {"$GMRInstance":"v4","%Name":"inst_47A96FD5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47A96FD5","objectId":{"name":"obj_spring","path":"objects/obj_spring/obj_spring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1952.0,"y":608.0,},
       ],"layers":[],"name":"game","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"decor","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_31E70568","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_31E70568","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_manorwindow_ext","path":"sprites/spr_manorwindow_ext/spr_manorwindow_ext.yy",},"x":192.0,"y":448.0,},

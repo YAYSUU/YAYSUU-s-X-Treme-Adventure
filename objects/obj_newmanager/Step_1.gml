@@ -130,9 +130,10 @@ else
 global.globaltimer++
 if (windowtimer > 0)
 	windowtimer--
-if !window_get_fullscreen() && !(window_get_width()=640*global.screenscale)
+if !window_get_fullscreen() && (!(window_get_width()=640*global.screenscale) || (inwidescreen() && !(window_get_width()=640*global.screenscale*2)))
 {
-	window_set_size(640*global.screenscale,480*global.screenscale)
+	window_set_size(640*global.screenscale*(global.splitscreen*2),480*global.screenscale)
+	window_center()
 }
 if (windowtimer < 1 || newwindowname != windowname)
 {

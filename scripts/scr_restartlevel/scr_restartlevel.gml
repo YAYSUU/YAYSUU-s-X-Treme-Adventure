@@ -8,6 +8,7 @@ function scr_restartlevel(){
 	global.firstroom=true
 	global.coins=0
 	global.coingoal = 100
+	global.mainplayer.state=playerstates.normal // normal pills 2: redux
 	switch (room)
 	{
 		default:

@@ -7,6 +7,7 @@ if room=room_options_test
 if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_paused() && !global.pause)) && global.inlevel && !instance_exists(obj_gameover) && !instance_exists(obj_stageclear)
 {
 	global.pause = !global.pause
+	cursor=0 // default to resume per a blondie
 	if global.pause
 	{
 		audio_pause_all()
