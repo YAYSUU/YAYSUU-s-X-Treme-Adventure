@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if global.pause
 {
-	if global.mobile
+	if global.inputtype = 3 // WHOSE IDEA WAS THIS?! FORCED TOUCHSCREEN? ...Oh wait, it was me. This code is ancient.
 	{
 		draw_sprite_tiled(spr_lvlselectbg,0,scroll,scroll)
 		draw_set_color(c_black)

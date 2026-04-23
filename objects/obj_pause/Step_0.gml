@@ -31,7 +31,7 @@ if (global.pause)
 		scroll++
 	else
 		scroll = 0
-	if (!global.mobile)
+	if !(global.inputtype = 3) // NOW, YOU CAN INPUTS!
 	{
 		if (global.key_upp || global.p2_key_upp)
 		{
