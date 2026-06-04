@@ -491,6 +491,7 @@
     {"id":{"name":"snd_extralife","path":"sounds/snd_extralife/snd_extralife.yy",},},
     {"id":{"name":"snd_fire","path":"sounds/snd_fire/snd_fire.yy",},},
     {"id":{"name":"snd_flagspin","path":"sounds/snd_flagspin/snd_flagspin.yy",},},
+    {"id":{"name":"snd_foot","path":"sounds/snd_foot/snd_foot.yy",},},
     {"id":{"name":"snd_footstep","path":"sounds/snd_footstep/snd_footstep.yy",},},
     {"id":{"name":"snd_ghostdie","path":"sounds/snd_ghostdie/snd_ghostdie.yy",},},
     {"id":{"name":"snd_glassshatter","path":"sounds/snd_glassshatter/snd_glassshatter.yy",},},

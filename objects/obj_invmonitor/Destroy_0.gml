@@ -6,5 +6,7 @@ if !instance_exists(obj_invincibility)
 else
 {
 	audio_stop_sound(mus_invincibility)
+	instance_destroy(obj_invincibility)
+	instance_create_depth(obj_player.x,obj_player.y,obj_player.depth-1,obj_invincibility) // invincibility timer fix
 	audio_play_sound(mus_invincibility,1,false,global.sndvol)
 }

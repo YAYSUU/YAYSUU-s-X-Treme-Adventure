@@ -79,7 +79,7 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			x = obj_spawn_p2.x
 			y = obj_spawn_p2.y
 		}
-		x = obj_spawn.x-(64*isotherplayer)
+		x = obj_spawn.x // removed x offset because teddy gets stuck in walls
 		y = obj_spawn.y
 	}
 	if !isotherplayer

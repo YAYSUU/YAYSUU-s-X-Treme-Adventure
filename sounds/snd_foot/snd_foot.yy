@@ -1,18 +1,18 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_glassshatter",
+  "%Name":"snd_foot",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "channelFormat":1,
+  "channelFormat":0,
   "compression":0,
-  "compressionQuality":10,
+  "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.8979365,
+  "duration":0.29349205,
   "exportDir":"",
-  "name":"snd_glassshatter",
+  "name":"snd_foot",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_glassshatter.mp3",
+  "soundFile":"snd_foot.mp3",
   "volume":1.0,
 }

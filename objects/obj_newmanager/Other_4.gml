@@ -3,7 +3,7 @@ if (global.currentsong == -1 && !(room=room_fclogo))
 else if !audio_is_playing(global.currentsong) && !(room=room_fclogo)
 {
 	audio_stop_all()
-	if global.currentsong=mus_title
+	if global.currentsong=mus_title || room=room_gameover
 	{
 		audio_play_sound(global.currentsong, 1, false, global.musvol);
 	}

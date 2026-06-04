@@ -100,6 +100,6 @@ instance_create_depth(0,0, 100, obj_pause)
 instance_create_depth(0,0, 100, obj_persistentachchecker)
 randomize()
 
-global.indev = false
+global.indev = true
 global.prevroom = room_initbruv
 room_goto(room_fclogo)

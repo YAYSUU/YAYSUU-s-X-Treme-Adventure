@@ -16,5 +16,6 @@ function scr_player_dobounce(){
 	audio_play_sound(snd_bounce, 1, false, global.sndvol)
 	grounded = false
 	prevgrounded = false
+	djump = false
 	dshed = false
 }

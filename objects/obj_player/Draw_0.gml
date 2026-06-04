@@ -24,6 +24,13 @@ if (global.inlevel || (global.multiplayer & isotherplayer))
 		draw_sprite_ext(spr_boost, runanimtimer / 60 * 16, drawx, drawy, image_xscale, image_yscale, image_angle, image_blend, image_alpha * damagealpha)
 	if (showarrow)
 		draw_sprite(spr_uparrow, (global.globaltimer / 8) % 4, x, y - 32)
+	if (state == playerstates.golfstop) // hmmm. Is it easier to add 4 seperate sprites for different arrows? Probably. WHO CARES!
+	{
+		draw_sprite_ext(spr_uparrow, (global.globaltimer / 8) % 4, x, y - 32,1,1,0,c_white,1) // up
+		draw_sprite_ext(spr_uparrow, (global.globaltimer / 8) % 4, x, y + 32,1,1,180,c_white,1) // down
+		draw_sprite_ext(spr_uparrow, (global.globaltimer / 8) % 4, x - 32, y,1,1,90,c_white,1) // left
+		draw_sprite_ext(spr_uparrow, (global.globaltimer / 8) % 4, x + 32, y,1,1,270,c_white,1) // right
+	}
 	if (state == playerstates.debug)
 	{
 		draw_set_font(global.smalloptfont)
