@@ -59,6 +59,7 @@ if inwidescreen() // splitscreen check
 	view_set_xport(1, 640)
 	view_set_yport(1, 0)
 	instance_create_depth(0,0, 100, obj_p2camera)
+	window_center()
 }
 else if view_camera[1]
 {
@@ -67,4 +68,5 @@ else if view_camera[1]
 	surface_resize(application_surface,640,480)
 	display_set_gui_size(640,480)
 	window_set_size(640*global.screenscale,480*global.screenscale)
+	window_center()
 }

@@ -3,6 +3,7 @@
 if touchingplayer(x, y) && !touched
 {
 	touched=true
+	var whichplayer=global.firstplayertouch
 	if obj_player.state=playerstates.hangglide
 	{
 		obj_player.newstate=playerstates.normal
@@ -11,11 +12,11 @@ if touchingplayer(x, y) && !touched
 	}
 	instance_destroy(obj_ghost2)
 	endtimer=120
-	if global.char="Y"
+	if whichplayer.char="Y"
 		sprite_index=spr_goalflag_transition
-	else if global.char="T"
+	else if whichplayer.char="T"
 		sprite_index=spr_goalflag_transition_t
-	else if global.char="C"
+	else if whichplayer.char="C"
 		sprite_index=spr_goalflag_transition_cotton
 	if room=room_glowstickcity
 		audio_play_sound(snd_glowstickcity_flagspin,1,false,global.sndvol)

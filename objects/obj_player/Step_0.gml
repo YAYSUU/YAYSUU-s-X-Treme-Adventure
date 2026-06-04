@@ -288,9 +288,9 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			vsp = jmp
 		if (key_run) && (char = "Y")
 		{
-			audio_play_sound(snd_airdash, 1, false, global.sndvol)
+			audio_play_sound(snd_dashpad, 1, false, global.sndvol*3/4,0,1.2)
+			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 			hsp = dashboost * facingdirection // YAHOO!
-			dshed = true
 		}
 		else
 			audio_play_sound(snd_jump, 1, false, global.sndvol)
