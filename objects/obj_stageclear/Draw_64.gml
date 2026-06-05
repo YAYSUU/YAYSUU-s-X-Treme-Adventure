@@ -10,36 +10,36 @@ if !global.inboss
 	{
 		if global.speedrun=true
 		{
-			draw_sprite(spr_stopwatch,0,64,288)
-			draw_text(96,288,obj_hud.timerstring)
-			draw_sprite(spr_bonus,0,352,288)
-			draw_text(416,288,obj_hud.timebonus)
+			draw_sprite(spr_stopwatch,0,64+xoffset,288)
+			draw_text(96+xoffset,288,obj_hud.timerstring)
+			draw_sprite(spr_bonus,0,352+xoffset,288)
+			draw_text(416+xoffset,288,obj_hud.timebonus)
 		}
 		else
 		{
-			draw_sprite(spr_stopwatch,0,96,288)
-			draw_text(128,288,obj_hud.timerstring)
-			draw_sprite(spr_bonus,0,320,288)
-			draw_text(384,288,obj_hud.timebonus)
+			draw_sprite(spr_stopwatch,0,96+xoffset,288)
+			draw_text(128+xoffset,288,obj_hud.timerstring)
+			draw_sprite(spr_bonus,0,320+xoffset,288)
+			draw_text(384+xoffset,288,obj_hud.timebonus)
 		}
 	}
 	if display>=2
 	{
-		draw_sprite(spr_yaysuucoinicon,0,96,320)
-		draw_text(128,320,global.coins)
-		draw_sprite(spr_bonus,0,320,320)
-		draw_text(384,320,(global.coins * 10))
+		draw_sprite(spr_yaysuucoinicon,0,96+xoffset,320)
+		draw_text(128+xoffset,320,global.coins)
+		draw_sprite(spr_bonus,0,320+xoffset,320)
+		draw_text(384+xoffset,320,(global.coins * 10))
 	}
 	if display>=3
 	{
-		draw_sprite(spr_scoreicon,0,96,384)
-		draw_sprite(spr_total,0,128,384)
-		draw_text(192,384,round(yearnedscore))
+		draw_sprite(spr_scoreicon,0,96+xoffset,384)
+		draw_sprite(spr_total,0,128+xoffset,384)
+		draw_text(192+xoffset,384,round(yearnedscore))
 	}
 	if display>=4
 	{
-		draw_sprite(spr_ranktext,0,544,256)
-		draw_sprite(spr_rank,rank,544,288)
+		draw_sprite(spr_ranktext,0,544+xoffset,256)
+		draw_sprite(spr_rank,rank,544+xoffset,288)
 	}
 }
 if display>=5
@@ -48,21 +48,21 @@ if display>=5
 	if global.inputtype == 2
 	{
 		//draw_sprite(spr_next,1,416,416)
-		draw_text_yxa(624,416,"`d  Next","yellow",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,4)
+		draw_text_yxa(624+xoffset,416,"`d  Next","yellow",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,4)
 		if global.trial
 		{
 			//draw_sprite(spr_retry,1,512,416)
-			draw_text_yxa(624,432,"`d  Retry","orange",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
+			draw_text_yxa(624+xoffset,432,"`d  Retry","orange",true,,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
 		}
 	}
 	else if global.inputtype == 1 || global.inputtype == 0
 	{
 		//draw_sprite(spr_next,0,416,416)
-		draw_text_yxa(624,416,keytostring(global.p1_jumpkey)+" Next","yellow",true)
+		draw_text_yxa(624+xoffset,416,keytostring(global.p1_jumpkey)+" Next","yellow",true)
 		if global.trial
 		{
 			//draw_sprite(spr_retry,0,512,416)
-			draw_text_yxa(624,432,keytostring(global.p1_dashkey)+" Retry","orange",true)
+			draw_text_yxa(624+xoffset,432,keytostring(global.p1_dashkey)+" Retry","orange",true)
 		}
 	}
 	else if global.inputtype == 3

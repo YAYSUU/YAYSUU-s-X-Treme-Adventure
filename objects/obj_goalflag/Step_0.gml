@@ -3,7 +3,7 @@
 if touchingplayer(x, y) && !touched
 {
 	touched=true
-	var whichplayer=global.firstplayertouch
+	whichplayer=global.firstplayertouch
 	if obj_player.state=playerstates.hangglide
 	{
 		obj_player.newstate=playerstates.normal
@@ -39,7 +39,7 @@ else if endtimer==0 && touched && !winning
 {
 	winning=true
 	audio_stop_all()
-	if global.char="Y"
+	if whichplayer.char="Y"
 	{
 		if room=room_glowstickcity
 		{
@@ -57,7 +57,7 @@ else if endtimer==0 && touched && !winning
 			audio_play_sound(snd_yaysuuwinstage,1,false,global.sndvol*global.voicelines)
 		}
 	}
-	else if global.char="T"
+	else if whichplayer.char="T"
 	{
 		if room=room_glowstickcity
 		{

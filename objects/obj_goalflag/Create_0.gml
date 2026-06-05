@@ -3,4 +3,5 @@
 touched=false
 endtimer=0
 winning=false
+whichplayer=-1
 sprite_index=spr_goalflag_a

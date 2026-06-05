@@ -17,6 +17,11 @@ bangtimer=0
 display=0
 stageprogress=0
 yearnedscore=0
+if obj_goalflag.whichplayer!=global.mainplayer && inwidescreen()
+	xoffset=640
+else
+	xoffset=0
+x+=xoffset
 // RANK SCORE REQUIREMENTS MIGHT NEED A FEW TWEAKS...
 if global.score>=2500
 {
@@ -37,11 +42,11 @@ else if global.score>=1000
 else {
 	rank=0
 }
-if global.char="Y"
+if obj_goalflag.whichplayer.char="Y"
 	sprite_index=spr_stageclear_y
-else if global.char="T"
+else if obj_goalflag.whichplayer.char="T"
 	sprite_index=spr_stageclear_t
-else if global.char="C"
+else if obj_goalflag.whichplayer.char="C"
 	sprite_index=spr_stageclear_c
 if instance_exists(obj_dialoguebox)
 {
