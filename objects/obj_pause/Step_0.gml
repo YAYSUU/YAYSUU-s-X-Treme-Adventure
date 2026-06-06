@@ -19,8 +19,7 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		if surface_exists(pausesurf)
 			surface_copy(pausesurf,0,0,application_surface)
 		else {
-			pausesurf=surface_create(surface_get_width(application_surface),surface_get_height(application_surface))
-			surface_copy(pausesurf,0,0,application_surface)
+			makepausesurf()
 		}
 	}
 	else

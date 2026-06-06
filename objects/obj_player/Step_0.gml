@@ -155,6 +155,10 @@ if ((!grounded) && key_dashp && (state == playerstates.normal || state == player
 	newstate = playerstates.dash
     audio_play_sound(snd_airdash, 1, false, global.sndvol)
 }
+if state == playerstates.dash && char = "T"
+{
+	vsp = 0 // Sonic 06 my behated
+}
 if (state == playerstates.dash && newstate == state && grounded)
 	newstate = playerstates.normal
 
