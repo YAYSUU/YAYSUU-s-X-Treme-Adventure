@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function sayvoiceline(voiceline,voicetext,voicecolor){ // say the line, bart!
+function sayvoiceline(voiceline,voicetext,voicecolor,voicename=""){ // say the line, bart!
 	if audio_is_playing(voiceline)
 	{
 		return
@@ -10,6 +10,7 @@ function sayvoiceline(voiceline,voicetext,voicecolor){ // say the line, bart!
 		with instance_create_depth(0,0,0,obj_subtitle_new)
 		{
 			dialoguesound=voiceline
+			name=voicename
 			text=voicetext
 			color=voicecolor
 		}

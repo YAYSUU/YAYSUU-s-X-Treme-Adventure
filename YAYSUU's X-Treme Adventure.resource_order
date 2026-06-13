@@ -565,6 +565,7 @@
     {"name":"spr_devroomscroll","order":5,"path":"sprites/spr_devroomscroll/spr_devroomscroll.yy",},
     {"name":"spr_diagspring","order":1,"path":"sprites/spr_diagspring/spr_diagspring.yy",},
     {"name":"spr_diagspringanim","order":2,"path":"sprites/spr_diagspringanim/spr_diagspringanim.yy",},
+    {"name":"spr_dialoguebox_tutorial","order":30,"path":"sprites/spr_dialoguebox_tutorial/spr_dialoguebox_tutorial.yy",},
     {"name":"spr_dialoguebox","order":21,"path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},
     {"name":"spr_dialoguetrigger","order":12,"path":"sprites/spr_dialoguetrigger/spr_dialoguetrigger.yy",},
     {"name":"spr_dicklaimer","order":5,"path":"sprites/spr_dicklaimer/spr_dicklaimer.yy",},

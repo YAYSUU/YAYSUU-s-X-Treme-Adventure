@@ -124,9 +124,9 @@ switch (state)
 			{
 				delay = 54
 				attackcount--
-				instance_create_depth(global.mainplayer.x-16,0,depth,obj_electrobot_warning)
+				instance_create_depth(global.mainplayer.x-16,-64,depth,obj_electrobot_warning)
 				if global.multiplayer
-					instance_create_depth(global.otherplayer.x-16,0,depth,obj_electrobot_warning)
+					instance_create_depth(global.otherplayer.x-16,-64,depth,obj_electrobot_warning)
 			}
 		}
 		break;
@@ -180,7 +180,7 @@ switch (state)
 			if (global.bosshp == 0)
 			{
 				state = electrobotstates.dying
-				sayvoiceline(snd_elecboss8vo,"DAISY, DAISY...","red")
+				sayvoiceline(snd_elecboss8vo,"DAISY, DAISY...","red","Electro-Bot")
 				delay = 150
 				kablooeyjrtimer=0
 				audio_stop_sound(global.currentsong)

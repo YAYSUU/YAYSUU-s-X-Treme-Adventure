@@ -643,6 +643,7 @@
     {"id":{"name":"spr_devroomscroll","path":"sprites/spr_devroomscroll/spr_devroomscroll.yy",},},
     {"id":{"name":"spr_diagspring","path":"sprites/spr_diagspring/spr_diagspring.yy",},},
     {"id":{"name":"spr_diagspringanim","path":"sprites/spr_diagspringanim/spr_diagspringanim.yy",},},
+    {"id":{"name":"spr_dialoguebox_tutorial","path":"sprites/spr_dialoguebox_tutorial/spr_dialoguebox_tutorial.yy",},},
     {"id":{"name":"spr_dialoguebox","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},},
     {"id":{"name":"spr_dialoguetrigger","path":"sprites/spr_dialoguetrigger/spr_dialoguetrigger.yy",},},
     {"id":{"name":"spr_dicklaimer","path":"sprites/spr_dicklaimer/spr_dicklaimer.yy",},},
