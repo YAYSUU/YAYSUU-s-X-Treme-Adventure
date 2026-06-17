@@ -3,5 +3,6 @@
 if touchingplayer(x, y)
 {
 	instance_destroy()
+	instance_create_depth(x,y,depth,obj_coincollect)
 	scr_collectcoins(1)
 }

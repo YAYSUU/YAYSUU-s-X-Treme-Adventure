@@ -7,7 +7,7 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			state = playerstates.inactive;
 			image_alpha=0
 		}
-		else
+		else if (state=playerstates.inactive) || (state=playerstates.dead) || (state=playerstates.win)
 			state = playerstates.normal
 		ouchies = false
 		deathies = false
@@ -79,7 +79,7 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			x = obj_spawn_p2.x
 			y = obj_spawn_p2.y
 		}
-		x = obj_spawn.x-(64*isotherplayer)
+		x = obj_spawn.x // removed x offset because teddy gets stuck in walls
 		y = obj_spawn.y
 	}
 	if !isotherplayer

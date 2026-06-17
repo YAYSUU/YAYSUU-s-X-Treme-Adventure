@@ -3,11 +3,11 @@
 if (!global.inlevel)
 	return
 
-if (global.mainplayer.state != playerstates.dead)
+if (playertofollow.state != playerstates.dead)
 {
-	if (abs(global.mainplayer.x - x) > maxvarience || abs(global.mainplayer.y - y) > maxvarience)
+	if (abs(playertofollow.x - x) > maxvarience || abs(playertofollow.y - y) > maxvarience)
 	    followtimer = 60
-	else if (global.mainplayer.hsp == 0 && global.mainplayer.vsp == 0 && (!dontunfocus))
+	else if (playertofollow.hsp == 0 && playertofollow.vsp == 0 && (!dontunfocus))
 	    followtimer--
 	if (focusonpointstored != focusonpoint)
 	{
@@ -18,8 +18,8 @@ if (global.mainplayer.state != playerstates.dead)
 	{
 	    if (!focusonpoint)
 	    {
-	        focuspointx = global.mainplayer.x
-	        focuspointy = global.mainplayer.y
+	        focuspointx = playertofollow.x
+	        focuspointy = playertofollow.y
 	    }
 		if (lerpy >= 1)
 	    {
@@ -40,7 +40,7 @@ if (global.mainplayer.state != playerstates.dead)
 	}
 }
 
-if (global.mainplayer.state != playerstates.debug)
+if (playertofollow.state != playerstates.debug)
 {
 	x = clamp(x, 320, (room_width - 320))
 	y = clamp(y, 240, (room_height - 240))
@@ -54,9 +54,9 @@ if (!focusonpoint)
 	actualcamy += voffset
 	
 	var wantedspeedoffset = 0
-	if (abs(global.mainplayer.hsp) > global.mainplayer.walkspeed)
+	if (abs(playertofollow.hsp) > global.mainplayer.walkspeed)
 	{
-		wantedspeedoffset = global.mainplayer.hsp * speedoffsetscale
+		wantedspeedoffset = playertofollow.hsp * speedoffsetscale
 	}
 	
 	var speedoffsetspeed
@@ -81,7 +81,7 @@ if vshakeoffset > 0
 var shakey = vshakeoffset * vwobble
 actualcamx = round(actualcamx)
 actualcamy = round(actualcamy)
-if (global.mainplayer.state != playerstates.debug)
+if (playertofollow.state != playerstates.debug)
 {
 	actualcamx = clamp(actualcamx, 320, (room_width - 320))
 	actualcamy = clamp(actualcamy, 240, (room_height - 240))
@@ -99,4 +99,4 @@ else {
 	gamepad_set_vibration(global.p1_controlslot, 0, 0)
 	gamepad_set_vibration(global.p2_controlslot, 0, 0)
 }
-camera_set_view_pos(view_camera[0], actualcamx - 320, (actualcamy - 240) + shakey)
+camera_set_view_pos(view_camera[cameraid], actualcamx - 320, (actualcamy - 240) + shakey)

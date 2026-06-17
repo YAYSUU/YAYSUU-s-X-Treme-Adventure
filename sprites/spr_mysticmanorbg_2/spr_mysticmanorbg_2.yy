@@ -5,21 +5,21 @@
   "bbox_bottom":959,
   "bbox_left":0,
   "bbox_right":1279,
-  "bbox_top":31,
+  "bbox_top":49,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"6ba934ba-aa86-4c1e-a0d8-60e52cb029d8","name":"6ba934ba-aa86-4c1e-a0d8-60e52cb029d8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d868b163-6a0c-4a9f-8fac-9283763cd40e","name":"d868b163-6a0c-4a9f-8fac-9283763cd40e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":960,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ed95381b-b991-4a18-9424-61d0cadbcd71","blendMode":0,"displayName":"default","isLocked":false,"name":"ed95381b-b991-4a18-9424-61d0cadbcd71","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1a21bb5e-6b59-4508-9287-bd4c8a3d4ffa","blendMode":0,"displayName":"default","isLocked":false,"name":"1a21bb5e-6b59-4508-9287-bd4c8a3d4ffa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_mysticmanorbg_2",
   "nineSlice":null,
@@ -70,7 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6ba934ba-aa86-4c1e-a0d8-60e52cb029d8","path":"sprites/spr_mysticmanorbg_2/spr_mysticmanorbg_2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6b417333-5a4a-44ef-94c9-fb859ab28bce","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d868b163-6a0c-4a9f-8fac-9283763cd40e","path":"sprites/spr_mysticmanorbg_2/spr_mysticmanorbg_2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2afe564b-c432-4976-9a10-0912a2f79ba9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

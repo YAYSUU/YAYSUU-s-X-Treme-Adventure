@@ -8,6 +8,8 @@ function scr_restartlevel(){
 	global.firstroom=true
 	global.coins=0
 	global.coingoal = 100
+	global.healgoal = 50
+	global.mainplayer.state=playerstates.normal // normal pills 2: redux
 	switch (room)
 	{
 		default:
@@ -24,6 +26,7 @@ function scr_restartlevel(){
 			break;
 		case room_mysticmanor_2b:
 		case room_mysticmanor_2c:
+		case room_mysticmanor_2d:
 			loadroom(room_mysticmanor_2, loadtype.newlevel)
 			break;
 		case room_chilifields_b:

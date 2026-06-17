@@ -11,10 +11,10 @@ if (global.inputtype != 3)
 {
 	if keyboard_check_any_pressed(1) && global.inputtype != 0
 		global.inputtype = 0
-	if (gamepad_any_button_pressed(global.p1_controlslot) || axislh!=prevaxislh || axislv!=prevaxislv) && global.inputtype != 2
-		global.inputtype = 2
 	// NOT ANYMORE!
 }
+if (gamepad_any_button_pressed(global.p1_controlslot) || axislh!=prevaxislh || axislv!=prevaxislv) && global.inputtype != 2 // GAMEPAD PLAYERS CAN REST EASY
+		global.inputtype = 2
 if keyboard_check_any_pressed(2) && global.p2inputtype != 0
 	global.p2inputtype = 0
 if (gamepad_any_button_pressed(global.p2_controlslot) || p2axislh!=p2prevaxislh || p2axislv!=prevaxislv) && global.p2inputtype != 2
@@ -130,9 +130,10 @@ else
 global.globaltimer++
 if (windowtimer > 0)
 	windowtimer--
-if !window_get_fullscreen() && !(window_get_width()=640*global.screenscale)
+if !window_get_fullscreen() && (!(window_get_width()=640*global.screenscale) || (inwidescreen() && !(window_get_width()=640*global.screenscale*2)))
 {
-	window_set_size(640*global.screenscale,480*global.screenscale)
+	window_set_size(640*global.screenscale*(global.splitscreen*2),480*global.screenscale)
+	window_center()
 }
 if (windowtimer < 1 || newwindowname != windowname)
 {

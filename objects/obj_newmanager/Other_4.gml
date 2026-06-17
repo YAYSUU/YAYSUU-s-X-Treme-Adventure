@@ -1,9 +1,9 @@
-if (global.currentsong == -1)
+if (global.currentsong == -1 && !(room=room_fclogo))
 	audio_stop_all()
-else if !audio_is_playing(global.currentsong)
+else if !audio_is_playing(global.currentsong) && !(room=room_fclogo)
 {
 	audio_stop_all()
-	if global.currentsong=mus_title
+	if global.currentsong=mus_title || room=room_gameover
 	{
 		audio_play_sound(global.currentsong, 1, false, global.musvol);
 	}
@@ -31,6 +31,7 @@ if (global.levelloadtype == loadtype.newlevel || global.levelloadtype == loadtyp
 	global.scoreadd = 0
 	global.coins=0
 	global.coingoal=100
+	global.healgoal=50
 	if global.inboss
 	{
 		global.bosshp = 6
@@ -41,4 +42,31 @@ if (global.levelloadtype == loadtype.newlevel || global.levelloadtype == loadtyp
 	{
 		global.otherplayer = instance_create_depth(0,0, 100, obj_player)
 	}
+}
+if inwidescreen() // splitscreen check
+{
+	surface_resize(application_surface,1280,480)
+	display_set_gui_size(1280,480)
+	window_set_size(640*global.screenscale*2,480*global.screenscale)
+	view_set_visible(0, true)
+	view_set_wport(0, 640)
+	view_set_hport(0, 480)
+	view_set_xport(0, 0)
+	view_set_yport(0, 0)
+	view_camera[1] = camera_create_view(0,0,640,480)
+	view_set_visible(1, true)
+	view_set_wport(1, 640)
+	view_set_hport(1, 480)
+	view_set_xport(1, 640)
+	view_set_yport(1, 0)
+	instance_create_depth(0,0, 100, obj_p2camera)
+	window_center()
+}
+else if view_camera[1]
+{
+	camera_destroy(view_camera[1])
+	instance_destroy(obj_p2camera)
+	surface_resize(application_surface,640,480)
+	display_set_gui_size(640,480)
+	window_set_size(640*global.screenscale,480*global.screenscale)
 }

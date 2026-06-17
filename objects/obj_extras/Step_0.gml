@@ -44,8 +44,7 @@ switch chos
 	if global.key_menuaccept
 	{
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		instance_deactivate_object(obj_extras)
-		instance_create_depth(x,y,depth,obj_credits)
+		loadroom(room_credits,loadtype.menu)
 	}
 	break;
 	case 2:

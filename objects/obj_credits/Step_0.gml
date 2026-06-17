@@ -3,5 +3,5 @@
 if (global.key_dashp)
 {
 	audio_play_sound(snd_nahnvm,0,false)
-	instance_destroy()
+	loadroom(room_extras,loadtype.menu)
 }

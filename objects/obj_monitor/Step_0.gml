@@ -3,7 +3,7 @@
 
 if touchingplayer(x, y)
 {
-	if (!global.firstplayertouch.vulnerable)
+	if (!global.firstplayertouch.vulnerable) || (global.firstplayertouch.state = playerstates.hangglide)
 	{
 		whichplayerispurpeguymurderer = global.firstplayertouch
 		instance_destroy()
@@ -12,7 +12,7 @@ if touchingplayer(x, y)
 	}
 	else if (global.secondplayertouch != noone)
 	{
-		if (!global.secondplayertouch.vulnerable)
+		if (!global.secondplayertouch.vulnerable) || (global.secondplayertouch.state = playerstates.hangglide)
 		{
 			whichplayerispurpeguymurderer = global.secondplayertouch
 			instance_destroy()

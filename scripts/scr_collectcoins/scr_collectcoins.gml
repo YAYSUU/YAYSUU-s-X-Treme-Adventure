@@ -4,6 +4,8 @@ function scr_collectcoins(amount){
 	global.coins += amount
 	if (global.coins < 0)
 		global.coins = 0
+	if (global.combo > 0)
+		global.combometer += 10
 	if (amount > 0)
 	{
 		if room == room_glowstickcity
@@ -16,24 +18,25 @@ function scr_collectcoins(amount){
 	if (global.coins >= global.coingoal)
 	{
 		global.coingoal += 100
-		if (global.hp == global.maxhp)
+		with (instance_create_layer(320+(instance_number(obj_itemdefault)*32),416,"gui",obj_itemdefault))
 		{
-			with (instance_create_layer(320+(instance_number(obj_itemdefault)*32),416,"gui",obj_itemdefault))
+			depth = global.itempopupdepth
+			if global.char = "Y"
 			{
-				depth = global.itempopupdepth
-				if global.char = "Y"
-				{
-					sprite_index=spr_itemlife_y
-				}
-				else if global.char = "T"
-				{
-					sprite_index=spr_itemlife_t
-				}
-				audio_pause_sound(global.currentsong)
-				audio_play_sound(snd_extralife,1,false,global.sndvol)
+				sprite_index=spr_itemlife_y
 			}
+			else if global.char = "T"
+			{
+				sprite_index=spr_itemlife_t
+			}
+			audio_pause_sound(global.currentsong)
+			audio_play_sound(snd_extralife,1,false,global.sndvol)
 		}
-		else
+	}
+	if (global.coins >= global.healgoal)
+	{
+		global.healgoal += 50
+		if (global.hp < global.maxhp)
 		{
 			global.hp++
 			audio_play_sound(snd_heal,1,false,global.sndvol)

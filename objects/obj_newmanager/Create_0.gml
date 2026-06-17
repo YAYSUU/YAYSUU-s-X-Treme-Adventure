@@ -6,12 +6,15 @@ global.menurepeat_delay=15
 global.menurepeat_holddelay=7
 global.trial=false
 global.arcade=false
+global.demomode=false // IT BEGINS...
+global.recording=false
+global.splitscreen=true
 global.font=font_add_sprite_ext(spr_text,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.,:!?-",false,0)
 global.subtitlefont=font_add_sprite_ext(spr_subtitlefont, "()[]!#$%'*,.:-/+?@^abcdefghijklmnopqrstuvwxyz~{}0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
 global.optfont=font_add_sprite_ext(spr_text_options,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.,:!?-",false,0)
 global.smalloptfont=font_add_sprite_ext(spr_smalloptionstext,"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?:-_()+%'abcdefghijklmnopqrstuvwxyz✓✗",false,0)
 global.inlevel = false
-global.nextroom = room_idlogo
+global.nextroom = room_fclogo
 axislh = gamepad_axis_value(global.p1_controlslot,gp_axislh)
 axislv = gamepad_axis_value(global.p1_controlslot,gp_axislv)
 p2axislh = gamepad_axis_value(global.p2_controlslot,gp_axislh)
@@ -37,12 +40,13 @@ global.scoreadd = 0
 global.lives=3
 global.showcollision = false
 global.combo = 0
+global.combometer = 0
 global.inboss = false
 global.levelloadtype = loadtype.menu
 global.inhub = false
 global.globaltimer = 0
 global.debugmessageoffset = 0
-global.skibispin = false // FIX THIS NEXT RELEASE! Thank you.
+global.skibispin = false // I FIXD IT. Stupid
 global.bobcat = false
 global.godmode = false
 global.quickmenu = false
@@ -76,10 +80,10 @@ while(object_exists(global.totalobjectidcount)) {
 global.inputtype = 0
 global.p2inputtype = 0
 
-instance_create_depth(0,0, 100, obj_camera)
 instance_create_depth(0,0, depth + 1, obj_fadeblack)
 global.mainplayer = instance_create_depth(0,0, 100, obj_player)
 global.otherplayer = noone
+instance_create_depth(0,0, 100, obj_camera) // i'll just move this here what could PAWSibly go wrong
 with (global.mainplayer)
 {
 	isotherplayer=false
@@ -99,4 +103,4 @@ randomize()
 
 global.indev = true
 global.prevroom = room_initbruv
-room_goto(room_idlogo)
+room_goto(room_fclogo)

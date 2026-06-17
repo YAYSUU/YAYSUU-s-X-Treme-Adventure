@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.indev)
+if (global.indev) && !(global.mobile)
 {
 	if !(state=playerstates.debug)
 	{

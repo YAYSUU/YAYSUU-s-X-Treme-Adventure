@@ -68,7 +68,19 @@ function draw_text_yxa(x,y,textstring,color,dropshadow,maxlength = 640,sprite = 
 	var yshakeoffset = 0
 	
 	textstring = string_wrap(string_replace_all(textstring, "\\n", "\n"),maxlength); // gotta love gamemaker!
-	var alignleft=draw_get_halign()=fa_right ? string_width(textstring) : 0
+	var alignleft=0
+	switch draw_get_halign()
+	{
+		case fa_right:
+		alignleft=string_width(textstring)
+		break;
+		case fa_center:
+		alignleft=string_width(textstring)/2
+		break;
+		default:
+		alignleft=0
+		break;
+	}
 	
 	for (var i = 1; i<=string_length(textstring); i++) {
 		xi++

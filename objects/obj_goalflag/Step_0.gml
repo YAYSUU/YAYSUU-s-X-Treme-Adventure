@@ -3,24 +3,34 @@
 if touchingplayer(x, y) && !touched
 {
 	touched=true
+	whichplayer=global.firstplayertouch
 	if obj_player.state=playerstates.hangglide
 	{
 		obj_player.newstate=playerstates.normal
 		obj_player.state=playerstates.normal
+		obj_player.visualrotation=0
 	}
+	instance_destroy(obj_ghost2)
 	endtimer=120
-	if global.char="Y"
+	if whichplayer.char="Y"
 		sprite_index=spr_goalflag_transition
-	else if global.char="T"
+	else if whichplayer.char="T"
 		sprite_index=spr_goalflag_transition_t
-	else if global.char="C"
+	else if whichplayer.char="C"
 		sprite_index=spr_goalflag_transition_cotton
 	if room=room_glowstickcity
 		audio_play_sound(snd_glowstickcity_flagspin,1,false,global.sndvol)
 	else
 		audio_play_sound(snd_flagspin,1,false,global.sndvol)
+}
+if endtimer>0 && touched
+	endtimer--
+else if endtimer==0 && touched && !winning
+{
+	winning=true
 	global.score += global.scoreadd + obj_hud.timebonus + (global.coins * 10)
-	if (!cheatsing())
+	global.scoreadd = 0
+	if (!cheatsing()) && (!global.multiplayer)
 	{
 		ini_open("savedata.ini")
 		if global.score > ini_read_real("records", string(room) + "_score", 0) && !global.inboss
@@ -29,14 +39,8 @@ if touchingplayer(x, y) && !touched
 			ini_write_real("records", string(room) + "_time", obj_hud.timer)
 		ini_close()
 	}
-}
-if endtimer>0 && touched
-	endtimer--
-else if endtimer==0 && touched && !winning
-{
-	winning=true
 	audio_stop_all()
-	if global.char="Y"
+	if whichplayer.char="Y"
 	{
 		if room=room_glowstickcity
 		{
@@ -54,7 +58,7 @@ else if endtimer==0 && touched && !winning
 			audio_play_sound(snd_yaysuuwinstage,1,false,global.sndvol*global.voicelines)
 		}
 	}
-	else if global.char="T"
+	else if whichplayer.char="T"
 	{
 		if room=room_glowstickcity
 		{

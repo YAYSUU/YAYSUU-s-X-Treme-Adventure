@@ -46,6 +46,7 @@ if place_meeting(x, y, obj_lava) && state!=playerstates.dead
 	if (!isotherplayer && global.hp=0) || (isotherplayer && global.p2hp=0)
 	{
 		newstate = playerstates.dead
+		if (!global.splitscreen && !isotherplayer) || (!global.multiplayer)
 		audio_stop_all()
 		audio_play_sound(mus_dead,1,false,global.sndvol)
 		global.lives--
@@ -55,6 +56,7 @@ if place_meeting(x, y, obj_lava) && state!=playerstates.dead
 		audio_play_sound(snd_ahooga, 1, false, global.sndvol)
 	}
 	vsp = bounceheight*1.5
+	scr_shake(30, false)
 	audio_play_sound(snd_fire, 1, false, global.sndvol)
 	audio_play_sound(snd_ouchie, 1, false, global.sndvol)
 	grounded = false
@@ -109,7 +111,7 @@ if (state != playerstates.hurt && state != playerstates.dead && state != players
 if (grounded || state == playerstates.golfstop)
 {
 	dshed = false
-	djump = (char == "T" || char == "C")
+	djump = true // now YAYSUU can djump!
 	lastwall = 0
 }
 
@@ -152,6 +154,10 @@ if ((!grounded) && key_dashp && (state == playerstates.normal || state == player
     dshed = true
 	newstate = playerstates.dash
     audio_play_sound(snd_airdash, 1, false, global.sndvol)
+}
+if state == playerstates.dash && char = "T"
+{
+	vsp = 0 // Sonic 06 my behated
 }
 if (state == playerstates.dash && newstate == state && grounded)
 	newstate = playerstates.normal
@@ -249,7 +255,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 	}
 }
 
-var canwalljump = !grounded && char="T" && move != 0 && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap)
+var canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap)
 // jumping
 if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && !forcecrouch)
 {
@@ -266,17 +272,17 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 		image_index = 0
 		sprite_index = playersprites[playersprite.jumpstart]
 	}
-	else if !grounded && char="T" && djump
+	else if !grounded && djump
 	{
 		if (inwater)
 			vsp = wdjmp
 		else
-			vsp = djmp
+			vsp = char="T" ? djmp : djmp*3/4
 		audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 		djump = false
 		newstate = playerstates.normal
 		image_index = 0
-		sprite_index = playersprites[playersprite.jumpstart]
+		sprite_index = playersprites[playersprite.bounce]
 	}
 	else if grounded
 	{
@@ -284,8 +290,12 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			vsp = wjmp
 		else
 			vsp = jmp
-		if (char == "C")
-			audio_play_sound(snd_jump_c, 1, false, global.sndvol)
+		if (key_run) && (char = "Y")
+		{
+			audio_play_sound(snd_dashpad, 1, false, global.sndvol*3/4,0,1.2)
+			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
+			hsp = dashboost * facingdirection // YAHOO!
+		}
 		else
 			audio_play_sound(snd_jump, 1, false, global.sndvol)
 		grounded = false
@@ -305,11 +315,22 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 
 if (state == playerstates.golfstop && newstate == state)
 {
-	if (key_jumpp)
+	if (key_leftp) || (key_rightp) || (key_dashp)
 	{
-		vsp = jmp
-		hsp = move * walkspeed
+		hsp = airdashboost * facingdirection
+		dshed = true
+		newstate = playerstates.dash
+		audio_play_sound(snd_airdash, 1, false, global.sndvol)
+	}
+	else if (key_jumpp) || (key_upp)
+	{
+		vsp = jmp * 2
 		newstate = playerstates.normal
+	}
+	else if (key_downp)
+	{
+		vsp = -(jmp * 2)
+		newstate = playerstates.stomp
 	}
 	else
 	{
@@ -356,6 +377,7 @@ if (ouchies)
 			scr_collectcoins(-50)
 			if !fratricide {
 				global.scoreadd -= 50
+				global.combometer -= 50 // peenalty
 			}
 			audio_play_sound(snd_ouchie, 1, false, global.sndvol)
 		}
@@ -365,10 +387,10 @@ if (ouchies)
 		    newstate = playerstates.dead
 			if !instance_exists(obj_stageclear)
 			{
-				if (global.lives > 0) && !isotherplayer
+				if (global.lives > 0)
 					global.lives--
 			    vsp = -abs(vsp)
-				if !isotherplayer
+				if (!isotherplayer && !global.splitscreen) || !global.multiplayer
 					audio_stop_all()
 				if global.jumpscare
 				{
@@ -386,9 +408,10 @@ if (ouchies)
 	}
 }
 if (state == playerstates.hurt && grounded)
+{
 	newstate = playerstates.normal
 	visualrotation = 0
-
+}
 if (hurtt > 0)
 {
 	hurtt--
@@ -413,8 +436,6 @@ else
 //vulnerability
 var runattack = (abs(hsp) > rundamagespeed && sign(hsp) == sign(yearnedhsp) && state == playerstates.normal)
 vulnerable = !(global.inv == 1 || (newstate != playerstates.launched && (state == playerstates.dash || state == playerstates.slide || state == playerstates.stomp || newstate == playerstates.dash || newstate == playerstates.slide || newstate == playerstates.stomp || runattack || ( (state == playerstates.bounce || newstate == playerstates.bounce) && char == "C")) ))
-if (vulnerable) && (grounded)
-	global.combo = 0
 if (runattack)
 	runanimtimer++
 else
@@ -433,7 +454,10 @@ if touchingplayer(x,y) && !vulnerable
 		depth=global.mainplayer.depth-1
 		with (obj_hud)
 		{
-			event_user(0)
+			if !global.splitscreen
+			{
+				event_user(0)
+			}
 		}
 	}
 	ouchies=false
@@ -441,31 +465,39 @@ if touchingplayer(x,y) && !vulnerable
 	vulnerable=true
 }
 //the death fade
-if (state == playerstates.dead) && !isotherplayer
+if (state == playerstates.dead) && ((!global.splitscreen && !isotherplayer) || (!global.multiplayer))
 {
 	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
 	    if (global.lives > 0)
 			loadroom(room, loadtype.respawn)
 		else
-		    if !instance_exists(obj_gameover)
-			{
-				global.jumpscare=false
-				instance_create_depth(0,0,depth,obj_gameover)
-			}
+		    loadroom(room_gameover, loadtype.menu)
 	}
 }
-if (state == playerstates.dead) && isotherplayer
+if (state == playerstates.dead) && ((global.splitscreen && global.multiplayer) || (!global.splitscreen && isotherplayer))
 {
 	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
-	    if !(global.inboss) { // come back my brother
+		if (global.lives = 0) // DEATH COMES FOR US ALL
+			loadroom(room_gameover, loadtype.menu)
+	    else if !(global.inboss) { // come back my brother
 			event_perform(ev_other,ev_room_start)
 			var canwalljump = 0
-			x=global.mainplayer.x
-			y=global.mainplayer.y
-			global.p2hp = 3
-			global.p2maxhp = 3
+			if isotherplayer
+			{
+				global.p2hp = global.bobcat ? 1 : 3
+				global.p2maxhp = global.bobcat ? 1 : 3
+			}
+			else {
+				global.hp = global.bobcat ? 1 : 3
+				global.maxhp = global.bobcat ? 1 : 3
+			}
+			if !global.splitscreen && isotherplayer // a safety net for the LITTLE BROTHER
+			{
+				x=global.mainplayer.x
+				y=global.mainplayer.y 
+			}
 		}
 		else {
 			state=playerstates.inactive
@@ -519,7 +551,8 @@ else
 if (state == playerstates.hangglide)
 {
 	facingdirection = hangglidedir
-	var yearnedvsp = (key_down - key_up) * 5
+	visualrotation = clamp(visualrotation+(key_up-key_down)*(8-hsp)*0.5*hangglidedir,-30,30) // Sonic Rivals 2 my beloved
+	var yearnedvsp = (-visualrotation/4)*hangglidedir
 	if yearnedvsp>vsp
 	{
 		vsp+=0.5
@@ -529,7 +562,6 @@ if (state == playerstates.hangglide)
 		vsp-=0.5
 	}
 	yearnedhsp = (facingdirection * 5) + (vsp * 0.5)
-	visualrotation = -(yearnedvsp)*2
 	if yearnedhsp>hsp
 	{
 		hsp+=0.5
@@ -547,6 +579,7 @@ if (state == playerstates.hangglide)
 		}
 		if char="T"
 		{
+			visualrotation=-visualrotation
 			hangglidedir=-hangglidedir
 		}
 	}
@@ -557,6 +590,7 @@ if (state == playerstates.hangglide)
 		newstate=playerstates.bounce
 		state=playerstates.bounce
 		hsp=facingdirection*20
+		visualrotation=0
 	}
 }
 if (state == playerstates.debug)
@@ -830,7 +864,7 @@ if (hascollision)
 		}
 	}
 }
-if isotherplayer && offscreentimer=4*global.defaultfps && !(state=playerstates.dead || state=playerstates.inactive)
+if isotherplayer && offscreentimer=4*global.defaultfps && !global.splitscreen && !(state=playerstates.dead || state=playerstates.inactive)
 {
 	x = global.mainplayer.x
 	y = global.mainplayer.y
@@ -917,14 +951,14 @@ switch (state)
 			{
 				if (vsp > 0)
 					newsprite = playersprites[playersprite.runfall]
-				else
+				else if (sprite_index != playersprites[playersprite.bounce])
 					newsprite = playersprites[playersprite.runjump]
 			}
 			else
 			{
 				if (vsp > 0)
 					newsprite = playersprites[playersprite.fall]
-				else if (sprite_index != playersprites[playersprite.jumpstart])
+				else if (sprite_index != playersprites[playersprite.jumpstart] && sprite_index != playersprites[playersprite.bounce])
 					newsprite = playersprites[playersprite.jumploop]
 			}
 		}
@@ -1019,6 +1053,8 @@ if (sprite_index == playersprites[playersprite.walk])
 else {
 	walktimer=0
 }
+if grounded && !prevgrounded && state=playerstates.normal
+	audio_play_sound(snd_foot,1,false,global.sndvol,0,random_range(1,1.2))
 if (!audio_exists(runningsound))
 	runningsound = audio_play_sound(snd_run, 1, true, global.sndvol)
 if (sprite_index == playersprites[playersprite.run])
@@ -1094,4 +1130,8 @@ if (global.skibispin)
 		else if (visualrotation < -180)
 			visualrotation += 360
 	}
+}
+if !(global.skibispin) && !(state=playerstates.hangglide) && !(state=playerstates.dead)
+{
+	visualrotation = 0
 }

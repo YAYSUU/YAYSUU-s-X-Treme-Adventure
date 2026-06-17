@@ -1,1 +1,0 @@
-scr_windowtitle("Incredible Dog Games!")

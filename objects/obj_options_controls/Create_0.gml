@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-chos=1
+chos=global.inputtype=3 ? 9 : 1
 dedede=0
 player=1
 waitingforinput=false

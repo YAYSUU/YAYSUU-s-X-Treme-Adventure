@@ -12,8 +12,8 @@ if (!donotannoymewhiletesting)
 				text=other.subtitle
 				sprite=other.button
 				subimg=other.subimg
-				color="purple"
-				nobox=true
+				color="black"
+				nobox=false
 			}
 		}
 		audio_play_sound(snd_hint,1,false,global.sndvol)

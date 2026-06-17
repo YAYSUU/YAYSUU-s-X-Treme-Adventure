@@ -20,7 +20,7 @@ if keyboard_check_pressed(vk_enter)
 		if global.mobile
 		{
 			audio_play_sound(snd_nicetry,1,false,global.sndvol)
-			rewardstring="Have you tried not having a phone?"
+			rewardstring="Yeah, you and what function keys?"
 			keyboard_string=""
 		}
 		else {
@@ -29,6 +29,12 @@ if keyboard_check_pressed(vk_enter)
 			global.indev = true
 			keyboard_string=""
 		}
+		break;
+		case "skibiditoilet":
+		audio_play_sound(snd_confirm,1,false,global.sndvol)
+		rewardstring="Skibi spin enabled!"
+		global.skibispin = true
+		keyboard_string=""
 		break;
 		case "bobcatblues":
 		audio_play_sound(snd_confirm,1,false,global.sndvol)

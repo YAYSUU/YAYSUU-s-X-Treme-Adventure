@@ -4,9 +4,10 @@ if room=room_options_test
 {
 	return;
 }
-if (global.key_start || global.p2_key_start) && global.inlevel && !instance_exists(obj_gameover) && !instance_exists(obj_stageclear)
+if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_paused() && !global.pause)) && global.inlevel && !instance_exists(obj_gameover) && !instance_exists(obj_stageclear)
 {
 	global.pause = !global.pause
+	cursor=0 // default to resume per a blondie
 	if global.pause
 	{
 		audio_pause_all()
@@ -15,6 +16,11 @@ if (global.key_start || global.p2_key_start) && global.inlevel && !instance_exis
 		instance_deactivate_all(true)
 		instance_activate_object(obj_newmanager)
 		instance_activate_object(obj_fadeblack)
+		if surface_exists(pausesurf)
+			surface_copy(pausesurf,0,0,application_surface)
+		else {
+			makepausesurf()
+		}
 	}
 	else
 	{
@@ -31,7 +37,7 @@ if (global.pause)
 		scroll++
 	else
 		scroll = 0
-	if (!global.mobile)
+	if !(global.inputtype = 3) // NOW, YOU CAN INPUTS!
 	{
 		if (global.key_upp || global.p2_key_upp)
 		{

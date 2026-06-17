@@ -116,7 +116,7 @@ else if (!obj_fadeblack.fading)
 					loadnewstage(global.lives, room_mysticmanor_2)
 					savestory(5)
 					break;
-				case room_mysticmanor_2c:
+				case room_mysticmanor_2d:
 					loadroom(room_demoending, loadtype.menu)
 					savestory(6)
 					break;

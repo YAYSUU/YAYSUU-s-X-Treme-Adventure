@@ -4,3 +4,4 @@ if (room == room_chillfields_2b)
 	voffset = 160
 else
 	voffset = 0
+playertofollow=global.mainplayer
