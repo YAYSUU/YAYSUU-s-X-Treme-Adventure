@@ -40,6 +40,7 @@ global.scoreadd = 0
 global.lives=3
 global.showcollision = false
 global.combo = 0
+global.combometer = 0
 global.inboss = false
 global.levelloadtype = loadtype.menu
 global.inhub = false
@@ -100,6 +101,6 @@ instance_create_depth(0,0, 100, obj_pause)
 instance_create_depth(0,0, 100, obj_persistentachchecker)
 randomize()
 
-global.indev = false
+global.indev = true
 global.prevroom = room_initbruv
 room_goto(room_fclogo)

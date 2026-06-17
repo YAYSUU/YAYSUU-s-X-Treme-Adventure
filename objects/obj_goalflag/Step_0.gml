@@ -22,7 +22,14 @@ if touchingplayer(x, y) && !touched
 		audio_play_sound(snd_glowstickcity_flagspin,1,false,global.sndvol)
 	else
 		audio_play_sound(snd_flagspin,1,false,global.sndvol)
+}
+if endtimer>0 && touched
+	endtimer--
+else if endtimer==0 && touched && !winning
+{
+	winning=true
 	global.score += global.scoreadd + obj_hud.timebonus + (global.coins * 10)
+	global.scoreadd = 0
 	if (!cheatsing()) && (!global.multiplayer)
 	{
 		ini_open("savedata.ini")
@@ -32,12 +39,6 @@ if touchingplayer(x, y) && !touched
 			ini_write_real("records", string(room) + "_time", obj_hud.timer)
 		ini_close()
 	}
-}
-if endtimer>0 && touched
-	endtimer--
-else if endtimer==0 && touched && !winning
-{
-	winning=true
 	audio_stop_all()
 	if whichplayer.char="Y"
 	{

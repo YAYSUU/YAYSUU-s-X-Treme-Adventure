@@ -31,6 +31,7 @@ if (global.levelloadtype == loadtype.newlevel || global.levelloadtype == loadtyp
 	global.scoreadd = 0
 	global.coins=0
 	global.coingoal=100
+	global.healgoal=50
 	if global.inboss
 	{
 		global.bosshp = 6
@@ -68,5 +69,4 @@ else if view_camera[1]
 	surface_resize(application_surface,640,480)
 	display_set_gui_size(640,480)
 	window_set_size(640*global.screenscale,480*global.screenscale)
-	window_center()
 }

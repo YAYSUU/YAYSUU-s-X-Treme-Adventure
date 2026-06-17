@@ -377,6 +377,7 @@ if (ouchies)
 			scr_collectcoins(-50)
 			if !fratricide {
 				global.scoreadd -= 50
+				global.combometer -= 50 // peenalty
 			}
 			audio_play_sound(snd_ouchie, 1, false, global.sndvol)
 		}
@@ -435,8 +436,6 @@ else
 //vulnerability
 var runattack = (abs(hsp) > rundamagespeed && sign(hsp) == sign(yearnedhsp) && state == playerstates.normal)
 vulnerable = !(global.inv == 1 || (newstate != playerstates.launched && (state == playerstates.dash || state == playerstates.slide || state == playerstates.stomp || newstate == playerstates.dash || newstate == playerstates.slide || newstate == playerstates.stomp || runattack || ( (state == playerstates.bounce || newstate == playerstates.bounce) && char == "C")) ))
-if (vulnerable) && (grounded)
-	global.combo = 0
 if (runattack)
 	runanimtimer++
 else

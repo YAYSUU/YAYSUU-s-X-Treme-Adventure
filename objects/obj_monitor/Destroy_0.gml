@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 instance_create_depth(x,y,depth,obj_explode)
+global.combometer = 200
 global.itempopupdepth--
 if self.id=obj_fringlemonitor
 	return;

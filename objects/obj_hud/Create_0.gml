@@ -5,5 +5,6 @@ timer=0
 timebonus=1200
 comboshowtimer = 0
 showncombo = 0
+showncombobonus = 0
 showresults = false
-combosprite = spr_good
+combosprite = spr_lame

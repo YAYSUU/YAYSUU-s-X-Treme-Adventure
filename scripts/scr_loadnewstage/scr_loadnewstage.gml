@@ -9,6 +9,7 @@ function loadnewstage(lifes = 3, stage){
 	global.firstroom=true
 	global.coins=0
 	global.coingoal = 100
+	global.healgoal = 50
 	global.lives=lifes
 	global.mainplayer.state=playerstates.normal // Sorry. No fun allowed. You have to take the normal pills
 	loadroom(stage, loadtype.newlevel)

@@ -22,3 +22,5 @@ repeat (3)
 	}
 }
 global.scoreadd += 5
+if global.combo > 0
+	global.combometer+=10
