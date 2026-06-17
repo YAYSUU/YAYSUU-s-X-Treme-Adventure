@@ -47,7 +47,8 @@ if (global.inlevel && !global.inhub)
 			global.combometer=clamp(global.combometer-1,0,200)
 		else if (global.combometer <= 0)
 		{
-			showncombobonus=global.combo*50
+			if (global.combo>1)
+				showncombobonus=global.combo*50
 			global.combo=0
 			global.scoreadd+=showncombobonus
 		}
