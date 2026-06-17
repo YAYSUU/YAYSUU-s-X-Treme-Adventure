@@ -26,11 +26,11 @@ if (global.inlevel && !global.inhub)
 	}
 	if (global.combo != 0)
 	{
-		if (global.combo < 1)
+		if (global.combo = 1)
 			combosprite = spr_lame
-		else if (global.combo > 1) && (global.combo < 3)
+		else if (global.combo > 1) && (global.combo <= 3)
 			combosprite = spr_good
-		else if (global.combo > 3) && (global.combo < 5)
+		else if (global.combo > 3) && (global.combo <= 5)
 			combosprite = spr_cool
 		else if (global.combo > 5)
 			combosprite = spr_xtreme
@@ -45,7 +45,7 @@ if (global.inlevel && !global.inhub)
 		showncombo = global.combo
 		if (global.combometer > 0)
 			global.combometer=clamp(global.combometer-1,0,200)
-		else if (global.combometer = 0)
+		else if (global.combometer <= 0)
 		{
 			showncombobonus=global.combo*50
 			global.combo=0
