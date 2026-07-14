@@ -5,7 +5,7 @@ if global.pause
 	if global.inputtype = 3 // WHOSE IDEA WAS THIS?! FORCED TOUCHSCREEN? ...Oh wait, it was me. This code is ancient.
 	{
 		draw_set_color(c_black) // fallback black screen
-		draw_rectangle(0,0,640,480,false)
+		draw_rectangle(0,0,display_get_gui_width,display_get_gui_height,false)
 		draw_set_color(c_white)
 		draw_sprite(pausespr,0,0,0)
 		draw_set_alpha(0.5)
@@ -33,7 +33,7 @@ if global.pause
 	{
 		draw_set_valign(fa_top)
 		draw_set_color(c_black) // fallback black screen
-		draw_rectangle(0,0,640,480,false)
+		draw_rectangle(0,0,display_get_gui_width,display_get_gui_height,false)
 		draw_set_color(c_white)
 		draw_sprite(pausespr,0,0,0)
 		draw_set_alpha(0.5)
