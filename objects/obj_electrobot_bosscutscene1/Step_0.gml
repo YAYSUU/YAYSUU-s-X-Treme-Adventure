@@ -8,18 +8,18 @@ if global.cutscenestate=2 && !audio_is_playing(snd_elecboss2vo)
 {
 	global.cutscenestate=3
 	if global.char="Y"
-		sayvoiceline(snd_elecboss3vo_y,"Huh? What the... You must have something to do with the weird deeds goin' on around here!","purple","YAYSUU")
+		sayvoiceline(snd_elecboss3vo_y,"Huh? What the... You must have something to do with the weird deeds goin' on around here!","white","YAYSUU")
 	else if global.char="T"
-		sayvoiceline(snd_elecboss3vo_t,"So. What in the world are YOU supposed to be?","orange","Teddy")
+		sayvoiceline(snd_elecboss3vo_t,"So. What in the world are YOU supposed to be?","white","Teddy")
 	sprite_index=spr_electrobot_idle
 }
 if global.cutscenestate=4 && !audio_is_playing(snd_elecboss4vo_y) && !audio_is_playing(snd_elecboss4vo_t)
 {
 	global.cutscenestate=5
 	if global.char="Y"
-		sayvoiceline(snd_elecboss5vo_y,"Immediate elimination, huh? Well, you'll have to BEAT ME FIRST!","purple","YAYSUU")
+		sayvoiceline(snd_elecboss5vo_y,"Immediate elimination, huh? Well, you'll have to BEAT ME FIRST!","white","YAYSUU")
 	else if global.char="T"
-		sayvoiceline(snd_elecboss5vo_t,"Elimination by... proxy?","orange","Teddy")
+		sayvoiceline(snd_elecboss5vo_t,"Elimination by... proxy?","white","Teddy")
 	sprite_index=spr_electrobot_idle
 }
 if global.cutscenestate=6 && global.char="T"

@@ -9,28 +9,13 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Knock knock...)"
-				color="white"
-				dialoguesound=snd_knockknock
-				playaudiosingle=true
-			}
+			saydialogue("(Knock knock...)","white",,snd_knockknock,true)
 			break;
 			case 2:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="lalalalala i love this manor!!! ^w^ really helps appease The Demons :3"
-				color="pink"
-				name="???"
-			}
+			saydialogue("lalalalala i love this manor!!! ^w^ really helps appease The Demons :3","pink","???")
 			break;
 			case 3:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(They seem content. Best not to disturb...)"
-				color="white"
-			}
+			saydialogue("(They seem content. Best not to disturb...)")
 			break;
 			case 4:
 			talking=false

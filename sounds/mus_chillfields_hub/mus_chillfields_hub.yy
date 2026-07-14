@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_househub",
+  "%Name":"mus_chillfields_hub",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":1,
   "compressionQuality":7,
   "conversionMode":0,
-  "duration":32.026127,
+  "duration":101.98204,
   "exportDir":"",
-  "name":"mus_househub",
+  "name":"mus_chillfields_hub",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":48000,
-  "soundFile":"mus_househub.mp3",
+  "soundFile":"mus_chillfields_hub.mp3",
   "volume":1.0,
 }

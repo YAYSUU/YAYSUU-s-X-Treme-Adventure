@@ -9,11 +9,7 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(It's a small, sleeping self-insert.)"
-				color="white"
-			}
+			saydialogue("(It's a small, sleeping self-insert.)")
 			break;
 			case 2:
 			if instance_exists(obj_robot1)
@@ -23,19 +19,11 @@ if talking && !talked
 				obj_player.newstate=playerstates.normal
 			}
 			else {
-				with instance_create_depth(0,0,depth,obj_dialoguebox)
-				{
-					text="(Seems you saved him from that annoying orange...)"
-					color="white"
-				}
+				saydialogue("(Seems you saved him from that annoying orange...)")
 			}
 			break;
 			case 3:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(He will surely dream of a finished game...)"
-				color="white"
-			}
+			saydialogue("(He will surely dream of a finished game...)")
 			break;
 			case 4:
 			talking=false
@@ -53,11 +41,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(The programmer takes a nap. Holdout! Programmer!)"
-				color="white"
-			}
+			saydialogue("(The programmer takes a nap. Holdout! Programmer!)")
 			break;
 			case 2:
 			talking=false

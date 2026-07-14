@@ -9,11 +9,7 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(This bunny seems to be lost...)"
-				color="white"
-			}
+			saydialogue("(This bunny seems to be lost...)")
 			break;
 			case 2:
 			talking=false
@@ -31,11 +27,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(They're looking at you...)"
-				color="white"
-			}
+			saydialogue("(They're looking at you...)")
 			break;
 			case 2:
 			talking=false

@@ -9,18 +9,10 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(It's a TV.)"
-				color="white"
-			}
+			saydialogue("(It's a TV.)")
 			break;
 			case 2:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Nothing good is on.)"
-				color="white"
-			}
+			saydialogue("(Nothing good is on.)")
 			break;
 			case 3:
 			talking=false
@@ -38,11 +30,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Upon closer inspection, there seems to be a burned-in image of a... skeleton with a top-hat?)"
-				color="white"
-			}
+			saydialogue("(Upon closer inspection, there seems to be a burned-in image of a... skeleton with a top-hat?)")
 			break;
 			case 2:
 			talking=false

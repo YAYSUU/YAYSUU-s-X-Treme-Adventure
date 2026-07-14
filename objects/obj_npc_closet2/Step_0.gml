@@ -9,13 +9,9 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(It's slightly ajar...)"
-				color="white"
-			}
+			saydialogue("(It's slightly ajar...)")
 			break;
-			case 3:
+			case 2:
 			talking=false
 			talked=true
 			obj_player.newstate=playerstates.normal
@@ -31,11 +27,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Something's looking at you...)"
-				color="white"
-			}
+			saydialogue("(Something's looking at you...)")
 			break;
 			case 2:
 			talking=false

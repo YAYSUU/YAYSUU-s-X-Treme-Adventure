@@ -1,4 +1,4 @@
-global.currentsong=mus_househub
+global.currentsong=mus_chillfields_hub
 scr_windowtitle("Home Sweet Home!")
 global.timer = 0
 global.score = 0

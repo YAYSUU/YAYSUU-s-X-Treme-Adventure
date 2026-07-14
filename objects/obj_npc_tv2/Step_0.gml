@@ -9,11 +9,7 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Static.)"
-				color="white"
-			}
+			saydialogue("(Static.)")
 			break;
 			case 2:
 			talking=false
@@ -31,11 +27,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(It's not plugged in...?)"
-				color="white"
-			}
+			saydialogue("(It's not plugged in...?)")
 			break;
 			case 2:
 			talking=false

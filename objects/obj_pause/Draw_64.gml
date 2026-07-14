@@ -4,10 +4,10 @@ if global.pause
 {
 	if global.inputtype = 3 // WHOSE IDEA WAS THIS?! FORCED TOUCHSCREEN? ...Oh wait, it was me. This code is ancient.
 	{
-		if surface_exists(pausesurf)
-			draw_surface(pausesurf,0,0)
-		else
-			makepausesurf()
+		draw_set_color(c_black) // fallback black screen
+		draw_rectangle(0,0,640,480,false)
+		draw_set_color(c_white)
+		draw_sprite(pausespr,0,0,0)
 		draw_set_alpha(0.5)
 		draw_sprite_tiled(spr_thisisntthelvlselectbg,0,scroll,scroll)
 		draw_set_alpha(1)
@@ -32,10 +32,10 @@ if global.pause
 	else
 	{
 		draw_set_valign(fa_top)
-		if surface_exists(pausesurf)
-			draw_surface(pausesurf,0,0)
-		else
-			makepausesurf() // if you toggle fullscreen while pausing, objects disappear. OH WELL.
+		draw_set_color(c_black) // fallback black screen
+		draw_rectangle(0,0,640,480,false)
+		draw_set_color(c_white)
+		draw_sprite(pausespr,0,0,0)
 		draw_set_alpha(0.5)
 		draw_sprite_tiled(spr_thisisntthelvlselectbg,0,scroll,scroll)
 		draw_set_alpha(1)

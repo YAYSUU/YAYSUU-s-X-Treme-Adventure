@@ -9,20 +9,10 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name="Parker"
-				text="This cave used to be a gold-mine..."
-				color="white"
-			}
+			saydialogue("This cave used to be a gold-mine...","white","Parker")
 			break;
 			case 2:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name="Parker"
-				text="Now it's just a `s(hack hack) `urobofest."
-				color="white"
-			}
+			saydialogue("Now it's just a `s(hack hack) `urobofest.","white","Parker")
 			break;
 			case 3:
 			talking=false
@@ -40,12 +30,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name="Parker"
-				text="I `slove `umy job."
-				color="white"
-			}
+			saydialogue("I `slove `umy job.","white","Parker")
 			break;
 			case 2:
 			talking=false

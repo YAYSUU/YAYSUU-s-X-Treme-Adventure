@@ -16,11 +16,7 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		instance_deactivate_all(true)
 		instance_activate_object(obj_newmanager)
 		instance_activate_object(obj_fadeblack)
-		if surface_exists(pausesurf)
-			surface_copy(pausesurf,0,0,application_surface)
-		else {
-			makepausesurf()
-		}
+		pausespr=sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),false,false,0,0)
 	}
 	else
 	{
@@ -28,6 +24,7 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		audio_stop_sound(snd_paused)
 		audio_play_sound(snd_paused,1,false,global.sndvol)
 		instance_activate_all()
+		sprite_delete(pausespr)
 	}
 }
 

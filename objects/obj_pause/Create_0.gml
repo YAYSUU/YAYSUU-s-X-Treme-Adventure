@@ -6,4 +6,4 @@ scroll=0
 resumekey=false
 retrykey=false
 quitkey=false
-pausesurf=surface_create(640,480)
+pausespr=-1

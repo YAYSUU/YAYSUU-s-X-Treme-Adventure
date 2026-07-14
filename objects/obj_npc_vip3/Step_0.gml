@@ -9,28 +9,13 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Knock knock...)"
-				color="white"
-				dialoguesound=snd_knockknock
-				playaudiosingle=true
-			}
+			saydialogue("(Knock knock...)","white",,snd_knockknock,true)
 			break;
 			case 2:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="hey, you! go away! i spent 5 bucks on this gamepass and i'm not gonna let you ruin it!"
-				color="yellow"
-				name="???"
-			}
+			saydialogue("hey, you! go away! i spent 5 bucks on this gamepass and i'm not gonna let you ruin it!","yellow","???")
 			break;
 			case 3:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Seems you can't go in...)"
-				color="white"
-			}
+			saydialogue("(Seems you can't go in...)")
 			break;
 			case 4:
 			talking=false
@@ -47,11 +32,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text="(Better get going!)"
-				color="white"
-			}
+			saydialogue("(Better get going!)")
 			break;
 			case 2:
 			talking=false

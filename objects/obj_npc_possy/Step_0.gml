@@ -9,28 +9,13 @@ if talking && !talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name="Possy"
-				text="Oh-oh... So mesmerizing..."
-				color="white"
-			}
+			saydialogue("Oh-oh... So mesmerizing...","white","Possy")
 			break;
 			case 2:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name="Possy"
-				text="Yet, so fleeting..."
-				color="white"
-			}
+			saydialogue("Yet, so fleeting...","white","Possy")
 			break;
 			case 3:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				name=global.char="Y" ? "YAYSUU" : "Teddy"
-				text=global.char="Y" ? "Ain't that the truth..." : "...whatever."
-				color="white"
-			}
+			saydialogue(global.char="Y"?"Ain't that the truth...":"...whatever.","white",global.char="Y"?"YAYSUU":"Teddy")
 			break;
 			case 4:
 			talking=false
@@ -48,11 +33,7 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
-			{
-				text=global.char="Y" ? "(You thought about sitting down, but you've got places to be.)" : "(No time for playing around!)"
-				color="white"
-			}
+			saydialogue(global.char="Y"?"You thought about sitting down, but you've got places to be.)":"(No time for playing around!)")
 			break;
 			case 2:
 			talking=false
