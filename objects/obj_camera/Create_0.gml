@@ -3,6 +3,7 @@
 voffset = 0
 vshakeoffset = 0
 vwobble = -1
+vwobbletimer = 0
 forwardside = 1
 intendedx = 0
 maxvarience = 96

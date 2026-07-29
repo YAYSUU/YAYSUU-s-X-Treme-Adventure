@@ -6,6 +6,8 @@ var p2prevaxislh = p2axislh
 var p2prevaxislv = p2axislv
 p2axislh = gamepad_axis_value(global.p2_controlslot,gp_axislh)
 p2axislv = gamepad_axis_value(global.p2_controlslot,gp_axislv)
+var prevfullscreen = fullscreen 
+fullscreen = window_get_fullscreen()
 
 if (global.inputtype != 3)
 {
@@ -130,9 +132,9 @@ else
 global.globaltimer++
 if (windowtimer > 0)
 	windowtimer--
-if !window_get_fullscreen() && (!(window_get_width()=640*global.screenscale) || (inwidescreen() && !(window_get_width()=640*global.screenscale*2)))
+if (!fullscreen && prevfullscreen) || (inwidescreen() && !(window_get_width()=640*global.screenscale*2))
 {
-	window_set_size(640*global.screenscale*(global.splitscreen*2),480*global.screenscale)
+	window_set_size(640*global.screenscale*(inwidescreen()*2),480*global.screenscale)
 	window_center()
 }
 if (windowtimer < 1 || newwindowname != windowname)

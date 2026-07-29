@@ -19,6 +19,7 @@ axislh = gamepad_axis_value(global.p1_controlslot,gp_axislh)
 axislv = gamepad_axis_value(global.p1_controlslot,gp_axislv)
 p2axislh = gamepad_axis_value(global.p2_controlslot,gp_axislh)
 p2axislv = gamepad_axis_value(global.p2_controlslot,gp_axislv)
+fullscreen = window_get_fullscreen()
 global.char = "Y"
 global.p2char = "T" // SO LONG, USELESS FUNCTIONS!
 global.currentsong = -1

@@ -72,12 +72,17 @@ if (!focusonpoint)
 	actualcamx += speedoffset
 }
 
-if global.screenshake
-	vwobble = (-vwobble)
-else
-	vwobble=0
-if vshakeoffset > 0
-	vshakeoffset--
+if vwobbletimer<2
+{
+	vwobbletimer++
+}
+else if vwobbletimer=2
+{
+	if vshakeoffset>0
+		vshakeoffset--
+	vwobble=-vwobble
+	vwobbletimer=0
+}
 var shakey = vshakeoffset * vwobble
 actualcamx = round(actualcamx)
 actualcamy = round(actualcamy)
