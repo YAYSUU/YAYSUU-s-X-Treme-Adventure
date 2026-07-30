@@ -31,6 +31,8 @@ inwater = place_meeting(x, y, obj_water)
 move = (key_right - key_left)
 if (move != 0 && !(global.skibispin && !grounded))
 	facingdirection = move
+if (runcharging && !key_dash)
+	move = facingdirection
 if place_meeting(x, y, obj_lava) && state!=playerstates.dead
 {
 	if !isotherplayer
@@ -98,11 +100,11 @@ if (state != playerstates.hurt && state != playerstates.dead && state != players
 {
 	if (state == playerstates.crouch || state == playerstates.inactive || state == playerstates.win)
 		wsp = 0
-	else if (key_run && !(state == playerstates.stomp && char == "T"))
+	else if (key_dash && !(state == playerstates.stomp && char == "T"))
 		wsp = runspeed
 	else
 		wsp = walkspeed
-	if ((key_run && !key_down) || (key_run && (state=playerstates.stomp || state=playerstates.bounce))) && global.p1_autorun
+	if ((key_dash && !key_down) || (key_dash && (state=playerstates.stomp || state=playerstates.bounce))) && global.char="T" && ((!issecondplayer && global.p1_autorun) || (issecondplayer && global.p2_autorun))
 		yearnedhsp = facingdirection * wsp
 	else
 		yearnedhsp = move * wsp
@@ -111,9 +113,12 @@ if (state != playerstates.hurt && state != playerstates.dead && state != players
 if (grounded || state == playerstates.golfstop)
 {
 	dshed = false
-	djump = true // now YAYSUU can djump!
+	jumpd = false
+	djump = global.char="T" // NOT ANYMORE!! GET YOUR OWN GIMMICK!
 	lastwall = 0
 }
+if (!grounded && !jumpd)
+	djump = true
 
 var candodashdo = (abs(hsp) <= runspeed) && !amiwalled(hsp)
 
@@ -135,7 +140,7 @@ if (candodashdo)
 }
 
 //airdash
-if ((!grounded) && key_dashp && (state == playerstates.normal || state == playerstates.bounce || state == playerstates.stomp) && newstate == state && !dshed && candodashdo && char != "C")
+if ((!grounded) && key_jumpp && !djump && (state == playerstates.normal || state == playerstates.bounce || state == playerstates.stomp) && newstate == state && !dshed && candodashdo && char != "T")
 {
 	if (global.skibispin)
 	{
@@ -155,15 +160,11 @@ if ((!grounded) && key_dashp && (state == playerstates.normal || state == player
 	newstate = playerstates.dash
     audio_play_sound(snd_airdash, 1, false, global.sndvol)
 }
-if state == playerstates.dash && char = "T"
-{
-	vsp = 0 // Sonic 06 my behated
-}
 if (state == playerstates.dash && newstate == state && grounded)
 	newstate = playerstates.normal
 
 //sliiide to the left! sliiide to the right! criss-cross! criss-cross! cha cha real smooth~ *ragdoll noises*
-if (grounded && ((abs(hsp) > walkspeed && key_downp) || key_dashp) && (state == playerstates.normal || state == playerstates.crouch) && newstate == state && candodashdo)
+if (grounded && ((abs(hsp) > walkspeed && key_downp) || key_dashp && key_down) && (state == playerstates.normal || state == playerstates.crouch) && newstate == state && candodashdo)
 {
     hsp = dashboost * facingdirection
 	newstate = playerstates.slide
@@ -206,7 +207,7 @@ else if (state == playerstates.bounce && newstate == state)
 }
 
 //dash run
-if (key_runp && !key_down && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char != "C" && !inwater)
+if (key_dashp && !key_down && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char = "T" && !inwater)
 {
 	yearnedhsp = facingdirection * runspeed
 	if (abs(hsp) < (yearnedhsp) || sign(hsp) != sign(yearnedhsp)) //you will not slow down if you start a run
@@ -220,7 +221,35 @@ if (key_runp && !key_down && state == playerstates.normal && newstate == state &
 		image_blend = other.whooshcolor
 	}
 }
-
+//rev roll
+if (key_dash && !key_down && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char = "Y" && !inwater && grounded)
+{
+	if (key_dashp) || (grounded && !prevgrounded)
+		audio_play_sound(snd_vroom,1,false,global.sndvol)
+	yearnedhsp = 0
+	runcharging = true
+	if runcharge<30
+		runcharge++
+	sprite_index=playersprites[playersprite.run]
+}
+else if (!key_dash && key_prevdash && runcharge>0 && grounded && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char = "Y" && !inwater)
+{
+	audio_stop_sound(snd_vroom)
+	hsp = dashboost * facingdirection * (runcharge/30)
+	runcharge=15
+	audio_play_sound(snd_dashpad, 1, false, global.sndvol)
+	with (instance_create_depth(x, y, depth + 1, obj_animatedeffect))
+	{
+		image_xscale = other.facingdirection
+		sprite_index = spr_runwhoosh
+		fade = true
+		image_blend = other.whooshcolor
+	}
+}
+else if runcharging && abs(hsp)<=wsp
+{
+	runcharging = false
+}	
 //crouching
 var forcecrouch = false
 var savedmask = mask_index
@@ -257,7 +286,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 
 var canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap)
 // jumping
-if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && !forcecrouch)
+if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && !forcecrouch && !(runcharging && key_dash))
 {
 	if (canwalljump) // WALL JUMP
 	{
@@ -277,9 +306,10 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 		if (inwater)
 			vsp = wdjmp
 		else
-			vsp = char="T" ? djmp : djmp*3/4
+			vsp = djmp
 		audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 		djump = false
+		jumpd = true
 		newstate = playerstates.normal
 		image_index = 0
 		sprite_index = playersprites[playersprite.bounce]
@@ -290,15 +320,9 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			vsp = wjmp
 		else
 			vsp = jmp
-		if (key_run) && (char = "Y")
-		{
-			audio_play_sound(snd_dashpad, 1, false, global.sndvol*3/4,0,1.2)
-			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
-			hsp = dashboost * facingdirection // YAHOO!
-		}
-		else
-			audio_play_sound(snd_jump, 1, false, global.sndvol)
+		audio_play_sound(snd_jump, 1, false, global.sndvol)
 		grounded = false
+		jumpd = true
 		prevgrounded = false
 		slopey = false
 		prevslopey = false
@@ -534,9 +558,9 @@ if (state != playerstates.golfstop && state != playerstates.dead && state != pla
 	if (abs(yearnedhsp - hsp) < accel)
 		hsp = yearnedhsp
 	else if (yearnedhsp > hsp)
-		hsp += accel
+		hsp += accel * (runcharging?0.6:1)
 	else if (yearnedhsp < hsp)
-		hsp -= accel
+		hsp -= accel * (runcharging?0.6:1)
 }
 
 //set mask
@@ -596,7 +620,7 @@ if (state == playerstates.hangglide)
 if (state == playerstates.debug)
 {
 	image_xscale = 1
-	if (key_run)
+	if (key_dash)
 	{
 		hsp = move * 20
 		vsp = (key_down - key_up) * 20
@@ -931,14 +955,14 @@ switch (state)
 				else
 					newsprite = playersprites[playersprite.brake]
 			}
-			else if (abs(hsp) < yearnaccel)
+			else if (abs(hsp) < yearnaccel && !runcharging)
 			{
 				if (idletime > 600)
 					newsprite = playersprites[playersprite.wait]
 				else
 					newsprite = playersprites[playersprite.idle]
 			}
-			else if (abs(hsp) > walkspeed)
+			else if (abs(hsp) > walkspeed) || (runcharging)
 				newsprite = playersprites[playersprite.run]
 			else
 				newsprite = playersprites[playersprite.walk]
@@ -1057,7 +1081,7 @@ if grounded && !prevgrounded && state=playerstates.normal
 	audio_play_sound(snd_foot,1,false,global.sndvol,0,random_range(1,1.2))
 if (!audio_exists(runningsound))
 	runningsound = audio_play_sound(snd_run, 1, true, global.sndvol)
-if (sprite_index == playersprites[playersprite.run])
+if (sprite_index == playersprites[playersprite.run] && !(key_dash && global.char="Y"))
 {
 	if audio_is_paused(runningsound)
 		audio_resume_sound(runningsound)

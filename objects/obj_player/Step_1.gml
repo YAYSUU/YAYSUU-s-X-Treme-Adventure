@@ -4,6 +4,7 @@ if real(self.id) != global.otherplayer && isotherplayer // anti mitosis
 {
 	instance_destroy()
 }
+key_prevdash = key_dash
 showarrow = false // why is this here
 //to stop showing arrow obviously
 if !instance_exists(obj_stageclear)

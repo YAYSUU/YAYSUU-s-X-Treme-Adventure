@@ -50,6 +50,8 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 				whooshcolor = #C2C3C7
 			else
 				whooshcolor = #FFF1E8
+			global.combo = 0
+			global.combometer = 0
 			if global.levelloadtype == loadtype.newlevel
 			{
 				global.checkpoint = false
@@ -79,8 +81,10 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			x = obj_spawn_p2.x
 			y = obj_spawn_p2.y
 		}
-		x = obj_spawn.x // removed x offset because teddy gets stuck in walls
-		y = obj_spawn.y
+		else { // Is he stupid?
+			x = obj_spawn.x
+			y = obj_spawn.y
+		}
 	}
 	if !isotherplayer
 	{
