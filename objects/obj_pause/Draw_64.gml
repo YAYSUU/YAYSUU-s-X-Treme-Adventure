@@ -36,6 +36,12 @@ if global.pause
 		draw_rectangle(0,0,display_get_gui_width,display_get_gui_height,false)
 		draw_set_color(c_white)
 		draw_sprite(pausespr,0,0,0)
+		if inwidescreen()
+		{
+			draw_set_color(c_black)
+			draw_line(640,0,640,480)
+			draw_line(641,0,641,480)
+		}
 		draw_set_alpha(0.5)
 		draw_sprite_tiled(spr_thisisntthelvlselectbg,0,scroll,scroll)
 		draw_set_alpha(1)

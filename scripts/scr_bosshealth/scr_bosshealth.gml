@@ -11,11 +11,11 @@ function boss_health_hearts(argument0) {
 	for (var i = 0; i< global.maxbosshp; i++) {
 		if i<=2
 		{
-			draw_sprite_ext(argument0,1,512+(xoffset*i),64,1,1,0,c_black,1);
+			draw_sprite_ext(argument0,1,448+(xoffset*i),32,1,1,0,c_black,1);
 		}
 		if i>2
 		{
-			draw_sprite_ext(argument0,1,512+(xoffset*i-96),96,1,1,0,c_black,1);
+			draw_sprite_ext(argument0,1,448+(xoffset*i-96),64,1,1,0,c_black,1);
 		}
 	}
 
@@ -23,11 +23,11 @@ function boss_health_hearts(argument0) {
 	for (var i = 0; i< global.bosshp; i++) {
 		if i<=2
 		{
-			draw_sprite(argument0,1,512+(xoffset*i),64);
+			draw_sprite(argument0,1,448+(xoffset*i),32);
 		}
 		if i>2
 		{
-			draw_sprite(argument0,1,512+(xoffset*i-96),96);
+			draw_sprite(argument0,1,448+(xoffset*i-96),64);
 		}
 	}
 
