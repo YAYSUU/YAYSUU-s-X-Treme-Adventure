@@ -1,17 +1,22 @@
  /// @description Insert description here
 // You can write your code in this editor
-image_xscale=clamp(image_xscale,1,2)
-image_yscale=clamp(image_yscale,1,2)
-image_alpha=clamp(image_alpha,0,1)
-if image_xscale>1
+image_xscale=clamp(image_xscale-0.01,1,2)
+image_yscale=clamp(image_yscale-0.01,1,2)
+image_alpha=clamp(image_alpha+0.05,0,1)
+if audio_sound_get_track_position(global.currentsongplay)>=4.58
 {
-	image_xscale-=0.01
+	faderect=true
+	faderectalpha=clamp(faderectalpha+0.05,0,1)
 }
-if image_yscale>1
+if audio_sound_get_track_position(global.currentsongplay)>=5.34 && !whiter
 {
-	image_yscale-=0.01
+	white=true
+	whitealpha=clamp(whitealpha+0.1,0,1)
 }
-if image_alpha<1
+if whitealpha=1
 {
-	image_alpha+=0.05
+	white=false
+	whiter=true
 }
+if !white
+	whitealpha=clamp(whitealpha-0.1,0,1)

@@ -1,1 +1,0 @@
-scr_windowtitle("HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA HA")

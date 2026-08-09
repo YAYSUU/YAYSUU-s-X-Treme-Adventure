@@ -3,11 +3,11 @@
 if room=room_fclogo
 {
 	sprite_index=spr_fclogo
-	jingle=mus_fclogo
-	audio_play_sound(jingle,1,false,global.musvol)
+	nextroom=room_sagelogo
 }
-if room=room_idalogo
+if room=room_sagelogo
 {
-	sprite_index=spr_idalogo
-	jingle=mus_idalogo
+	sprite_index=spr_sagelogo_bg
+	image_alpha=0
+	nextroom=room_titlescreen
 }

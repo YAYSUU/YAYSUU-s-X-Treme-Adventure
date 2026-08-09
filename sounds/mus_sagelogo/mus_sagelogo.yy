@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_idalogo",
+  "%Name":"mus_sagelogo",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":1,
   "compressionQuality":0,
   "conversionMode":0,
-  "duration":2.5365534,
+  "duration":7.68,
   "exportDir":"",
-  "name":"mus_idalogo",
+  "name":"mus_sagelogo",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_idalogo.mp3",
+  "soundFile":"mus_sagelogo.mp3",
   "volume":1.0,
 }
