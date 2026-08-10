@@ -52,6 +52,8 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 				whooshcolor = #FFF1E8
 			if global.levelloadtype == loadtype.newlevel
 			{
+				global.combo = 0
+				global.combometer = 0
 				global.checkpoint = false
 				if issecondplayer != isotherplayer
 				{

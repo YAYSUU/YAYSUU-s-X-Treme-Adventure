@@ -273,7 +273,7 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 		if (inwater)
 			vsp = wdjmp
 		else
-			vsp = char="T" ? djmp : djmp*3/4
+			vsp = char="T" ? djmp : djmp*3.5/4
 		audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 		djump = false
 		newstate = playerstates.normal
