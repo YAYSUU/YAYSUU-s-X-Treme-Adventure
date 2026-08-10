@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"snd_yaysuuselect",
   "audioGroupId":{
-    "name":"ambience",
-    "path":"audiogroups/ambience",
+    "name":"voicelines",
+    "path":"audiogroups/voicelines",
   },
   "bitDepth":1,
   "channelFormat":0,

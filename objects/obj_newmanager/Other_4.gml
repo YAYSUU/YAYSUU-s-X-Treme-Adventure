@@ -13,7 +13,7 @@ else if !audio_is_playing(global.currentsong)
 	}
 }
 if (global.ambience == -1) || !(global.inlevel)
-	audio_stop_sound(global.ambience)
+	audio_group_stop_all(ambience)
 else if !audio_is_playing(global.ambience)
 {
 	audio_group_stop_all(ambience)

@@ -6,11 +6,8 @@ if touchingplayer(x, y)
 	{
 		candamage = false
 		instance_destroy()
-		if (!small)
-		{
-			with (global.firstplayertouch)
-				scr_player_trybounce(other.dashbouncy)
-		}
+		with (global.firstplayertouch)
+			scr_player_trybounce(other.dashbouncy)
 	}
 	else if (global.secondplayertouch != noone)
 	{
