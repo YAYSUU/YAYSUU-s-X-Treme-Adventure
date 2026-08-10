@@ -1,3 +1,4 @@
+
 if (global.currentsong == -1)
 	audio_stop_all()
 else if !audio_is_playing(global.currentsong)
@@ -10,6 +11,13 @@ else if !audio_is_playing(global.currentsong)
 	else {
 		global.currentsongplay = audio_play_sound(global.currentsong, 1, true, global.musvol);
 	}
+}
+if (global.ambience == -1) || !(global.inlevel)
+	audio_stop_sound(global.ambience)
+else if !audio_is_playing(global.ambience)
+{
+	audio_group_stop_all(ambience)
+	audio_play_sound(global.ambience, 1, true, global.sndvol);
 }
 global.itempopupdepth = 100
 

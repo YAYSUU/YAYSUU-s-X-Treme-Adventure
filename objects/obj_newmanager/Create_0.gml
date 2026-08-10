@@ -24,6 +24,7 @@ global.char = "Y"
 global.p2char = "T" // SO LONG, USELESS FUNCTIONS!
 global.currentsong = -1
 global.currentsongplay = -1
+global.ambience = -1
 global.cutscenestate = 0
 global.jumpscare = false
 global.debugmessage = ""

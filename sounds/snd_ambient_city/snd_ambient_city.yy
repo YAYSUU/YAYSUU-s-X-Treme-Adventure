@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_yaysuuselect",
+  "%Name":"snd_ambient_city",
   "audioGroupId":{
     "name":"ambience",
     "path":"audiogroups/ambience",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.7768254,
+  "duration":85.64594,
   "exportDir":"",
-  "name":"snd_yaysuuselect",
+  "name":"snd_ambient_city",
   "parent":{
-    "name":"stagevo",
-    "path":"folders/Sounds/stagevo.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_yaysuuselect.mp3",
+  "soundFile":"snd_ambient_city.mp3",
   "volume":1.0,
 }
