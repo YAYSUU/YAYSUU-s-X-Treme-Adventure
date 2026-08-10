@@ -526,6 +526,7 @@
     {"name":"spr_chillfieldsbossscroll","order":3,"path":"sprites/spr_chillfieldsbossscroll/spr_chillfieldsbossscroll.yy",},
     {"name":"spr_chillfieldscavebg_1","order":3,"path":"sprites/spr_chillfieldscavebg_1/spr_chillfieldscavebg_1.yy",},
     {"name":"spr_chillfieldscavebg_2","order":4,"path":"sprites/spr_chillfieldscavebg_2/spr_chillfieldscavebg_2.yy",},
+    {"name":"spr_chillhills_dark","order":20,"path":"sprites/spr_chillhills_dark/spr_chillhills_dark.yy",},
     {"name":"spr_chillhills","order":5,"path":"sprites/spr_chillhills/spr_chillhills.yy",},
     {"name":"spr_chrselectbg","order":7,"path":"sprites/spr_chrselectbg/spr_chrselectbg.yy",},
     {"name":"spr_closet_spooky","order":20,"path":"sprites/spr_closet_spooky/spr_closet_spooky.yy",},

@@ -9,5 +9,6 @@ if (global.showcollision)
 	draw_text(640,80,string(y))
 	draw_text(640,96,string(obj_player.x))
 	draw_text(640,112,string(obj_player.y))
+	draw_text(640,128,string(testvar))
 	draw_set_halign(fa_left)
 }
