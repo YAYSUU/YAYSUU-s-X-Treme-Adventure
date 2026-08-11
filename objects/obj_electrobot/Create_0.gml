@@ -19,3 +19,4 @@ slowdown = 0
 attackamount = 3
 prevattack = state
 idledamagedelay = 0
+small = false
