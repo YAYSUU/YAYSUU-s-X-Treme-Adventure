@@ -25,7 +25,7 @@ if (touchingplayer(x, y)) && !global.jumpscare
 			global.secondplayertouch.ouchies = true
 			global.secondplayertouch.deathies = true
 		}
-		if global.firstplayertouch == global.mainplayer
+		if global.firstplayertouch == global.mainplayer && !inwidescreen()
 		{
 			global.jumpscare = true
 			global.injumpscare = true;
