@@ -5,3 +5,4 @@
 event_inherited();
 hitboxcolor = c_blue
 whichplayerispurpeguymurderer = noone
+small = false
