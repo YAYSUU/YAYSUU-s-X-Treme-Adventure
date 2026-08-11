@@ -16,7 +16,7 @@ function collisionupdate_rubble(player){
 			}
 			else if (player.state == playerstates.bounce)
 			{
-				hascollision = false
+				hascollision = !(player.bbox_right > bbox_left && player.bbox_left < bbox_right && player.bbox_top > bbox_bottom)
 				checkoffsetx = player.hsp * 2
 				checkoffsety = player.vsp * 2
 			}
