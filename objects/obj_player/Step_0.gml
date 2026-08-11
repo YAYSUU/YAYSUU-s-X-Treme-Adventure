@@ -22,7 +22,7 @@ if (!global.inlevel) || (global.inlevel && isotherplayer && !global.multiplayer)
 
 if (inbackground)
 {
-	if (!place_meeting(x, y, obj_backplate) && !place_meeting(x, y, obj_backdoor))
+	if (!place_meeting(x, y, obj_backplate) && !place_meeting(x, y, obj_backdoor) && !place_meeting(x, y, obj_backsolid) && grounded)
 		inbackground = false
 }
 

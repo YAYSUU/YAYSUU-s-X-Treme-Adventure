@@ -1,0 +1,1 @@
+myghost.attack = (touchingplayer(x, y, false))
