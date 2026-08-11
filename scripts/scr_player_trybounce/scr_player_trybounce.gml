@@ -11,7 +11,7 @@ function scr_player_dobounce(issmall){
 	if (abs(hsp) > walkspeed)
 		vsp = bounceheightbigger
 	else
-	vsp = bounceheight
+		vsp = bounceheight
 	audio_play_sound(snd_stompland, 1, false, global.sndvol*(!issmall))
 	audio_play_sound(snd_bounce, 1, false, global.sndvol)
 	grounded = false
