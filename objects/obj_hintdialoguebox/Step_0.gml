@@ -16,7 +16,7 @@ if (!finished)
         else if (string_char_at(text, progress) == ",") && string_char_at(text, progress+1) == " "
             progressdelay = 10;
         else
-            progressdelay = 1;
+            progressdelay = 0;
         
         if (progress >= string_length(text))
         {
