@@ -12,12 +12,12 @@ else if !audio_is_playing(global.currentsong)
 		global.currentsongplay = audio_play_sound(global.currentsong, 1, true, global.musvol);
 	}
 }
-if (global.ambience == -1) || !(global.inlevel)
+if (global.ambiencesound == -1) || !(global.inlevel)
 	audio_group_stop_all(ambience)
-else if !audio_is_playing(global.ambience)
+else if !audio_is_playing(global.ambiencesound)
 {
 	audio_group_stop_all(ambience)
-	audio_play_sound(global.ambience, 1, true, global.sndvol);
+	audio_play_sound(global.ambiencesound, 1, true, global.sndvol);
 }
 global.itempopupdepth = 100
 

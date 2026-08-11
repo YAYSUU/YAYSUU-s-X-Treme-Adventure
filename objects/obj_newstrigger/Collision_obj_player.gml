@@ -2,4 +2,4 @@
 // You can write your code in this editor
 instance_destroy()
 audio_play_sound(snd_siren,1,false,global.sndvol)
-instance_create_depth(0,0,depth,obj_uncanny_newsticker)
+instance_create_depth(0,0,0,obj_uncanny_newsticker)
