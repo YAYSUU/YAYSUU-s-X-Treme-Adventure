@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if !instance_exists(obj_stageclear)  
 {
-	if touchingplayer(x, y) && global.mainplayer.grounded && !(instance_exists(obj_dialoguebox))
+	if touchingplayer(x, y) && global.mainplayer.grounded && !(instance_exists(obj_dialoguebox)) && (!global.trial) && (!global.arcade)
 	{
 		global.mainplayer.showarrow = true
 		if (global.mainplayer.key_upp) && talking=false
