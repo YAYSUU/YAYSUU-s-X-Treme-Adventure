@@ -17,66 +17,66 @@ if keyboard_check_pressed(vk_enter)
 	switch keyboard_string
 	{
 		case "opensalami":
-		if global.mobile
-		{
-			audio_play_sound(snd_nicetry,1,false,global.sndvol)
-			rewardstring="Yeah, you and what function keys?"
-			keyboard_string=""
-		}
-		else {
-			audio_play_sound(snd_confirm,1,false,global.sndvol)
-			rewardstring="Indev mode enabled! Use the FUNCTION KEYS!!"
-			global.indev = true
-			keyboard_string=""
-		}
-		break;
+			if global.mobile
+			{
+				audio_play_sound(snd_nicetry,1,false,global.sndvol)
+				rewardstring="Yeah, you and what function keys?"
+				keyboard_string=""
+			}
+			else {
+				audio_play_sound(snd_confirm,1,false,global.sndvol)
+				rewardstring="Indev mode enabled! Use the FUNCTION KEYS!!"
+				global.indev = true
+				keyboard_string=""
+			}
+			break;
 		case "skibiditoilet":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="Skibi spin enabled!"
-		global.skibispin = true
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="Skibi spin enabled!"
+			global.skibispin = true
+			keyboard_string=""
+			break;
 		case "bobcatblues":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="What could possibly go wrong?"
-		global.bobcat = true
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="What could possibly go wrong?"
+			global.bobcat = true
+			keyboard_string=""
+			break;
 		case "iamgod":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="Immortality achieved!"
-		global.godmode = true
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="Immortality achieved!"
+			global.godmode = true
+			keyboard_string=""
+			break;
 		case "gimmegimme":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="Extra stages unlocked!"
-		ini_open("savedata.ini")
-		ini_write_real("extras","extrastageunlock",true)
-		ini_close()
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="Extra stages unlocked!"
+			ini_open("savedata.ini")
+			ini_write_real("extras","extrastageunlock",true)
+			ini_close()
+			keyboard_string=""
+			break;
 		case "findher":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="Where is COTTON?"
-		loadroom(room_findher,loadtype.menu)
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="Where is COTTON?"
+			loadroom(room_findher,loadtype.menu)
+			keyboard_string=""
+			break;
 		case "jaspernap":
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		rewardstring="You can't see this text lalalalala"
-		loadroom(room_jasperror,loadtype.menu,true)
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			rewardstring="You can't see this text lalalalala"
+			loadroom(room_jasperror,loadtype.menu,true)
+			keyboard_string=""
+			break;
 		case "":
-		audio_play_sound(snd_nicetry,1,false,global.sndvol)
-		rewardstring="Please enter in a cheat."
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_nicetry,1,false,global.sndvol)
+			rewardstring="Please enter in a cheat."
+			keyboard_string=""
+			break;
 		default:
-		audio_play_sound(snd_nicetry,1,false,global.sndvol)
-		rewardstring=choose("WRONG!","NOPE!","I'm afraid not.","Nuh uh.","Don't feel like it.","Try again!","loud incorrect buzzer","You stupid!")
-		keyboard_string=""
-		break;
+			audio_play_sound(snd_nicetry,1,false,global.sndvol)
+			rewardstring=choose("WRONG!","NOPE!","I'm afraid not.","Nuh uh.","Don't feel like it.","Try again!","loud incorrect buzzer","You stupid!")
+			keyboard_string=""
+			break;
 	}
 }
