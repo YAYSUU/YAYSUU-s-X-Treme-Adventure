@@ -1,5 +1,5 @@
 myname = "BOUNS"
 myfunc = function()
 {
-    loadroom(room_extras, loadtype.menu)
+    loadroom(room_extrastages, loadtype.menu)
 }
