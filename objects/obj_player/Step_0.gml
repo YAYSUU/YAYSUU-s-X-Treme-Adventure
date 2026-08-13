@@ -546,25 +546,17 @@ else
 if (state == playerstates.hangglide)
 {
 	facingdirection = hangglidedir
-	visualrotation = clamp(visualrotation+(key_up-key_down)*(8-hsp)*0.5*hangglidedir,-30,30) // Sonic Rivals 2 my beloved
+	visualrotation = clamp(visualrotation+(key_up-key_down)*(8-abs(hsp))*0.5*hangglidedir,-45,30) // Sonic Rivals 2 my beloved
 	var yearnedvsp = (-visualrotation/4)*hangglidedir
 	if yearnedvsp>vsp
-	{
 		vsp+=0.5
-	}
 	else if yearnedvsp<vsp
-	{
 		vsp-=0.5
-	}
-	yearnedhsp = (facingdirection * 5) + (vsp * 0.5)
+	yearnedhsp = (facingdirection * 5)
 	if yearnedhsp>hsp
-	{
 		hsp+=0.5
-	}
-	if yearnedhsp<hsp
-	{
+	else if yearnedhsp<hsp
 		hsp-=0.5
-	}
 	if amiwalled(hsp)
 	{
 		if char="Y"
