@@ -68,6 +68,7 @@ if (global.key_menuaccept) && selected=false
 			image_speed=1
 			delay=60 
 			selected=true
+			global.extras = false
 			audio_play_sound(snd_confirm,1,false,global.sndvol)
 			break
 		case 2:
@@ -77,6 +78,7 @@ if (global.key_menuaccept) && selected=false
 			image_speed=1
 			delay=60 
 			selected=true
+			global.extras = false
 			audio_play_sound(snd_confirm,1,false,global.sndvol)
 			break
 		case 3:

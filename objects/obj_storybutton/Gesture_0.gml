@@ -9,4 +9,5 @@ obj_mainmenu_cursor.image_alpha=1
 obj_mainmenu_cursor.image_speed=1
 obj_mainmenu_cursor.delay=60 
 obj_mainmenu_cursor.selected=true
+global.extras = false
 audio_play_sound(snd_confirm,1,false,global.sndvol)

@@ -71,6 +71,7 @@ switch chos
 	{
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		global.trial=true
+		global.extras = true
 		loadroom(room_charselect,loadtype.menu)
 	}
 	else if global.key_menuaccept && !extrasunlock

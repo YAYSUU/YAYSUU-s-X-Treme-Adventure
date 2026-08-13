@@ -79,7 +79,7 @@ if (selected)
 				loadnewstage(savelives[charlife],currentstage)
 		}
 		else {
-			if global.prevroom=room_extrastages || global.prevroom=room_extras
+			if global.extras
 			{
 				loadroom(room_extrastages, loadtype.menu)
 			}
