@@ -116,7 +116,7 @@ if (grounded || state == playerstates.golfstop)
 }
 
 var candodashdo = (abs(hsp) <= runspeed) && !amiwalled(hsp)
-
+var canwalljump = false
 if (state != playerstates.dead && state != playerstates.inactive && state != playerstates.debug)
 {
 
@@ -251,7 +251,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 	}
 }
 
-var canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap)
+canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap)
 // jumping
 if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && !forcecrouch)
 {
@@ -479,7 +479,6 @@ if (state == playerstates.dead) && ((global.splitscreen && global.multiplayer) |
 			loadroom(room_gameover, loadtype.menu)
 	    else if !(global.inboss) { // come back my brother
 			event_perform(ev_other,ev_room_start)
-			var canwalljump = 0
 			if isotherplayer
 			{
 				global.p2hp = global.bobcat ? 1 : 3

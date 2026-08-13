@@ -57,7 +57,7 @@ global.quickmenu = false
 global.invertskin = false
 global.mobile = (os_type == os_android)
 global.multiplayer = false
-global.skin = 1
+global.skin = 0
 windowtimer = 0
 windowname = ""
 newwindowname = ""
