@@ -313,7 +313,10 @@ if (state == playerstates.golfstop && newstate == state)
 {
 	if (key_leftp) || (key_rightp) || (key_dashp)
 	{
+		if (!key_dashp)
+			facingdirection = key_rightp - key_leftp
 		hsp = airdashboost * facingdirection
+		vsp = -1
 		dshed = true
 		newstate = playerstates.dash
 		audio_play_sound(snd_airdash, 1, false, global.sndvol)
