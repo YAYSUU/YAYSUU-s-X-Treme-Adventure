@@ -95,4 +95,4 @@ char=isotherplayer ? global.p2char : global.char
 if (global.p2char == global.char)
 	scr_setupcharacter(char, 1)
 else
-	scr_setupcharacter(char, 0)
+	scr_setupcharacter(char, global.skin)

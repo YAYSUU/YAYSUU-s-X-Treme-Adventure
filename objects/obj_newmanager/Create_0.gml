@@ -55,11 +55,9 @@ global.bobcat = false
 global.godmode = false
 global.quickmenu = false
 global.invertskin = false
-if os_type=os_android
-	global.mobile = true
-else 
-	global.mobile = false
+global.mobile = (os_type == os_android)
 global.multiplayer = false
+global.skin = 1
 windowtimer = 0
 windowname = ""
 newwindowname = ""
