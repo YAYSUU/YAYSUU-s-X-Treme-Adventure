@@ -135,7 +135,7 @@ else if !instance_exists(obj_notification)
 	{
 		if !selected
 		{
-			if global.prevroom=room_extras || global.prevroom=room_extrastages
+			if global.extras
 			{
 				loadroom(room_extras, loadtype.menu)
 			}
