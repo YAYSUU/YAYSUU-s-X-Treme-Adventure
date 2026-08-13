@@ -8,3 +8,4 @@ deathobject = obj_explode
 dashbouncy = false
 if (!variable_instance_exists(self, "inbackground"))
 	inbackground = false
+canbounceatall = true

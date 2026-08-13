@@ -1,5 +1,5 @@
-myname = "ohio 2"
+myname = "mm1"
 myfunc = function()
 {
-    loadroom(room_chillfields_2, loadtype.newlevel)
+    loadroom(room_mysticmanor_1, loadtype.newlevel)
 }
