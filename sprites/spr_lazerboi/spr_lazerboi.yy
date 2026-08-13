@@ -295,8 +295,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_fromYOURhouse",
+    "path":"texturegroups/level_fromYOURhouse",
   },
   "type":0,
   "VTile":false,

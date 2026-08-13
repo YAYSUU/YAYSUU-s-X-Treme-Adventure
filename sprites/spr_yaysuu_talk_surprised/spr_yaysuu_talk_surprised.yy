@@ -85,8 +85,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"player_yaysuu",
+    "path":"texturegroups/player_yaysuu",
   },
   "type":0,
   "VTile":false,

@@ -1,1 +1,1 @@
-sprite_index = spr_secrettile_dev
+sprite_index = spr_secrettile_devimeanblack

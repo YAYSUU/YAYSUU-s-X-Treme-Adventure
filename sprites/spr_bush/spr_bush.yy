@@ -95,8 +95,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_chillfields",
+    "path":"texturegroups/level_chillfields",
   },
   "type":0,
   "VTile":false,

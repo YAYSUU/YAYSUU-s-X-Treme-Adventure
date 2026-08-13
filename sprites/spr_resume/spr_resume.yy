@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"mobieletelefoon",
+    "path":"texturegroups/mobieletelefoon",
   },
   "type":0,
   "VTile":false,

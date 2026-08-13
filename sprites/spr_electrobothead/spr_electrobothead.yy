@@ -89,8 +89,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"boss_electrobot",
+    "path":"texturegroups/boss_electrobot",
   },
   "type":0,
   "VTile":false,

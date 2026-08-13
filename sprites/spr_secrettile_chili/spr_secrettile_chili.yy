@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_chiliiiifields",
+    "path":"texturegroups/level_chiliiiifields",
   },
   "type":0,
   "VTile":false,
