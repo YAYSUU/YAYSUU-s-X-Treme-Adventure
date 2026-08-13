@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_chillhills_dark",
   "bboxMode":0,
-  "bbox_bottom":271,
-  "bbox_left":8,
-  "bbox_right":1064,
+  "bbox_bottom":512,
+  "bbox_left":13,
+  "bbox_right":1167,
   "bbox_top":122,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"c826ec2e-cbaa-40f2-b3df-7132a6fbedfd","name":"c826ec2e-cbaa-40f2-b3df-7132a6fbedfd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"abd020e5-b08a-4fa9-8509-64a7af3754eb","name":"abd020e5-b08a-4fa9-8509-64a7af3754eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":272,
+  "height":513,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"aa4d6323-a761-4d7a-9404-6b9142fca587","blendMode":0,"displayName":"default","isLocked":false,"name":"aa4d6323-a761-4d7a-9404-6b9142fca587","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"ee59f791-2cb2-4f20-b1d3-3d96c35f9b8f","blendMode":0,"displayName":"default","isLocked":false,"name":"ee59f791-2cb2-4f20-b1d3-3d96c35f9b8f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_chillhills_dark",
   "nineSlice":null,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c826ec2e-cbaa-40f2-b3df-7132a6fbedfd","path":"sprites/spr_chillhills_dark/spr_chillhills_dark.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"75e5d9f1-c1a9-4668-a0c1-96fcc4ebb0cb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"abd020e5-b08a-4fa9-8509-64a7af3754eb","path":"sprites/spr_chillhills_dark/spr_chillhills_dark.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"65c332bb-ac76-492b-a607-2156fda3c120","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -88,5 +88,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1068,
+  "width":1168,
 }

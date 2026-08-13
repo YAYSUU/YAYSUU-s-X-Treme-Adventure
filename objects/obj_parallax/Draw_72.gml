@@ -19,9 +19,9 @@ if layer_exists("layer2")
 }
 if layer_exists("layer1")
 {
-	layer_x("layer1", (xx/8))
+	layer_x("layer1", (xx/9))
 	if indoors
 		layer_y("layer1",yy)
 	else
-		layer_y("layer1",(yy/8)+(instance_exists(obj_parallaxh) ? obj_parallaxh.y/1.35 : obj_spawn.y/1.35))
+		layer_y("layer1",(yy/9)+(instance_exists(obj_parallaxh) ? obj_parallaxh.y/2 : obj_spawn.y/2)+200)
 }
