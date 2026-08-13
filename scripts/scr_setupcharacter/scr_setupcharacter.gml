@@ -58,6 +58,7 @@ function scr_setupcharacter(char, skin)
 			playersprites[playersprite.golfstop] = spr_yan_dance
 			playersprites[playersprite.lifeicon] = spr_yanlifeicon
 			playersprites[playersprite.lifemonitor] = spr_lifemonitor_yan
+			playersprites[playersprite.healthicon] = spr_lasaga
 		}
 		else
 		{

@@ -50,13 +50,12 @@ else if endtimer==0 && touched && !winning
 			audio_play_sound(mus_yaysuuwin,1,false,global.musvol)
 		}
 		audio_group_stop_all(voicelines)
-		if global.inboss
-		{
+		if global.skin == 1
+			audio_play_sound(snd_yanwin,1,false,global.sndvol*global.voicelines)
+		else if global.inboss
 			audio_play_sound(snd_yaysuuwinboss,1,false,global.sndvol*global.voicelines)
-		}
-		else {
+		else
 			audio_play_sound(snd_yaysuuwinstage,1,false,global.sndvol*global.voicelines)
-		}
 	}
 	else if whichplayer.char="T"
 	{

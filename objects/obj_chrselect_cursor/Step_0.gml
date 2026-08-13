@@ -123,7 +123,7 @@ else if !instance_exists(obj_notification)
 				audio_play_sound(snd_teddyselect,1,false,global.sndvol*global.voicelines)
 			}
 			with (global.mainplayer)
-				scr_setupcharacter(global.char, 0)
+				scr_setupcharacter(global.char, global.skin)
 		}
 	}
 	if ((global.p2_key_menuaccept || global.p2_key_jump) && !global.multiplayer && !global.mobile && (global.trial || global.arcade))
