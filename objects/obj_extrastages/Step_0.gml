@@ -76,7 +76,7 @@ if global.key_menuaccept
 {
 	audio_stop_all()
 	audio_play_sound(snd_confirm,1,false,global.sndvol)
-	loadnewstage(3, currentlevel)
+	loadnewstage(25, currentlevel)
 }
 else if global.key_menuquit
 {
