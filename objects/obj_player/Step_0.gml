@@ -31,7 +31,7 @@ inwater = place_meeting(x, y, obj_water)
 move = (key_right - key_left)
 if (move != 0 && !(global.skibispin && !grounded))
 	facingdirection = move
-if place_meeting(x, y, obj_lava) && state!=playerstates.dead
+if place_meeting(x, y, obj_lava) && state!=playerstates.dead && state!=playerstates.debug
 {
 	if !isotherplayer
 	{
@@ -599,9 +599,9 @@ if (state == playerstates.debug)
 		}
 		else if (key_dashp)
 		{
-			audio_play_sound(snd_balloonpop, 1, false, global.sndvol)
-			state = playerstates.normal
-			newstate = playerstates.normal
+			scr_debugmessage("deleting " + object_get_name(previousspawnedobject.object_index))
+			instance_destroy(previousspawnedobject)
+			previousspawnedobject = -1
 		}
 	}
 	else
@@ -621,6 +621,7 @@ if (state == playerstates.debug)
 			with (instance_create_depth(x, y, depth, selecteddebugobject))
 			{
 				//set default values for certain objects so that you can use them
+				scr_debugmessage("spawning " + object_get_name(object_index))
 				switch (object_index)
 				{
 					case obj_conveyor:
@@ -641,7 +642,10 @@ if (state == playerstates.debug)
 						break;
 					case obj_devnote:
 					case obj_inleveltext:
-						text = choose("i'm the grass man, oh man!", "lorem pissum", "random text!", "skee... hahaha")
+						text = choose("i'm the grass man, oh man!", "lorem pissum", "random text!", "skee... hahaha", "titty boob huge fuck,")
+						break;
+					case obj_debugmessage:
+						messagetext = choose("i'm the grass man, oh man!", "lorem pissum", "random text!", "skee... hahaha", "titty boob huge fuck,")
 						break;
 					case obj_hintnew:
 						hintsound = snd_hfail
@@ -653,6 +657,34 @@ if (state == playerstates.debug)
 					case obj_interactwarp:
 						warproom = room
 						warptype = loadtype.nextroom
+						break;
+					case obj_backsolid:
+						isbackground = true
+						break;
+					case obj_characterbutton:
+						if (other.char == "Y")
+						{
+							sprite_index = spr_teddylifeicon
+							mychar = "T"
+						}
+						else
+							mychar = "Y"
+						break;
+					case obj_button:
+						myname = "FUCK!"
+						myfunc = function()
+						{
+						    scr_debugmessage("a function when pressed")
+						    scr_debugmessage("hi this object runs")
+						}
+						break;
+					case obj_varbutton:
+						myvar = choose("checkpoint", "showcollision", "inboss", "inhub", "bobcat", "godmode", "quickmenu", "skibispin")
+						break;
+					case obj_pianokey:
+						pitch = random(2)
+						if (pitch < 1)
+							pitch = (pitch*0.5)+0.5
 						break;
 				}
 				other.previousspawnedobject = id
