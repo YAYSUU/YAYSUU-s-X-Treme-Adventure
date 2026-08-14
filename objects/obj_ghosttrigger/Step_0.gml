@@ -1,4 +1,4 @@
-myghost.attack = (touchingplayer(x, y, false))
+attack = (touchingplayer(x, y, false))
 if (!global.mainplayer.inbackground)
 {
 	if (image_alpha < 1)

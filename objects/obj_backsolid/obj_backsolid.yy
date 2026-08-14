@@ -39,5 +39,5 @@
     "path":"sprites/spr_backsolid/spr_backsolid.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

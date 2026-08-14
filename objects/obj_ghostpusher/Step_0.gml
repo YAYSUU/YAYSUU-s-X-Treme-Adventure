@@ -1,4 +1,4 @@
-if (attack)
+if (mytrigger.attack)
 {
 	if (obj_player.bbox_left > bbox_right)
 		move_towards_point(obj_player.x, obj_player.y, 15)
