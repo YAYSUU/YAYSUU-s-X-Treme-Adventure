@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if touchingplayer(x, y) || touchingplayer(x, y, true)
+if touchingplayer(x, y, 2)
 {
 	instance_destroy()
 	instance_create_depth(x,y,depth,obj_coincollect)

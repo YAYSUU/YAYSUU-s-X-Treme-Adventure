@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if touchingplayer(x, y)
+if touchingplayer(x, y, 2)
 {
 	var placate = global.firstplayertouch
 	var bounceboth = 1

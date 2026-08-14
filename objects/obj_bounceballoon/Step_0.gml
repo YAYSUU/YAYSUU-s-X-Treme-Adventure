@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if touchingplayer(x, y) && sprite_index == normsprite
+if touchingplayer(x, y, 2) && sprite_index == normsprite
 {
 	var whichplayer = global.firstplayertouch
 	if (global.secondplayertouch != noone && irandom(1) == 0) //too complicated 4 me lel

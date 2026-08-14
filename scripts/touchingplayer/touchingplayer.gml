@@ -46,7 +46,7 @@ function touchingplayer(checkx, checky, background = false){
 			return false
 	}
 	
-	if (obj_player.hascollision && obj_player.inbackground == background)
+	if (obj_player.hascollision && (obj_player.inbackground == background || background == 2))
 	{
 		global.firstplayertouch = global.mainplayer
 		global.secondplayertouch = noone
@@ -62,7 +62,7 @@ function touchingplayer(checkx, checky, background = false){
 function touchingplayerspecific(checkx, checky, whichplayer, background = false){
 	var checkedplayer = whichplayer == 2 ? global.otherplayer : global.mainplayer
 	
-	if (checkedplayer.hascollision && checkedplayer.inbackground == background)
+	if (checkedplayer.hascollision && (checkedplayer.inbackground == background || background == 2))
 	{
 		if (place_meeting(checkx, checky, checkedplayer))
 			return true
@@ -73,7 +73,7 @@ function touchingplayerspecific(checkx, checky, whichplayer, background = false)
 	return false
 }
 function touchingwho(checkx, checky, background = false){
-	if (obj_player.hascollision && obj_player.inbackground == background)
+	if (obj_player.hascollision && (obj_player.inbackground == background || background == 2))
 	{
 		if (place_meeting(checkx, checky, obj_player))
 			if global.mainplayer=other
