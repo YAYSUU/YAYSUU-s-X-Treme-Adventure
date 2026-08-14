@@ -25,6 +25,7 @@ if touchingplayer(x, y)
 		if (whichplayer.key_upp) 
 		{
 			whichplayer.newstate = playerstates.hangglide
+			whichplayer.facingdirection = image_xscale
 			whichplayer.hangglidedir = whichplayer.facingdirection
 		}
 	}

@@ -30,6 +30,12 @@ function collisionupdate_rubble(player){
 				checkoffsety = 0
 			}
 		}
+		else if (player.state == playerstates.hangglide && weakahh)
+		{
+			hascollision = false
+			checkoffsetx = player.hsp * 2
+			checkoffsety = player.vsp * 2
+		}
 		else if (player.state == playerstates.bounce || player.state == playerstates.launched)
 		{
 			hascollision = !(player.bbox_right > bbox_left && player.bbox_left < bbox_right && player.bbox_top > bbox_bottom)
