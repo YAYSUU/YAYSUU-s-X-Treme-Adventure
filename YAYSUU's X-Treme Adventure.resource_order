@@ -319,6 +319,7 @@
     {"name":"scr_getachievementname","order":34,"path":"scripts/scr_getachievementname/scr_getachievementname.yy",},
     {"name":"scr_isextrastage","order":36,"path":"scripts/scr_isextrastage/scr_isextrastage.yy",},
     {"name":"scr_keytostring","order":37,"path":"scripts/scr_keytostring/scr_keytostring.yy",},
+    {"name":"scr_layerobjects","order":51,"path":"scripts/scr_layerobjects/scr_layerobjects.yy",},
     {"name":"scr_levelstart","order":2,"path":"scripts/scr_levelstart/scr_levelstart.yy",},
     {"name":"scr_loadnewstage","order":44,"path":"scripts/scr_loadnewstage/scr_loadnewstage.yy",},
     {"name":"scr_obtainachievement","order":32,"path":"scripts/scr_obtainachievement/scr_obtainachievement.yy",},

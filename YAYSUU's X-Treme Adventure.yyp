@@ -388,6 +388,7 @@
     {"id":{"name":"scr_healthsystem","path":"scripts/scr_healthsystem/scr_healthsystem.yy",},},
     {"id":{"name":"scr_isextrastage","path":"scripts/scr_isextrastage/scr_isextrastage.yy",},},
     {"id":{"name":"scr_keytostring","path":"scripts/scr_keytostring/scr_keytostring.yy",},},
+    {"id":{"name":"scr_layerobjects","path":"scripts/scr_layerobjects/scr_layerobjects.yy",},},
     {"id":{"name":"scr_levelstart","path":"scripts/scr_levelstart/scr_levelstart.yy",},},
     {"id":{"name":"scr_loadnewstage","path":"scripts/scr_loadnewstage/scr_loadnewstage.yy",},},
     {"id":{"name":"scr_obtainachievement","path":"scripts/scr_obtainachievement/scr_obtainachievement.yy",},},

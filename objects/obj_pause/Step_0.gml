@@ -24,6 +24,7 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		audio_stop_sound(snd_paused)
 		audio_play_sound(snd_paused,1,false,global.sndvol)
 		instance_activate_all()
+		scr_layerobjects()
 		sprite_delete(pausespr)
 	}
 }

@@ -1,4 +1,3 @@
-
 if (global.currentsong == -1)
 	audio_stop_all()
 else if !audio_is_playing(global.currentsong)
@@ -20,6 +19,8 @@ else if !audio_is_playing(global.ambiencesound)
 	audio_play_sound(global.ambiencesound, 1, true, global.sndvol);
 }
 global.itempopupdepth = 100
+if (global.inlevel)
+	scr_layerobjects()
 
 if (global.levelloadtype == loadtype.newlevel || global.levelloadtype == loadtype.respawn)
 {
