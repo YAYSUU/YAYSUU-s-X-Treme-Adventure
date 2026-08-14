@@ -3,7 +3,7 @@
 var whichplayer = scr_closestplayer()
 if noticed
 {
-	move_towards_point(whichplayer.x, whichplayer.y, 1)
+	move_towards_point(whichplayer.x, whichplayer.y, 2)
 	if whichplayer.x<x
 		image_xscale=1
 	else
@@ -12,7 +12,7 @@ if noticed
 	if (image_alpha < 1)
 		image_alpha += 0.02
 	
-	if distance_to_object(whichplayer)>=320
+	if distance_to_object(whichplayer)>=480
 		noticed=false
 }
 else
@@ -20,7 +20,7 @@ else
 	speed = 0
 	if (image_alpha > 0.5)
 		image_alpha -= 0.02
-	if distance_to_object(whichplayer)<=160
+	if distance_to_object(whichplayer)<=240
 		noticed=true
 }
 event_inherited()
