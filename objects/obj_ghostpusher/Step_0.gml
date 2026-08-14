@@ -19,3 +19,14 @@ else if (point_distance(x, y, xstart, ystart) < 6)
 }
 else
 	move_towards_point(xstart, ystart, 5)
+
+if (global.mainplayer.inbackground && place_meeting(x, y, obj_backplate))
+{
+	if (image_alpha > 0.5 && visible)
+		image_alpha -= 0.1
+}
+else
+{
+	if (image_alpha < 1 && visible)
+		image_alpha += 0.1
+}

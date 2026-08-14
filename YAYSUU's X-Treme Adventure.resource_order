@@ -771,6 +771,7 @@
     {"name":"spr_secrettile_manordark","order":30,"path":"sprites/spr_secrettile_manordark/spr_secrettile_manordark.yy",},
     {"name":"spr_secrettile_manordarktop","order":31,"path":"sprites/spr_secrettile_manordarktop/spr_secrettile_manordarktop.yy",},
     {"name":"spr_secrettile_manorrooftop","order":33,"path":"sprites/spr_secrettile_manorrooftop/spr_secrettile_manorrooftop.yy",},
+    {"name":"spr_secrettile_manortop","order":34,"path":"sprites/spr_secrettile_manortop/spr_secrettile_manortop.yy",},
     {"name":"spr_secrettile_thatsjustgray","order":32,"path":"sprites/spr_secrettile_thatsjustgray/spr_secrettile_thatsjustgray.yy",},
     {"name":"spr_secrettile_thatsjustwhite","order":23,"path":"sprites/spr_secrettile_thatsjustwhite/spr_secrettile_thatsjustwhite.yy",},
     {"name":"spr_secrettile_tutorialgrass","order":22,"path":"sprites/spr_secrettile_tutorialgrass/spr_secrettile_tutorialgrass.yy",},
