@@ -1,1 +1,2 @@
 sprite_index = spr_secrettile_manordark
+topsprite = spr_secrettile_manortop
