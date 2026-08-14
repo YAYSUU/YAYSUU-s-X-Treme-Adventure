@@ -24,12 +24,12 @@ function scr_layerobjects(){
 	layerthese(obj_stop)
 	layerthese(obj_go)
 	layerthese(obj_spring)
+	layerthese(obj_hintnew)
 	//bigger lvlobjs
 	layerthese(obj_hangglider)
 	layerthese(obj_monitor)
 	layerthese(obj_car)
-	layerthese(obj_goalflag)
-	layerthese(obj_checkpoint)
+	layerthese(obj_sometypeofflag)
 	layerthese(obj_lever)
 	layerthese(obj_superbutton)
 	//backgroundish or tiley stuff

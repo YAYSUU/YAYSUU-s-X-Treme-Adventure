@@ -279,6 +279,7 @@
     {"id":{"name":"obj_silverblock","path":"objects/obj_silverblock/obj_silverblock.yy",},},
     {"id":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},},
     {"id":{"name":"obj_sndtest","path":"objects/obj_sndtest/obj_sndtest.yy",},},
+    {"id":{"name":"obj_sometypeofflag","path":"objects/obj_sometypeofflag/obj_sometypeofflag.yy",},},
     {"id":{"name":"obj_spawn_p2","path":"objects/obj_spawn_p2/obj_spawn_p2.yy",},},
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},},
     {"id":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},},

@@ -13,7 +13,10 @@
     "name":"lvlassets",
     "path":"folders/Objects/levelobjs/lvlassets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_sometypeofflag",
+    "path":"objects/obj_sometypeofflag/obj_sometypeofflag.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
