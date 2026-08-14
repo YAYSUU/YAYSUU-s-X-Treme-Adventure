@@ -76,10 +76,14 @@ if vwobbletimer<2
 {
 	vwobbletimer++
 }
-else if vwobbletimer=2
+else
 {
 	if vshakeoffset>0
-		vshakeoffset--
+	{
+		vshakeoffset -= 3
+		if vshakeoffset<=0
+			vshakeoffset = 0
+	}
 	vwobble=-vwobble
 	vwobbletimer=0
 }
