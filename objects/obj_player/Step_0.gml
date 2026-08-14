@@ -682,9 +682,7 @@ if (state == playerstates.debug)
 						myvar = choose("checkpoint", "showcollision", "inboss", "inhub", "bobcat", "godmode", "quickmenu", "skibispin")
 						break;
 					case obj_pianokey:
-						pitch = random(2)
-						if (pitch < 1)
-							pitch = (pitch*0.5)+0.5
+						pitch = random_range(1,2)
 						break;
 				}
 				other.previousspawnedobject = id
