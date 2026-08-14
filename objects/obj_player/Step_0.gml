@@ -579,7 +579,7 @@ if (state == playerstates.hangglide)
 			facingdirection = hangglidedir
 		}
 	}
-	if key_jumpp
+	if key_jumpp || place_meeting(x+(facingdirection*8),y,obj_wallsoap)
 	{
 		audio_play_sound(snd_jump,1,false,global.sndvol)
 		vsp=jmp

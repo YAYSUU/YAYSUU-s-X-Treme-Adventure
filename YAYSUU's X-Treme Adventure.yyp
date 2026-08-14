@@ -725,6 +725,7 @@
     {"id":{"name":"spr_gobox","path":"sprites/spr_gobox/spr_gobox.yy",},},
     {"id":{"name":"spr_good","path":"sprites/spr_good/spr_good.yy",},},
     {"id":{"name":"spr_halloffame","path":"sprites/spr_halloffame/spr_halloffame.yy",},},
+    {"id":{"name":"spr_hangglider_loose","path":"sprites/spr_hangglider_loose/spr_hangglider_loose.yy",},},
     {"id":{"name":"spr_hangglider","path":"sprites/spr_hangglider/spr_hangglider.yy",},},
     {"id":{"name":"spr_hint","path":"sprites/spr_hint/spr_hint.yy",},},
     {"id":{"name":"spr_housetiles","path":"sprites/spr_housetiles/spr_housetiles.yy",},},

@@ -1,1 +1,2 @@
 topsprite=spr_secrettile_manorrooftop
+sprite_index=spr_secrettile_thatsjustgray

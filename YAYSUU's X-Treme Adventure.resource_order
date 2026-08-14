@@ -639,6 +639,7 @@
     {"name":"spr_gobox","order":6,"path":"sprites/spr_gobox/spr_gobox.yy",},
     {"name":"spr_good","order":17,"path":"sprites/spr_good/spr_good.yy",},
     {"name":"spr_halloffame","order":28,"path":"sprites/spr_halloffame/spr_halloffame.yy",},
+    {"name":"spr_hangglider_loose","order":49,"path":"sprites/spr_hangglider_loose/spr_hangglider_loose.yy",},
     {"name":"spr_hangglider","order":46,"path":"sprites/spr_hangglider/spr_hangglider.yy",},
     {"name":"spr_hint","order":4,"path":"sprites/spr_hint/spr_hint.yy",},
     {"name":"spr_housetiles","order":3,"path":"sprites/spr_housetiles/spr_housetiles.yy",},
