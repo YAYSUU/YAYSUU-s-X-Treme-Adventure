@@ -36,6 +36,9 @@
     "name":"spr_secretorang",
     "path":"sprites/spr_secretorang/spr_secretorang.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_collisionmask",
+    "path":"sprites/spr_collisionmask/spr_collisionmask.yy",
+  },
   "visible":true,
 }

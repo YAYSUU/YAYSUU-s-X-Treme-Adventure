@@ -38,8 +38,8 @@
     "path":"sprites/spr_secretorang_launch/spr_secretorang_launch.yy",
   },
   "spriteMaskId":{
-    "name":"spr_collisionmask",
-    "path":"sprites/spr_collisionmask/spr_collisionmask.yy",
+    "name":"spr_crouchcollisionmask",
+    "path":"sprites/spr_crouchcollisionmask/spr_crouchcollisionmask.yy",
   },
   "visible":true,
 }

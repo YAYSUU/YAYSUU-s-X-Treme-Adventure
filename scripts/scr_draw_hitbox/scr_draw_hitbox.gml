@@ -3,7 +3,10 @@
 function scr_draw_hitbox(){
 	if (global.showcollision)
 	{
-		draw_sprite_ext(mask_index, 0, x, y, 1, 1, image_angle, hitboxcolor, 1)
-		draw_sprite_ext(mask_index, 0, x + hsp, y + vsp, 1, 1, image_angle, hitboxcolor, 0.5)
+		var mask = mask_index
+		if (mask == -1)
+			mask = sprite_index
+		draw_sprite_ext(mask, 0, x, y, 1, 1, image_angle, hitboxcolor, 1)
+		draw_sprite_ext(mask, 0, x + hsp, y + vsp, 1, 1, image_angle, hitboxcolor, 0.5)
 	}
 }
