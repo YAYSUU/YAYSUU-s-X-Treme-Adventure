@@ -1,4 +1,4 @@
 isbackground = false
 visible = true
 sprite_index = spr_secrettile_manor
-topsprite = noone
+topsprite = spr_secrettile_manortop

@@ -1,4 +1,4 @@
-myname = "llslt"
+myname = "lvlsltl"
 myfunc = function()
 {
 	global.trial=true // Is she stupid?
