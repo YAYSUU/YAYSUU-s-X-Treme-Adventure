@@ -6,24 +6,19 @@ if touchingplayer(x, y, 2) && sprite_index == normsprite
 	if (global.secondplayertouch != noone && irandom(1) == 0) //too complicated 4 me lel
 		whichplayer = global.secondplayertouch
 	var whichchar = whichplayer.isotherplayer ? global.p2char : global.char
-	if (whichplayer.state == playerstates.stomp)
+	if (whichchar == "T" && !whichplayer.vulnerable)
 	{
-		if (whichchar == "T")
+		sprite_index = popsprite
+		audio_play_sound(snd_balloonpop,1,false,global.sndvol)
+	}
+	else if (whichplayer.state == playerstates.stomp)
+	{
+		whichplayer.newstate = playerstates.bounce
+		if (vbounce != 0 && obj_player.vsp*image_yscale > vbounce*image_yscale)
 		{
-			sprite_index = popsprite
-			audio_play_sound(snd_balloonpop,1,false,global.sndvol)
-		}
-		else
-		{
-			whichplayer.newstate = playerstates.bounce
-			if (vbounce != 0 && obj_player.vsp*image_yscale > vbounce*image_yscale)
-			{
-				whichplayer.vsp = vbounce * image_yscale
-				sprite_index = bigbouncesprite
-				audio_play_sound(snd_boing,1,false,global.sndvol)
-			}
-			//if (hbounce != 0)
-			//	obj_player.hsp = hbounce * image_xscale
+			whichplayer.vsp = vbounce * image_yscale
+			sprite_index = bigbouncesprite
+			audio_play_sound(snd_boing,1,false,global.sndvol)
 		}
 	}
 	else
