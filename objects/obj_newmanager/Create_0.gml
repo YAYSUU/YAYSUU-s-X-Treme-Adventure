@@ -59,6 +59,7 @@ global.mobile = (os_type == os_android)
 global.multiplayer = false
 global.skin = 0
 global.extras = false
+global.THEMOSTCONTROVERSIALGLOBALEVERCREATEDINYXA_removethiseventuallybutnotyet = true
 windowtimer = 0
 windowname = ""
 newwindowname = ""
