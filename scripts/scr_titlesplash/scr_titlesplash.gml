@@ -4,7 +4,7 @@ function get_titlesplash(){
 	return choose("YAYSUU Team presents...",
 	"YAYSUU Team represents...",
 	"YAYSUU Team resents...",
-	"Fazmade, mostly, presents...",
+	"Vassie, mostly, presents...",
 	"Mobile users can't see this, but...",
 	"A blast from the past, it's...",
 	"Hey! Look over here! It's...",
@@ -18,5 +18,11 @@ function get_titlesplash(){
 	"From the game engine that brought you pizzas and blasts...",
 	"insert extremely dated joke here...",
 	"I think there's a cat in this game...",
-	"Who's X-Treme Adventure? Oh yeah...")
+	"Who's X-Treme Adventure? Oh yeah...",
+	"OWO what's this?",
+	"Badum-tsss... Wait, wrong thing. Uhhhh...",
+	"Is it a sonic? Is it a pizza tower? No, it's a...",
+	"Coming straight from YOUR pc...",
+	"...What?",
+	"With code taken from a skibidi-based mod...")
 }
