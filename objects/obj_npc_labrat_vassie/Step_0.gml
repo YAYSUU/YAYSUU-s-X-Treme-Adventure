@@ -40,11 +40,23 @@ else if talking && talked
 		switch dialogueprogress
 		{
 			case 1:
-			with instance_create_depth(0,0,depth,obj_dialoguebox)
+			if (place_meeting(x, y, obj_secretorang_bouncer))
 			{
-				name="Vassie"
-				text="they're already making the rise and fall of fazmade... i can TASTE it..."
-				color="pink"
+				with instance_create_depth(0,0,depth,obj_dialoguebox)
+				{
+					name="Vassie"
+					text="yo is that an orang? niiice"
+					color="pink"
+				}
+			}
+			else
+			{
+				with instance_create_depth(0,0,depth,obj_dialoguebox)
+				{
+					name="Vassie"
+					text="they're already making the rise and fall of fazmade... i can TASTE it..."
+					color="pink"
+				}
 			}
 			break;
 			case 2:
