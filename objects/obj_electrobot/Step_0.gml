@@ -25,10 +25,7 @@ switch (state)
 			image_xscale = 1
 		else if (obj_player.x < x)
 			image_xscale = -1
-		if (idledamagedelay > 0)
-			idledamagedelay--
-		else
-			candamage = true
+		candamage = false
 		if (!hasdamaged)
 		{
 			vulnerable = true
@@ -111,7 +108,7 @@ switch (state)
 		{
 			if (attackcount == 0)
 			{
-				delay = idledelay
+				delay = idledelay + 30
 				state = electrobotstates.idle
 				vsp = 10
 				gravityapplies = true
