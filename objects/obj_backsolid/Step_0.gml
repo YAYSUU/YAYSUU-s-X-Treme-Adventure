@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (obj_player.inbackground == isbackground)
+if (global.mainplayer.inbackground == isbackground)
 {
 	mycollision.y = y
 	if (image_alpha < 1 && !forcevis)
