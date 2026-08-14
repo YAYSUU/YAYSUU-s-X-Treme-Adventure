@@ -6,4 +6,4 @@ noticed = false
 image_alpha = 0.5
 grv = 0
 deathobject = obj_ghost1_dieded
-canbounceatall = false
+canbounceatall = true // STAAAAPHH!!!!!
