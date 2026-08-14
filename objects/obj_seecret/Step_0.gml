@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if global.mainplayer.state=playerstates.dead
 	return;
-if touchingplayer(x, y)
+if touchingplayer(x, y, false) || touchingplayer(x, y, true)
 {
 	if (image_alpha > 0)
 		image_alpha -= fadespeed

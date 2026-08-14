@@ -1,13 +1,14 @@
 if (mytrigger.attack)
 {
-	if (obj_player.bbox_left > bbox_right)
+	
+	if (obj_player.bbox_left > bbox_right && image_xscale == 1) || (obj_player.bbox_right < bbox_left && image_xscale == -1)
 		move_towards_point(obj_player.x, obj_player.y, 15)
 	else
 		move_towards_point(obj_player.x, obj_player.y, 5)
 	
 	if (touchingplayer(x, y, false))
 	{
-		obj_player.hsp = -6
+		obj_player.hsp = -6 * image_xscale
 		sprite_index = spr_ghost1_dieded
 		alarm[0] = 4
 	}

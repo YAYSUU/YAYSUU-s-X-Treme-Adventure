@@ -12,6 +12,6 @@ djump = false
 dshed = false
 if (inbackground)
 {
-	if (!place_meeting(x, y, obj_backplate) && !place_meeting(x, y, obj_backdoor) && !place_meeting(x, y, obj_backsolid) && grounded)
+	if (!place_meeting(x, y, obj_backplate) && !place_meeting(x, y, obj_backdoor) && !place_meeting(x, y, obj_backsolid))
 		inbackground = false
 }
