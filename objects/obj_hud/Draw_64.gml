@@ -80,3 +80,10 @@ if global.inlevel && !global.inhub
 		draw_set_color(c_white)
 	}
 }
+else if (global.inhub && comboshowtimer > 0)
+{
+	draw_combometer(false)
+	if inwidescreen()
+		draw_combometer(true)
+	draw_set_halign(fa_left)
+}

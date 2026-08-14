@@ -24,15 +24,21 @@ if (global.inlevel && !global.inhub)
 		else
 			timerstring = string_replace_all(string_format(floor(timer / 3600), 2, 0) + ":" + string_format(floor(timer / 60) % 60, 2, 0), " ", "0")
 	}
+}
+if global.inlevel
+{
 	if (global.combo != 0)
 	{
-		if (global.combo = 1)
+		var combofuck = global.combo
+		if (global.inhub)
+			combofuck *= 0.1
+		if (combofuck <= 1)
 			combosprite = spr_lame
-		else if (global.combo > 1) && (global.combo <= 3)
+		else if (combofuck > 1) && (combofuck <= 3)
 			combosprite = spr_good
-		else if (global.combo > 3) && (global.combo <= 5)
+		else if (combofuck > 3) && (combofuck <= 5)
 			combosprite = spr_cool
-		else if (global.combo > 5)
+		else if (combofuck > 5)
 			combosprite = spr_xtreme
 	}
 	else

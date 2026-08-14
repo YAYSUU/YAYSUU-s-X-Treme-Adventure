@@ -8,6 +8,8 @@ if touchingplayer(x, y, false) && grounded
 		hsp = image_xscale * 8
 		vsp = -8
 		audio_play_sound(snd_stompland, 1, false)
+		global.combo++
+		global.combometer = 100
 	}
 	else if (global.secondplayertouch != noone)
 	{
@@ -18,6 +20,8 @@ if touchingplayer(x, y, false) && grounded
 			hsp = image_xscale * 8
 			vsp = -8
 			audio_play_sound(snd_stompland, 1, false)
+			global.combo++
+			global.combometer = 100
 		}
 	}
 }
