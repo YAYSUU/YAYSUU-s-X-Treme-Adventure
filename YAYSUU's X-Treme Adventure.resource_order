@@ -615,6 +615,7 @@
     {"name":"spr_ghost1_dieded","order":8,"path":"sprites/spr_ghost1_dieded/spr_ghost1_dieded.yy",},
     {"name":"spr_ghost1","order":7,"path":"sprites/spr_ghost1/spr_ghost1.yy",},
     {"name":"spr_ghost2","order":16,"path":"sprites/spr_ghost2/spr_ghost2.yy",},
+    {"name":"spr_ghostzone","order":48,"path":"sprites/spr_ghostzone/spr_ghostzone.yy",},
     {"name":"spr_glass","order":47,"path":"sprites/spr_glass/spr_glass.yy",},
     {"name":"spr_glassshard","order":8,"path":"sprites/spr_glassshard/spr_glassshard.yy",},
     {"name":"spr_glowstickcity_border","order":4,"path":"sprites/spr_glowstickcity_border/spr_glowstickcity_border.yy",},
