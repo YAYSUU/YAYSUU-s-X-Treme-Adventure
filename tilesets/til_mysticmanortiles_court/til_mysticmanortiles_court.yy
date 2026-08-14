@@ -21,7 +21,7 @@
     "name":"spr_tile_manorcourt",
     "path":"sprites/spr_tile_manorcourt/spr_tile_manorcourt.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

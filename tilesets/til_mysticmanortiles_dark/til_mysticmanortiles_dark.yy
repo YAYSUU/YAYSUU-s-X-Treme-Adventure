@@ -21,7 +21,7 @@
     "name":"spr_tile_manordark",
     "path":"sprites/spr_tile_manordark/spr_tile_manordark.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

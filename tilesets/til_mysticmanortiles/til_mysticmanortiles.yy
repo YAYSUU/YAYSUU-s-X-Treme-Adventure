@@ -21,7 +21,7 @@
     "name":"spr_tile_manor",
     "path":"sprites/spr_tile_manor/spr_tile_manor.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

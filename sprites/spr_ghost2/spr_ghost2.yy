@@ -89,8 +89,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_mysticmanor",
-    "path":"texturegroups/level_mysticmanor",
+    "name":"gamestuff_rooftops",
+    "path":"texturegroups/gamestuff_rooftops",
   },
   "type":0,
   "VTile":false,

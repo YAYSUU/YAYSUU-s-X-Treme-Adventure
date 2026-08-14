@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"old",
-    "path":"folders/Sprites/technical/old.yy",
+    "name":"technical",
+    "path":"folders/Sprites/technical.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"gamestuff_general",
+    "path":"texturegroups/gamestuff_general",
   },
   "type":0,
   "VTile":false,

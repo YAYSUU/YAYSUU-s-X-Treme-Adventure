@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"gamestuff_ghastly",
+    "path":"texturegroups/gamestuff_ghastly",
   },
   "type":0,
   "VTile":false,

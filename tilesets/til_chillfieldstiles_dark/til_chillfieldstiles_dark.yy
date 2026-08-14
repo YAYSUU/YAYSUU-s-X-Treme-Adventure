@@ -21,7 +21,7 @@
     "name":"spr_tile_chilldark",
     "path":"sprites/spr_tile_chilldark/spr_tile_chilldark.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

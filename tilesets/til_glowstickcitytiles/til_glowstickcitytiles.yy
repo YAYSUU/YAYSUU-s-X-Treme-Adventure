@@ -21,7 +21,7 @@
     "name":"spr_tile_glowstick",
     "path":"sprites/spr_tile_glowstick/spr_tile_glowstick.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

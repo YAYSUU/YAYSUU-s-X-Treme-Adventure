@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_mysticmanor",
-    "path":"texturegroups/level_mysticmanor",
+    "name":"gamestuff_ghastly",
+    "path":"texturegroups/gamestuff_ghastly",
   },
   "type":0,
   "VTile":false,

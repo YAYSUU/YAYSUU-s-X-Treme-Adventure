@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_tutorial",
+    "path":"texturegroups/level_tutorial",
   },
   "type":0,
   "VTile":false,

@@ -21,7 +21,7 @@
     "name":"spr_tile_manorroof",
     "path":"sprites/spr_tile_manorroof/spr_tile_manorroof.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

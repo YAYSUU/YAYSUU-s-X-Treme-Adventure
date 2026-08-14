@@ -87,8 +87,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"level_fromYOURhouse",
-    "path":"texturegroups/level_fromYOURhouse",
+    "name":"unused",
+    "path":"texturegroups/unused",
   },
   "type":0,
   "VTile":false,

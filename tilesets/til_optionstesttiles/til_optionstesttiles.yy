@@ -21,7 +21,7 @@
     "name":"spr_tile_options",
     "path":"sprites/spr_tile_options/spr_tile_options.yy",
   },
-  "spriteNoExport":false,
+  "spriteNoExport":true,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

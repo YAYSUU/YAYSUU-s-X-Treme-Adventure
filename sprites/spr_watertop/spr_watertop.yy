@@ -95,8 +95,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_fundevroom",
-    "path":"texturegroups/level_fundevroom",
+    "name":"gamestuff_dev",
+    "path":"texturegroups/gamestuff_dev",
   },
   "type":0,
   "VTile":false,

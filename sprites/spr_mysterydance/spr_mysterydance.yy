@@ -95,8 +95,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"gamestuff_dev",
+    "path":"texturegroups/gamestuff_dev",
   },
   "type":0,
   "VTile":false,
