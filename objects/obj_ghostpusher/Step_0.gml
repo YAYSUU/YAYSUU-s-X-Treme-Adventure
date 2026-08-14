@@ -23,10 +23,10 @@ else
 if (global.mainplayer.inbackground && place_meeting(x, y, obj_backplate))
 {
 	if (image_alpha > 0.5 && visible)
-		image_alpha -= 0.1
+		image_alpha -= 0.05
 }
 else
 {
 	if (image_alpha < 1 && visible)
-		image_alpha += 0.1
+		image_alpha += 0.05
 }
