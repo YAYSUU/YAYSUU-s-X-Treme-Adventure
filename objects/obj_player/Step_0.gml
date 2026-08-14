@@ -549,13 +549,19 @@ else
 if (state == playerstates.hangglide)
 {
 	facingdirection = hangglidedir
-	visualrotation = clamp(visualrotation+(key_up-key_down)*(8-abs(hsp))*0.5*hangglidedir,-45,30) // Sonic Rivals 2 my beloved
+	var magicnumberithink = 8
+	if (char == "T")
+		magicnumberithink = 12
+	visualrotation = clamp(visualrotation+((key_up-key_down)*(magicnumberithink-abs(hsp))*0.5*hangglidedir),-45,30) // Sonic Rivals 2 my beloved
 	var yearnedvsp = (-visualrotation/4)*hangglidedir
 	if yearnedvsp>vsp
 		vsp+=0.5
 	else if yearnedvsp<vsp
 		vsp-=0.5
-	yearnedhsp = (facingdirection * 5)
+	if (char == "T")
+		yearnedhsp = (facingdirection * 8)
+	else
+		yearnedhsp = (facingdirection * 5)
 	if yearnedhsp>hsp
 		hsp+=0.5
 	else if yearnedhsp<hsp
@@ -564,13 +570,13 @@ if (state == playerstates.hangglide)
 	{
 		if char="Y"
 		{
-			yearnedhsp=-yearnedhsp
 			hsp=-hsp
 		}
-		if char="T"
+		else if char="T"
 		{
 			visualrotation=-visualrotation
 			hangglidedir=-hangglidedir
+			facingdirection = hangglidedir
 		}
 	}
 	if key_jumpp
