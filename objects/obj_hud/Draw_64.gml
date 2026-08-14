@@ -9,12 +9,13 @@ if global.inlevel && !global.inhub
 		var healthheight = 128
 		if (global.inboss)
 		{
+			var phase
 			if global.bosshp=0
-				var phase=2
+				phase=2
 			else if global.bosshp<=global.maxbosshp/2
-				var phase=1
+				phase=1
 			else
-				var phase=0
+				phase=0
 			draw_sprite(spr_electrobothead,phase,544,32)
 			boss_health_hearts(spr_fringleglasses)
 			healthheight = 32
