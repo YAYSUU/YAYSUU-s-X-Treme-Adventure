@@ -806,6 +806,7 @@
     {"name":"spr_storybutton","order":17,"path":"sprites/spr_storybutton/spr_storybutton.yy",},
     {"name":"spr_subtitlefont_b","order":1,"path":"sprites/spr_subtitlefont_b/spr_subtitlefont_b.yy",},
     {"name":"spr_superbutton","order":36,"path":"sprites/spr_superbutton/spr_superbutton.yy",},
+    {"name":"spr_suspiciousbush","order":29,"path":"sprites/spr_suspiciousbush/spr_suspiciousbush.yy",},
     {"name":"spr_suspiciouschair","order":9,"path":"sprites/spr_suspiciouschair/spr_suspiciouschair.yy",},
     {"name":"spr_teddy_brake","order":13,"path":"sprites/spr_teddy_brake/spr_teddy_brake.yy",},
     {"name":"spr_teddy_chrselect_ok","order":14,"path":"sprites/spr_teddy_chrselect_ok/spr_teddy_chrselect_ok.yy",},

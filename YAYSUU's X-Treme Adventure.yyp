@@ -900,6 +900,7 @@
     {"id":{"name":"spr_subtitlefont","path":"sprites/spr_subtitlefont/spr_subtitlefont.yy",},},
     {"id":{"name":"spr_superbutton","path":"sprites/spr_superbutton/spr_superbutton.yy",},},
     {"id":{"name":"spr_superstick","path":"sprites/spr_superstick/spr_superstick.yy",},},
+    {"id":{"name":"spr_suspiciousbush","path":"sprites/spr_suspiciousbush/spr_suspiciousbush.yy",},},
     {"id":{"name":"spr_suspiciouschair","path":"sprites/spr_suspiciouschair/spr_suspiciouschair.yy",},},
     {"id":{"name":"spr_teddy_brake","path":"sprites/spr_teddy_brake/spr_teddy_brake.yy",},},
     {"id":{"name":"spr_teddy_chrselect_ok","path":"sprites/spr_teddy_chrselect_ok/spr_teddy_chrselect_ok.yy",},},
