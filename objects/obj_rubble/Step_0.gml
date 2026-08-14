@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 whichplayer = scr_closestplayer()
-if !(strong && whichplayer.char!="T")
+/*if !(strong && whichplayer.char!="T")
 {
 	if !(whichplayer.vulnerable) || (whichplayer.state=playerstates.stomp) || (whichplayer.state=playerstates.slide) || (whichplayer.state=playerstates.hangglide)
 	{
@@ -16,7 +16,7 @@ else
 if hascollision
 	mycollision.y=y
 else
-	mycollision.y=-2763
+	mycollision.y=-2763*/
 
 if touchingplayer(x,y)
 {

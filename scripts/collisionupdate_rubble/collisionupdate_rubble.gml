@@ -3,8 +3,13 @@
 function collisionupdate_rubble(player){
 	if (player == global.mainplayer)
 		hascollision = true
-	
-	if (!strong || player.char != "Y")
+	if ((player.state == playerstates.hangglide || player.state == playerstates.bounce) && weakahh)
+	{
+		hascollision = false
+		checkoffsetx = player.hsp * 2
+		checkoffsety = player.vsp * 2
+	}
+	else if (!strong || player.char != "Y")
 	{
 		if (!player.vulnerable)
 		{
@@ -29,12 +34,6 @@ function collisionupdate_rubble(player){
 				checkoffsetx = player.hsp * 2
 				checkoffsety = 0
 			}
-		}
-		else if (player.state == playerstates.hangglide && weakahh)
-		{
-			hascollision = false
-			checkoffsetx = player.hsp * 2
-			checkoffsety = player.vsp * 2
 		}
 		else if (player.state == playerstates.bounce || player.state == playerstates.launched)
 		{
