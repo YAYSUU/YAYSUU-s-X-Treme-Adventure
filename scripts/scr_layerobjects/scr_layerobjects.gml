@@ -36,12 +36,15 @@ function scr_layerobjects(){
 	layerthese(obj_npc_common)
 	layerthese(obj_pianokey)
 	layerthese(obj_ghosttrigger)
+	layerthese(obj_elevator_enter)
+	layerthese(obj_elevator_exit)
 	layerthese(obj_backdoor)
 	layerthese(obj_backsolid)
 	layerthese(obj_backplate)
 	layerthese(obj_wallsoap)
 	layerthese(obj_conveyor)
 	layerthese(obj_lava)
+	layerthese(obj_multiplayerglass)
 	scr_debugmessage("finish layering at " + string(global.layeringdepth))
 	if (global.layeringdepth >= layer_get_depth("game") + 100) //just realized this can't happen anymore but keep it just incase
 	{

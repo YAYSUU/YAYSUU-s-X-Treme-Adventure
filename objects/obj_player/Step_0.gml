@@ -14,7 +14,8 @@ enum playerstates
 	launched,
 	hangglide,
 	fireass,
-	debug
+	debug,
+	elevate
 }
 
 if (!global.inlevel) || (global.inlevel && isotherplayer && !global.multiplayer)
@@ -31,7 +32,12 @@ inwater = place_meeting(x, y, obj_water)
 move = (key_right - key_left)
 if (move != 0 && !(global.skibispin && !grounded))
 	facingdirection = move
-if (inwater)
+if (state == playerstates.elevate)
+{
+	grv = 0
+	maxfallspeed = 0
+}
+else if (inwater)
 {
 	grv = watergrav
 	maxfallspeed = normmaxfall
@@ -62,7 +68,7 @@ prevslopey = slopey
 scr_updatecollision(id)
 scr_player_checkground()
 
-if (state != playerstates.hurt && state != playerstates.dead && state != playerstates.debug)
+if (state != playerstates.hurt && state != playerstates.dead && state != playerstates.debug && state != playerstates.elevate)
 {
 	if (state == playerstates.crouch || state == playerstates.inactive || state == playerstates.win)
 		wsp = 0
@@ -85,7 +91,7 @@ if (grounded || state == playerstates.golfstop)
 
 var candodashdo = (abs(hsp) <= runspeed) && !amiwalled(hsp)
 var canwalljump = false
-if (state != playerstates.dead && state != playerstates.inactive && state != playerstates.debug)
+if (state != playerstates.dead && state != playerstates.inactive && state != playerstates.debug && state != playerstates.elevate)
 {
 
 if (candodashdo)
@@ -531,7 +537,7 @@ if (state != playerstates.dead || state != playerstates.debug)
 	state = newstate
 
 //actual movement
-if (state != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && state != playerstates.debug)
+if (state != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && state != playerstates.debug && state != playerstates.elevate)
 {
 	var accel
 	if abs(hsp) >= walkspeed && (hsp * sign(hsp)) < (yearnedhsp * sign(hsp)) && !global.inv && char == "C" //cotton's gradual run
@@ -595,7 +601,7 @@ if (state == playerstates.hangglide)
 }
 //set mask
 hascollision = true
-if (state == playerstates.dead) || (state == playerstates.debug)
+if (state == playerstates.dead) || (state == playerstates.debug) || (state == playerstates.elevate)
     hascollision = false
 else if (state == playerstates.crouch || state == playerstates.slide)
     mask_index = spr_crouchcollisionmask

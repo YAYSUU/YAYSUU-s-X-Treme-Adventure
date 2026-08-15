@@ -5,7 +5,7 @@ if (!global.inlevel)
 
 if (playertofollow.state != playerstates.dead)
 {
-	if (abs(playertofollow.x - x) > maxvarience || abs(playertofollow.y - y) > maxvarience)
+	if (abs(playertofollow.x - x) > maxvarience || abs(playertofollow.y - y) > maxvarience || playertofollow.state == playerstates.elevate)
 	    followtimer = 60
 	else if (playertofollow.hsp == 0 && playertofollow.vsp == 0 && (!dontunfocus))
 	    followtimer--
