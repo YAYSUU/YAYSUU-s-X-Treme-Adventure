@@ -127,8 +127,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"menu_extraz",
-    "path":"texturegroups/menu_extraz",
+    "name":"menu_gallery",
+    "path":"texturegroups/menu_gallery",
   },
   "type":0,
   "VTile":false,
