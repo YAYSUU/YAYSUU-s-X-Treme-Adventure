@@ -85,8 +85,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"cutscenes",
-    "path":"texturegroups/cutscenes",
+    "name":"cutscene_uhhhiwnIDK",
+    "path":"texturegroups/cutscene_uhhhiwnIDK",
   },
   "type":0,
   "VTile":false,

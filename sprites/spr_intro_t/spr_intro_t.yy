@@ -145,8 +145,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"cutscenes",
-    "path":"texturegroups/cutscenes",
+    "name":"cutscene_intro_teddy",
+    "path":"texturegroups/cutscene_intro_teddy",
   },
   "type":0,
   "VTile":false,

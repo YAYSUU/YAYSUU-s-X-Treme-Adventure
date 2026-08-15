@@ -161,8 +161,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"cutscenes",
-    "path":"texturegroups/cutscenes",
+    "name":"cutscene_intro_yaysuu",
+    "path":"texturegroups/cutscene_intro_yaysuu",
   },
   "type":0,
   "VTile":false,
