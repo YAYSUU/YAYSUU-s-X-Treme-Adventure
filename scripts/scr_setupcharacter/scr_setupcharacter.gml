@@ -25,7 +25,8 @@ enum playersprite
 	wallslide,
 	lifeicon,
 	lifemonitor,
-	healthicon
+	healthicon,
+	lookahead
 }
 function scr_setupcharacter(char, skin)
 {
@@ -59,6 +60,7 @@ function scr_setupcharacter(char, skin)
 			playersprites[playersprite.lifeicon] = spr_yanlifeicon
 			playersprites[playersprite.lifemonitor] = spr_lifemonitor_yan
 			playersprites[playersprite.healthicon] = spr_lasaga
+			playersprites[playersprite.lookahead] = spr_yan_lookahead
 		}
 		else
 		{
@@ -87,6 +89,7 @@ function scr_setupcharacter(char, skin)
 			playersprites[playersprite.lifeicon] = spr_yaysuulifeicon
 			playersprites[playersprite.lifemonitor] = spr_lifemonitor_y
 			playersprites[playersprite.healthicon] = spr_pizza
+			playersprites[playersprite.lookahead] = spr_yaysuu_lookahead
 		}
 	}
 	else if (char == "T")
@@ -117,6 +120,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.lifeicon] = spr_teddylifeicon
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_t
 		playersprites[playersprite.healthicon] = spr_pancake
+		playersprites[playersprite.lookahead] = spr_teddy_lookahead
 	}
 	else
 	{

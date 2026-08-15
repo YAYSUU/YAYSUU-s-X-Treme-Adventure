@@ -980,7 +980,12 @@ switch (state)
 				if (idletime > 600)
 					newsprite = playersprites[playersprite.wait]
 				else
-					newsprite = playersprites[playersprite.idle]
+				{
+					if (key_up)
+						newsprite = playersprites[playersprite.lookahead]
+					else
+						newsprite = playersprites[playersprite.idle]
+				}
 			}
 			else if (abs(hsp) > walkspeed)
 				newsprite = playersprites[playersprite.run]

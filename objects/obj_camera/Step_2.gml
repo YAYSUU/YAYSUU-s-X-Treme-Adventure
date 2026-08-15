@@ -53,14 +53,13 @@ if (!focusonpoint)
 {
 	actualcamy += voffset
 	
-	var wantedspeedoffset = 0
-	if (abs(playertofollow.hsp))
-	{
-		wantedspeedoffset = playertofollow.hsp * speedoffsetscale
-	}
+	var wantedspeedoffset = playertofollow.hsp * speedoffsetscale
+	var lookahead = playertofollow.sprite_index = playertofollow.playersprites[playersprite.lookahead]
+	if (lookahead)
+		wantedspeedoffset = 160 * playertofollow.facingdirection
 	
 	var speedoffsetspeed
-	if (abs(wantedspeedoffset) > speedoffset * sign(wantedspeedoffset))
+	if (abs(wantedspeedoffset) > speedoffset * sign(wantedspeedoffset) && !lookahead)
 		speedoffsetspeed = speedoffsetspeedincrease
 	else
 		speedoffsetspeed = speedoffsetspeeddecrease
