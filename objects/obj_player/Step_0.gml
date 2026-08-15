@@ -354,15 +354,19 @@ if (ouchies)
 	if ((!global.inv && hurtt <= 0 && !winning) || deathies) && state != playerstates.dead && state != playerstates.inactive
 	{
 		if (deathies)
+		{
 			if !isotherplayer
 				global.hp = 0
 			else
 				global.p2hp = 0
+		}
 		else if !fratricide && !global.godmode
+		{
 			if !isotherplayer
 				global.hp--
 			else
 				global.p2hp--
+		}
 		if (global.hp > 0 && !isotherplayer) || (global.p2hp > 0 && isotherplayer)
 		{
 		    newstate = playerstates.hurt
@@ -402,9 +406,7 @@ if (ouchies)
 		}
 	}
 	if fratricide
-	{
 		fratricide=false
-	}
 }
 if (state == playerstates.hurt && grounded)
 {
@@ -543,15 +545,6 @@ if (state != playerstates.golfstop && state != playerstates.dead && state != pla
 	else if (yearnedhsp < hsp)
 		hsp -= accel
 }
-
-//set mask
-hascollision = true
-if (state == playerstates.dead) || (state == playerstates.debug)
-    hascollision = false
-else if (state == playerstates.crouch || state == playerstates.slide)
-    mask_index = spr_crouchcollisionmask
-else
-    mask_index = spr_collisionmask
 // hang glider! Implemented Entirely by ME! YAYSUU!
 if (state == playerstates.hangglide)
 {
@@ -596,6 +589,14 @@ if (state == playerstates.hangglide)
 		}
 	}
 }
+//set mask
+hascollision = true
+if (state == playerstates.dead) || (state == playerstates.debug)
+    hascollision = false
+else if (state == playerstates.crouch || state == playerstates.slide)
+    mask_index = spr_crouchcollisionmask
+else
+    mask_index = spr_collisionmask
 if (state == playerstates.debug)
 {
 	image_xscale = 1
