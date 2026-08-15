@@ -15,7 +15,7 @@ enum electrobotstates
 	fuckingdead
 }
 
-movingobject_start()
+event_user(10)
 
 switch (state)
 {
@@ -262,5 +262,5 @@ if (sprite_index != oldsprite)
 if (sprite_index == spr_electrobot_jump && image_index == 6)
 	image_index = 2
 
-movingobject_end()
+event_user(11)
 event_inherited()

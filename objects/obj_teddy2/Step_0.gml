@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-movingobject_start()
+//movingobject_start()
 
 yearnedx = obj_player.x - obj_player.facingdirection * 96
 if (x > yearnedx + 128)
@@ -48,4 +48,4 @@ if (sprite_index != sper)
 	image_index = 0
 }
 
-movingobject_end()
+//movingobject_end()

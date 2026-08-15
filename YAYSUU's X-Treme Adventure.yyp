@@ -370,8 +370,6 @@
     {"id":{"name":"draw_text_yxa","path":"scripts/draw_text_yxa/draw_text_yxa.yy",},},
     {"id":{"name":"keytostringtwo","path":"scripts/keytostringtwo/keytostringtwo.yy",},},
     {"id":{"name":"loadroom","path":"scripts/loadroom/loadroom.yy",},},
-    {"id":{"name":"movingobject_end","path":"scripts/movingobject_end/movingobject_end.yy",},},
-    {"id":{"name":"movingobject_start","path":"scripts/movingobject_start/movingobject_start.yy",},},
     {"id":{"name":"preloadactualroom","path":"scripts/preloadactualroom/preloadactualroom.yy",},},
     {"id":{"name":"scr_anybuttonpressed","path":"scripts/scr_anybuttonpressed/scr_anybuttonpressed.yy",},},
     {"id":{"name":"scr_anykeypressed","path":"scripts/scr_anykeypressed/scr_anykeypressed.yy",},},

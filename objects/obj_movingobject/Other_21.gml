@@ -1,8 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function movingobject_end(){
-	if (vsp < 0)
-		grounded = false
+/// @description moving object end
+if (vsp < 0)
+	grounded = false
 if (grounded)
 {
 	var loopprevent = 0
@@ -81,5 +79,4 @@ if (slowdown != 0)
 		hsp -= slowdown
 	else if (hsp < 0)
 		hsp += slowdown
-}
 }

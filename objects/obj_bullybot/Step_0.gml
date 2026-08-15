@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-movingobject_start()
+event_user(10)
 
 
 if (touchingplayer(x,y) && sprite_index != spr_bullybot_kick)
@@ -35,5 +35,5 @@ if (touchingplayer(x,y) && sprite_index != spr_bullybot_kick)
 	}
 }
 
-movingobject_end()
+event_user(11)
 event_inherited()

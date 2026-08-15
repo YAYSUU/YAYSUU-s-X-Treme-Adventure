@@ -1,4 +1,4 @@
-movingobject_start()
+event_user(10)
 if touchingplayer(x, y, false) && grounded
 {
 	if (!global.firstplayertouch.vulnerable)
@@ -35,4 +35,4 @@ if (hsp != 0)
 	}
 }
 image_index = grounded
-movingobject_end()
+event_user(11)
