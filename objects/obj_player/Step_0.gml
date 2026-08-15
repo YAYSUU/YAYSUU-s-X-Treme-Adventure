@@ -469,7 +469,12 @@ if (state == playerstates.dead) && ((!global.splitscreen && !isotherplayer) || (
 	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
 	    if (global.lives > 0)
-			loadroom(room, loadtype.respawn)
+		{
+			if (room == room_chilifields_b || room == room_chilifields_c || room == room_chilifields_d || room == room_chilifields_e)
+				loadroom(room_chilifields_a, loadtype.respawn) //i'm EVIL
+			else
+				loadroom(room, loadtype.respawn)
+		}
 		else
 		    loadroom(room_gameover, loadtype.menu)
 	}

@@ -1,1 +1,1 @@
-text="REALLY wanted to remove this checkpoint"
+text="EVILS!!"
