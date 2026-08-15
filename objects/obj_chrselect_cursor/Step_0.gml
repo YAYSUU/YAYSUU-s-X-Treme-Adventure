@@ -26,8 +26,8 @@ switch chos2
 switch savestage[charlife]
 {
 	case 0:
-	currentstage=room_tutorial
-	lvlname="Tutorial"
+	currentstage=room_intro
+	lvlname="EMPTY"
 	gameprogress=0
 	break;
 	case 1:
@@ -75,8 +75,15 @@ if (selected)
 		if !(global.trial) {
 			if global.arcade
 				loadnewstage(3,room_tutorial)
-			else
-				loadnewstage(savelives[charlife],currentstage)
+			else {
+				if currentstage=room_intro
+				{
+					global.lives=3
+					loadroom(room_intro, loadtype.menu)
+				}
+				else
+					loadnewstage(savelives[charlife],currentstage)
+			}
 		}
 		else {
 			if global.extras

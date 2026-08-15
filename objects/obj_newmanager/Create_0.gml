@@ -55,7 +55,7 @@ global.bobcat = false
 global.godmode = false
 global.quickmenu = false
 global.invertskin = false
-global.mobile = (os_type == os_android)
+global.mobile = true
 global.multiplayer = false
 global.skin = 0
 global.extras = false
