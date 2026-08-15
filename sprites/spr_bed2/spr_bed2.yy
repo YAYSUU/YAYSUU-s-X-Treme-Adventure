@@ -87,8 +87,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_glowstickcity",
-    "path":"texturegroups/level_glowstickcity",
+    "name":"level_mysticmanor",
+    "path":"texturegroups/level_mysticmanor",
   },
   "type":0,
   "VTile":false,

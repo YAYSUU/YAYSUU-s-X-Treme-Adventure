@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_mysticmanor",
-    "path":"texturegroups/level_mysticmanor",
+    "name":"level_multi",
+    "path":"texturegroups/level_multi",
   },
   "type":0,
   "VTile":false,

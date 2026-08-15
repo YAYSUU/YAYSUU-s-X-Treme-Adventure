@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"level_chillfields",
-    "path":"texturegroups/level_chillfields",
+    "name":"level_multi",
+    "path":"texturegroups/level_multi",
   },
   "type":0,
   "VTile":false,
