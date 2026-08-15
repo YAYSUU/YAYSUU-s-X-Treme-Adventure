@@ -18,6 +18,7 @@ runspeed = 10
 rundamagespeed = -0
 bounceheight = -10
 bounceheightbigger = -11
+bounceheightsmaller = -8
 normalgrav = 0.3
 stompgrav = 1
 floatgrav = 0.1
@@ -92,6 +93,7 @@ fratricide=false
 isotherplayer = instance_number(obj_player) > 1
 issecondplayer = isotherplayer // This is for CONTROLS ONLY.
 char=isotherplayer ? global.p2char : global.char
+invulsafety = 0
 if (global.p2char == global.char)
 	scr_setupcharacter(char, 1)
 else

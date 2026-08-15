@@ -434,7 +434,9 @@ else
 
 //vulnerability
 var runattack = (abs(hsp) > rundamagespeed && sign(hsp) == sign(yearnedhsp) && state == playerstates.normal)
-vulnerable = !(global.inv == 1 || (newstate != playerstates.launched && (state == playerstates.dash || state == playerstates.slide || state == playerstates.stomp || newstate == playerstates.dash || newstate == playerstates.slide || newstate == playerstates.stomp || runattack || ( (state == playerstates.bounce || newstate == playerstates.bounce) && char == "C")) ))
+if (invulsafety > 0)
+	invulsafety--
+vulnerable = !(global.inv == 1 || (invulsafety > 0) || (newstate != playerstates.launched && (state == playerstates.dash || state == playerstates.slide || state == playerstates.stomp || newstate == playerstates.dash || newstate == playerstates.slide || newstate == playerstates.stomp || runattack || ( (state == playerstates.bounce || newstate == playerstates.bounce) && char == "C")) ))
 if (runattack)
 	runanimtimer++
 else
