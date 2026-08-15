@@ -23,8 +23,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_glowstickcity",
+    "path":"texturegroups/level_glowstickcity",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

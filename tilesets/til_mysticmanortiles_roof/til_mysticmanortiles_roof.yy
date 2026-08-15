@@ -23,8 +23,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_mysticmanor",
+    "path":"texturegroups/level_mysticmanor",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

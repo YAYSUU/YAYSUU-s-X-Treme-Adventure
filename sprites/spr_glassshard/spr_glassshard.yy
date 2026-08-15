@@ -89,8 +89,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"gamestuff_rooftops",
-    "path":"texturegroups/gamestuff_rooftops",
+    "name":"gamestuff_manor",
+    "path":"texturegroups/gamestuff_manor",
   },
   "type":0,
   "VTile":false,

@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"menu_soundtest",
-    "path":"texturegroups/menu_soundtest",
+    "name":"menu_extraz",
+    "path":"texturegroups/menu_extraz",
   },
   "type":0,
   "VTile":false,

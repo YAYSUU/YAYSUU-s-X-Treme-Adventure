@@ -23,8 +23,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_fromYOURhouse",
+    "path":"texturegroups/level_fromYOURhouse",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

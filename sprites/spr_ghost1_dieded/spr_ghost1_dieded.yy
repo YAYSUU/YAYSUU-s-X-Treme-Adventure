@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"gamestuff_ghastly",
-    "path":"texturegroups/gamestuff_ghastly",
+    "name":"gamestuff_manor",
+    "path":"texturegroups/gamestuff_manor",
   },
   "type":0,
   "VTile":false,

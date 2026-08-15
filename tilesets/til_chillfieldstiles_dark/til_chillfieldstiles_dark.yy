@@ -23,8 +23,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"level_chillfields",
+    "path":"texturegroups/level_chillfields",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,
