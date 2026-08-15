@@ -388,6 +388,7 @@ if (ouchies)
 		{
 			deathies = false;
 		    newstate = playerstates.dead
+			depth = obj_seecret.depth-1
 			if !instance_exists(obj_stageclear)
 			{
 				if (global.lives > 0)
