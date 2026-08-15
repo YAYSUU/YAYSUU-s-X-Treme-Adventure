@@ -571,7 +571,16 @@ if (state == playerstates.hangglide)
 		hsp+=0.5
 	else if yearnedhsp<hsp
 		hsp-=0.5
-	if amiwalled(hsp)
+	if key_jumpp || place_meeting(x+(facingdirection*8),y,obj_wallsoap)
+	{
+		audio_play_sound(snd_jump,1,false,global.sndvol)
+		vsp=jmp
+		newstate=playerstates.bounce
+		state=playerstates.bounce
+		hsp=facingdirection*20
+		visualrotation=0
+	}
+	else if amiwalled(hsp)
 	{
 		if char="Y"
 		{
@@ -583,15 +592,6 @@ if (state == playerstates.hangglide)
 			hangglidedir=-hangglidedir
 			facingdirection = hangglidedir
 		}
-	}
-	if key_jumpp || place_meeting(x+(facingdirection*8),y,obj_wallsoap)
-	{
-		audio_play_sound(snd_jump,1,false,global.sndvol)
-		vsp=jmp
-		newstate=playerstates.bounce
-		state=playerstates.bounce
-		hsp=facingdirection*20
-		visualrotation=0
 	}
 }
 if (state == playerstates.debug)
