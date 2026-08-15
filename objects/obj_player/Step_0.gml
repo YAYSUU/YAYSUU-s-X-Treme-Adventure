@@ -31,38 +31,6 @@ inwater = place_meeting(x, y, obj_water)
 move = (key_right - key_left)
 if (move != 0 && !(global.skibispin && !grounded))
 	facingdirection = move
-if place_meeting(x, y, obj_lava) && state!=playerstates.dead && state!=playerstates.debug
-{
-	if !isotherplayer
-	{
-		if !global.godmode
-			global.hp--
-	}
-	else
-	{
-		if !global.godmode
-			global.p2hp--
-	}
-	if (!isotherplayer && global.hp=0) || (isotherplayer && global.p2hp=0)
-	{
-		newstate = playerstates.dead
-		if (!global.splitscreen && !isotherplayer) || (!global.multiplayer)
-		audio_stop_all()
-		audio_play_sound(mus_dead,1,false,global.sndvol)
-		global.lives--
-	}
-	else {
-		newstate = playerstates.fireass
-		audio_play_sound(snd_ahooga, 1, false, global.sndvol)
-	}
-	vsp = bounceheight*1.5
-	scr_shake(30, false)
-	audio_play_sound(snd_fire, 1, false, global.sndvol)
-	audio_play_sound(snd_ouchie, 1, false, global.sndvol)
-	grounded = false
-	prevgrounded = false
-	dshed = false
-}
 if (inwater)
 {
 	grv = watergrav
@@ -348,6 +316,38 @@ if ((state == playerstates.launched || state == playerstates.fireass) && newstat
 }
 
 //ow! ow! that hurts! that hurts!
+if place_meeting(x, y, obj_lava) && state!=playerstates.dead && state!=playerstates.debug
+{
+	if !isotherplayer
+	{
+		if !global.godmode
+			global.hp--
+	}
+	else
+	{
+		if !global.godmode
+			global.p2hp--
+	}
+	if (!isotherplayer && global.hp=0) || (isotherplayer && global.p2hp=0)
+	{
+		newstate = playerstates.dead
+		if (!global.splitscreen && !isotherplayer) || (!global.multiplayer)
+		audio_stop_all()
+		audio_play_sound(mus_dead,1,false,global.sndvol)
+		global.lives--
+	}
+	else {
+		newstate = playerstates.fireass
+		audio_play_sound(snd_ahooga, 1, false, global.sndvol)
+	}
+	vsp = bounceheight*1.5
+	scr_shake(30, false)
+	audio_play_sound(snd_fire, 1, false, global.sndvol)
+	audio_play_sound(snd_ouchie, 1, false, global.sndvol)
+	grounded = false
+	prevgrounded = false
+	dshed = false
+}
 if (ouchies)
 {
 	ouchies = false
