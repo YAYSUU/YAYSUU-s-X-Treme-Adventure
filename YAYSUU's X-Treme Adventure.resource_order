@@ -136,6 +136,7 @@
     {"name":"obj_lifemonitor","order":3,"path":"objects/obj_lifemonitor/obj_lifemonitor.yy",},
     {"name":"obj_lives","order":3,"path":"objects/obj_lives/obj_lives.yy",},
     {"name":"obj_logo","order":2,"path":"objects/obj_logo/obj_logo.yy",},
+    {"name":"obj_loosehangglider","order":8,"path":"objects/obj_loosehangglider/obj_loosehangglider.yy",},
     {"name":"obj_lvlselect","order":4,"path":"objects/obj_lvlselect/obj_lvlselect.yy",},
     {"name":"obj_marquee_text_rev","order":6,"path":"objects/obj_marquee_text_rev/obj_marquee_text_rev.yy",},
     {"name":"obj_marquee_text","order":5,"path":"objects/obj_marquee_text/obj_marquee_text.yy",},

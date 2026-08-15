@@ -194,6 +194,7 @@
     {"id":{"name":"obj_lifemonitor","path":"objects/obj_lifemonitor/obj_lifemonitor.yy",},},
     {"id":{"name":"obj_lives","path":"objects/obj_lives/obj_lives.yy",},},
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},
+    {"id":{"name":"obj_loosehangglider","path":"objects/obj_loosehangglider/obj_loosehangglider.yy",},},
     {"id":{"name":"obj_lvlselect","path":"objects/obj_lvlselect/obj_lvlselect.yy",},},
     {"id":{"name":"obj_mainmenu_cursor","path":"objects/obj_mainmenu_cursor/obj_mainmenu_cursor.yy",},},
     {"id":{"name":"obj_marquee_text_rev","path":"objects/obj_marquee_text_rev/obj_marquee_text_rev.yy",},},

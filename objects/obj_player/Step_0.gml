@@ -221,7 +221,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 
 canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0
 // jumping
-if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && !forcecrouch)
+if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && !forcecrouch)
 {
 	if (canwalljump) // WALL JUMP
 	{
@@ -367,6 +367,8 @@ if (ouchies)
 			else
 				global.p2hp--
 		}
+		if (state == playerstates.hangglide)
+			event_user(2)
 		if (global.hp > 0 && !isotherplayer) || (global.p2hp > 0 && isotherplayer)
 		{
 		    newstate = playerstates.hurt
@@ -567,13 +569,14 @@ if (state == playerstates.hangglide)
 		hsp+=0.5
 	else if yearnedhsp<hsp
 		hsp-=0.5
-	if key_jumpp || place_meeting(x+(facingdirection*8),y,obj_wallsoap)
+	if (key_jumpp || place_meeting(x+(facingdirection*8),y,obj_wallsoap))
 	{
+		event_user(2)
 		audio_play_sound(snd_jump,1,false,global.sndvol)
 		vsp=jmp
 		newstate=playerstates.bounce
 		state=playerstates.bounce
-		hsp=facingdirection*20
+		//hsp=facingdirection*20
 		visualrotation=0
 	}
 	else if amiwalled(hsp)
