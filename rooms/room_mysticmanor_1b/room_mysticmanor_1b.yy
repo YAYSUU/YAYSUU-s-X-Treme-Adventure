@@ -256,6 +256,7 @@
     {"name":"inst_417D9315","path":"rooms/room_mysticmanor_1b/room_mysticmanor_1b.yy",},
     {"name":"inst_5F95BA30","path":"rooms/room_mysticmanor_1b/room_mysticmanor_1b.yy",},
     {"name":"inst_5F1B333","path":"rooms/room_mysticmanor_1b/room_mysticmanor_1b.yy",},
+    {"name":"inst_6C485117","path":"rooms/room_mysticmanor_1b/room_mysticmanor_1b.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -512,6 +513,7 @@
         {"$GMRInstance":"v4","%Name":"inst_417D9315","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_417D9315","objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2912.0,"y":768.0,},
         {"$GMRInstance":"v4","%Name":"inst_5F95BA30","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F95BA30","objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2944.0,"y":768.0,},
         {"$GMRInstance":"v4","%Name":"inst_5F1B333","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F1B333","objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2976.0,"y":768.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6C485117","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C485117","objectId":{"name":"obj_spikeball","path":"objects/obj_spikeball/obj_spikeball.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3456.0,"y":352.0,},
       ],"layers":[],"name":"game","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"decor","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_361BB87","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_361BB87","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},"x":160.0,"y":320.0,},
