@@ -12,7 +12,7 @@ if noticed
 	if (image_alpha < 1)
 		image_alpha += 0.02
 	
-	if distance_to_object(whichplayer)>=480
+	if distance_to_object(whichplayer)>=320
 		noticed=false
 }
 else

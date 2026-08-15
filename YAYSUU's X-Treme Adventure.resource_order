@@ -625,6 +625,8 @@
     {"name":"spr_ghost1_dieded","order":8,"path":"sprites/spr_ghost1_dieded/spr_ghost1_dieded.yy",},
     {"name":"spr_ghost1","order":7,"path":"sprites/spr_ghost1/spr_ghost1.yy",},
     {"name":"spr_ghost2","order":16,"path":"sprites/spr_ghost2/spr_ghost2.yy",},
+    {"name":"spr_ghost3_dieded","order":19,"path":"sprites/spr_ghost3_dieded/spr_ghost3_dieded.yy",},
+    {"name":"spr_ghost3","order":18,"path":"sprites/spr_ghost3/spr_ghost3.yy",},
     {"name":"spr_ghostzone","order":48,"path":"sprites/spr_ghostzone/spr_ghostzone.yy",},
     {"name":"spr_glass","order":47,"path":"sprites/spr_glass/spr_glass.yy",},
     {"name":"spr_glassshard","order":8,"path":"sprites/spr_glassshard/spr_glassshard.yy",},

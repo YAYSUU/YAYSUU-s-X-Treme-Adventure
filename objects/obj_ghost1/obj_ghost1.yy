@@ -34,12 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ghost2",
-    "path":"sprites/spr_ghost2/spr_ghost2.yy",
+    "name":"spr_ghost3",
+    "path":"sprites/spr_ghost3/spr_ghost3.yy",
   },
   "spriteMaskId":{
-    "name":"spr_collisionmask",
-    "path":"sprites/spr_collisionmask/spr_collisionmask.yy",
+    "name":"spr_smallcollisionmask_air",
+    "path":"sprites/spr_smallcollisionmask_air/spr_smallcollisionmask_air.yy",
   },
   "visible":true,
 }
