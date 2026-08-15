@@ -54,7 +54,7 @@ if (!focusonpoint)
 	actualcamy += voffset
 	
 	var wantedspeedoffset = 0
-	if (abs(playertofollow.hsp) > global.mainplayer.walkspeed)
+	if (abs(playertofollow.hsp))
 	{
 		wantedspeedoffset = playertofollow.hsp * speedoffsetscale
 	}
