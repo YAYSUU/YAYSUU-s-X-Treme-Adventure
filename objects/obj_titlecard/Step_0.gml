@@ -12,5 +12,6 @@ else if goawaytime=0
 }
 if x>=640
 {
-	image_alpha=0
+	image_alpha = 0
+	visible = false
 }

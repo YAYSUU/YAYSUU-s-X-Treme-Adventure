@@ -13,13 +13,35 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		audio_pause_all()
 		audio_stop_sound(snd_paused)
 		audio_play_sound(snd_paused,1,false,global.sndvol)
+		var w = surface_get_width(application_surface)
+		var h = surface_get_height(application_surface)
+		var pausesurf = surface_create(w, h)
+		surface_copy(pausesurf, 0, 0, application_surface)
+		surface_set_target(pausesurf)
+		with (obj_hud)
+		{
+			if (visible)
+				event_user(12)
+		}
+		with (obj_titlecard)
+		{
+			if (visible)
+				event_user(12)
+		}
+		if (instance_exists(obj_itemdefault))
+		{
+			with (obj_itemdefault)
+			{
+				if (visible)
+					event_user(12)
+			}
+		}
+		surface_reset_target()
+		pausespr=sprite_create_from_surface(pausesurf,0,0,w,h,false,false,0,0)
+		surface_free(pausesurf)
 		instance_deactivate_all(true)
 		instance_activate_object(obj_newmanager)
 		instance_activate_object(obj_fadeblack)
-		screen_save("PausedScreen.png")
-		pausespr = sprite_add("PausedScreen.png", 1, false, false, 0, 0)
-		file_delete("PausedScreen.png")
-		//pausespr=sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),false,false,0,0)
 	}
 	else
 	{

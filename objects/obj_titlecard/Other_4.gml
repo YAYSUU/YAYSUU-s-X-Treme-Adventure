@@ -1,6 +1,7 @@
 /// @description which level am i on
 // You can write your code in this editor
 image_alpha=1
+visible = false
 x=288 // sorry, this is hardcoded
 y=192
 goawaytime=60
