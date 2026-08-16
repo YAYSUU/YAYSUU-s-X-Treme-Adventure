@@ -1,0 +1,1 @@
+txtass_destroy(mytxtass)
