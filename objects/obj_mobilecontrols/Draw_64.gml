@@ -24,7 +24,7 @@ if global.inputtype = 3 && hide=false && !instance_exists(obj_stageclear) && !(i
 	}
 	if room=room_extras
 	{
-		if !(instance_exists(obj_cheats) || instance_exists(obj_credits))
+		if !instance_exists(obj_cheats) && !instance_exists(obj_gallery)
 		{
 			draw_sprite_ext(spr_up,0,96-global.controldistance,256,1,1,0,c_white,global.controlalpha-(global.controlalpha*0.5*global.key_up))
 			draw_sprite_ext(spr_left,0,32-global.controldistance,320,1,1,0,c_white,global.controlalpha-(global.controlalpha*0.5*global.key_left))
