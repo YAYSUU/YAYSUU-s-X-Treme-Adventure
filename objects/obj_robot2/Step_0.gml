@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_user(10)
-if (image_xscale == 1)
-	spotted = obj_player.x == (clamp(obj_player.x, x, x + 384))
-else
-	spotted = obj_player.x == (clamp(obj_player.x, x - 384, x))
+
+spotted = isbetween(global.mainplayer.x, x, x + 384*image_xscale)
+if (!spotted && global.multiplayer)
+	spotted = isbetween(global.otherplayer.x, x, x + 384*image_xscale)
 
 if (insecret && spotted)
 {
