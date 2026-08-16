@@ -16,7 +16,10 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		instance_deactivate_all(true)
 		instance_activate_object(obj_newmanager)
 		instance_activate_object(obj_fadeblack)
-		pausespr=sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),false,false,0,0)
+		screen_save("PausedScreen.png")
+		pausespr = sprite_add("PausedScreen.png", 1, false, false, 0, 0)
+		file_delete("PausedScreen.png")
+		//pausespr=sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),false,false,0,0)
 	}
 	else
 	{
