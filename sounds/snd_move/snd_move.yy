@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.9926531,
+  "duration":1.0971428,
   "exportDir":"",
   "name":"snd_move",
   "parent":{

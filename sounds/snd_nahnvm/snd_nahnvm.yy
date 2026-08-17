@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":1.3322449,
+  "duration":1.0971428,
   "exportDir":"",
   "name":"snd_nahnvm",
   "parent":{
