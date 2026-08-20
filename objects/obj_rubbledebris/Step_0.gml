@@ -4,3 +4,5 @@ vsp += grv
 x += hsp
 y += vsp
 image_angle += rsp
+if (y > room_height * 64)
+	instance_destroy()
