@@ -1,8 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function collisionupdate_rubble(player){
-	if (player == global.mainplayer)
-		hascollision = true
+	hascollision = true
 	if ((player.state == playerstates.hangglide || player.state == playerstates.bounce) && weakahh)
 	{
 		hascollision = false
