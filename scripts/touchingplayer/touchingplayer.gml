@@ -59,9 +59,7 @@ function touchingplayer(checkx, checky, background = false){
 	return false
 }
 
-function touchingplayerspecific(checkx, checky, whichplayer, background = false){
-	var checkedplayer = whichplayer == 2 ? global.otherplayer : global.mainplayer
-	
+function touchingplayerspecific(checkx, checky, checkedplayer, background = false){
 	if (checkedplayer.hascollision && (checkedplayer.inbackground == background || background == 2))
 	{
 		if (place_meeting(checkx, checky, checkedplayer))

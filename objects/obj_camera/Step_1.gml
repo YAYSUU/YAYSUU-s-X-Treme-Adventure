@@ -1,4 +1,4 @@
 focusonpoint = false
 deltax = actualcamx
 deltay = actualcamy
-playertofollow=global.mainplayer
+//playertofollow=global.mainplayer

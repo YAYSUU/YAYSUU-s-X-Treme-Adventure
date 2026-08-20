@@ -3,3 +3,4 @@
 fadespeed = 0.04
 //depth = global.mainplayer.depth - 1
 topsprite = noone
+otheralpha = 1

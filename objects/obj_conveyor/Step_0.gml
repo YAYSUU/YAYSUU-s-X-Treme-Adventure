@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (touchingplayerspecific(x, y-1, 1) && global.mainplayer.grounded)
+if (touchingplayerspecific(x, y-1, global.mainplayer) && global.mainplayer.grounded)
 {
 	global.mainplayer.x += conveyorspeed * directionmodifier
 	playertouching = true
@@ -14,7 +14,7 @@ else if (playertouching)
 }
 if (global.multiplayer)
 {
-	if (touchingplayerspecific(x, y-1, 2) && global.otherplayer.grounded)
+	if (touchingplayerspecific(x, y-1, global.otherplayer) && global.otherplayer.grounded)
 	{
 		global.otherplayer.x += conveyorspeed * directionmodifier
 		player2touching = true
