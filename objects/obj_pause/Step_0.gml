@@ -50,7 +50,8 @@ if (global.key_start || (global.p2_key_start && global.multiplayer) || (os_is_pa
 		audio_play_sound(snd_paused,1,false,global.sndvol)
 		instance_activate_all()
 		scr_layerobjects()
-		sprite_delete(pausespr)
+		if (sprite_exists(pausespr))
+			sprite_delete(pausespr)
 	}
 }
 

@@ -1,9 +1,9 @@
-if global.jumpscare=true
+if global.jumpscare
 	draw_sprite(spr_uncanny_jumpscare,0,0,0)
-draw_set_color(c_black)
-draw_rectangle(0,0,-10000,480,false)
-draw_rectangle(display_get_gui_width,0,10000+display_get_gui_width,480,false)
-draw_set_color(c_white)
+//draw_set_color(c_black)
+//draw_rectangle(0,0,-10000,480,false)
+//draw_rectangle(display_get_gui_width,0,10000+display_get_gui_width,480,false)
+//draw_set_color(c_white)
 if window_get_fullscreen() && global.borders && !inwidescreen()
 {
 	switch room
@@ -74,5 +74,5 @@ else
 
 draw_set_valign(fa_top)
 draw_set_font(global.subtitlefont)
-if (windowpos != 1) && global.inlevel=true
+if (windowpos != 1)
 	draw_text_yxa(0, windowpos*windowpos*-32, windowname, "lgray", true)

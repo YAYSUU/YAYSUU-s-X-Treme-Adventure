@@ -316,9 +316,7 @@ if (state == playerstates.golfstop && newstate == state)
 if ((state == playerstates.launched || state == playerstates.fireass) && newstate == state)
 {
 	if (grounded)
-	{
 		newstate = playerstates.normal
-	}
 }
 
 //ow! ow! that hurts! that hurts!
@@ -497,7 +495,7 @@ if (state == playerstates.dead) && ((global.splitscreen && global.multiplayer) |
 {
 	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
-		if (global.lives = 0) // DEATH COMES FOR US ALL
+		if (global.lives == 0) // DEATH COMES FOR US ALL
 			loadroom(room_gameover, loadtype.menu)
 	    else if !(global.inboss) { // come back my brother
 			event_perform(ev_other,ev_room_start)

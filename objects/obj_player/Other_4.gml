@@ -82,10 +82,19 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 			y = obj_spawn_p2.y
 			scr_layerobjects()
 		}*/
+		
 		x = obj_spawn.x
 		y = obj_spawn.y
 	}
-	if !isotherplayer
+	if isotherplayer
+	{
+		if (instance_exists(obj_spawn_p2))
+		{
+			x = obj_spawn_p2.x
+			y = obj_spawn_p2.y
+		}
+	}
+	else
 	{
 		obj_camera.x = x
 		obj_camera.y = y

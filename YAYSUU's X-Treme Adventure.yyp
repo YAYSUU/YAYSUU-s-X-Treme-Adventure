@@ -806,6 +806,7 @@
     {"id":{"name":"spr_movingplatform_spot","path":"sprites/spr_movingplatform_spot/spr_movingplatform_spot.yy",},},
     {"id":{"name":"spr_movingplatform_toggledfella","path":"sprites/spr_movingplatform_toggledfella/spr_movingplatform_toggledfella.yy",},},
     {"id":{"name":"spr_movingplatform","path":"sprites/spr_movingplatform/spr_movingplatform.yy",},},
+    {"id":{"name":"spr_multibar","path":"sprites/spr_multibar/spr_multibar.yy",},},
     {"id":{"name":"spr_music","path":"sprites/spr_music/spr_music.yy",},},
     {"id":{"name":"spr_mysterydance","path":"sprites/spr_mysterydance/spr_mysterydance.yy",},},
     {"id":{"name":"spr_mysteryjirl","path":"sprites/spr_mysteryjirl/spr_mysteryjirl.yy",},},

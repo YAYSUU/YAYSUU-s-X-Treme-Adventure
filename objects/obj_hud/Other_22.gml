@@ -73,13 +73,8 @@ if global.inlevel && !global.inhub
 			draw_set_halign(fa_left)
 		}
 	}
-	if inwidescreen()
-	{
-		draw_set_color(c_black)
-		draw_line(640,0,640,480)
-		draw_line(641,0,641,480)
-		draw_set_color(c_white)
-	}
+	//if inwidescreen()
+		//draw_sprite(spr_multibar, 0, 640, 0)
 }
 else if (global.inhub && comboshowtimer > 0)
 {

@@ -49,9 +49,9 @@ if (global.inlevel)
 	scr_layerobjects()
 if inwidescreen() // splitscreen check
 {
-	surface_resize(application_surface,1280,480)
-	display_set_gui_size(1280,480)
-	window_set_size(640*global.screenscale*2,480*global.screenscale)
+	surface_resize(application_surface,1282,480)
+	display_set_gui_size(1282,480)
+	window_set_size((640*global.screenscale*2)+2,480*global.screenscale)
 	view_set_visible(0, true)
 	view_set_wport(0, 640)
 	view_set_hport(0, 480)

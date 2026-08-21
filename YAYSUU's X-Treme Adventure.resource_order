@@ -724,6 +724,7 @@
     {"name":"spr_movingplatform_spot","order":20,"path":"sprites/spr_movingplatform_spot/spr_movingplatform_spot.yy",},
     {"name":"spr_movingplatform_toggledfella","order":34,"path":"sprites/spr_movingplatform_toggledfella/spr_movingplatform_toggledfella.yy",},
     {"name":"spr_movingplatform","order":18,"path":"sprites/spr_movingplatform/spr_movingplatform.yy",},
+    {"name":"spr_multibar","order":37,"path":"sprites/spr_multibar/spr_multibar.yy",},
     {"name":"spr_music","order":7,"path":"sprites/spr_music/spr_music.yy",},
     {"name":"spr_mysterydance","order":46,"path":"sprites/spr_mysterydance/spr_mysterydance.yy",},
     {"name":"spr_mysteryjirl","order":45,"path":"sprites/spr_mysteryjirl/spr_mysteryjirl.yy",},
