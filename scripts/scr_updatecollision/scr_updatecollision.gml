@@ -16,4 +16,24 @@ function scr_updatecollision(player){
 		with (obj_rubble)
 			collisionupdate_rubble(player)
 	}
+	if (instance_exists(obj_player1solid))
+	{
+		with (obj_player1solid)
+		{
+			if (player == global.mainplayer && active)
+				y = intendedy
+			else
+				y = -2763
+		}
+	}
+	if (instance_exists(obj_player2solid))
+	{
+		with (obj_player2solid)
+		{
+			if (player == global.otherplayer && active)
+				y = intendedy
+			else
+				y = -2763
+		}
+	}
 }

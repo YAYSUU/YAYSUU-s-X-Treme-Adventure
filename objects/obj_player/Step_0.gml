@@ -982,7 +982,7 @@ switch (state)
 					newsprite = playersprites[playersprite.wait]
 				else
 				{
-					if (key_up)
+					if (key_up && !showarrow)
 						newsprite = playersprites[playersprite.lookahead]
 					else
 						newsprite = playersprites[playersprite.idle]

@@ -76,13 +76,13 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 	}
 	else
 	{
-		if isotherplayer && instance_exists(obj_spawn_p2)
+		/*if isotherplayer && instance_exists(obj_spawn_p2)
 		{
 			x = obj_spawn_p2.x
 			y = obj_spawn_p2.y
 			scr_layerobjects()
-		}
-		x = obj_spawn.x // removed x offset because teddy gets stuck in walls
+		}*/
+		x = obj_spawn.x
 		y = obj_spawn.y
 	}
 	if !isotherplayer
