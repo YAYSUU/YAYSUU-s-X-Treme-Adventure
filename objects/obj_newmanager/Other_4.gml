@@ -61,7 +61,7 @@ if inwidescreen() // splitscreen check
 	view_set_visible(1, true)
 	view_set_wport(1, 640)
 	view_set_hport(1, 480)
-	view_set_xport(1, 640)
+	view_set_xport(1, 642)
 	view_set_yport(1, 0)
 	instance_create_depth(0,0, 100, obj_p2camera)
 	window_center()
