@@ -51,7 +51,7 @@ if inwidescreen() // splitscreen check
 {
 	surface_resize(application_surface,1282,480)
 	display_set_gui_size(1282,480)
-	window_set_size((640*global.screenscale*2)+2,480*global.screenscale)
+	window_set_size((640*global.screenscale*2),480*global.screenscale)
 	view_set_visible(0, true)
 	view_set_wport(0, 640)
 	view_set_hport(0, 480)
@@ -61,7 +61,7 @@ if inwidescreen() // splitscreen check
 	view_set_visible(1, true)
 	view_set_wport(1, 640)
 	view_set_hport(1, 480)
-	view_set_xport(1, 642)
+	view_set_xport(1, 640)
 	view_set_yport(1, 0)
 	instance_create_depth(0,0, 100, obj_p2camera)
 	window_center()

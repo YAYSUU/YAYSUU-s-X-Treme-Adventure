@@ -341,6 +341,7 @@
     {"id":{"name":"room_demoending","path":"rooms/room_demoending/room_demoending.yy",},},
     {"id":{"name":"room_dev","path":"rooms/room_dev/room_dev.yy",},},
     {"id":{"name":"room_ending","path":"rooms/room_ending/room_ending.yy",},},
+    {"id":{"name":"room_extras_gallery","path":"rooms/room_extras_gallery/room_extras_gallery.yy",},},
     {"id":{"name":"room_extras","path":"rooms/room_extras/room_extras.yy",},},
     {"id":{"name":"room_extrastages","path":"rooms/room_extrastages/room_extrastages.yy",},},
     {"id":{"name":"room_fclogo","path":"rooms/room_fclogo/room_fclogo.yy",},},
@@ -392,6 +393,7 @@
     {"id":{"name":"scr_donotifchoice","path":"scripts/scr_donotifchoice/scr_donotifchoice.yy",},},
     {"id":{"name":"scr_draw_hitbox","path":"scripts/scr_draw_hitbox/scr_draw_hitbox.yy",},},
     {"id":{"name":"scr_drawcombometer","path":"scripts/scr_drawcombometer/scr_drawcombometer.yy",},},
+    {"id":{"name":"scr_flavortext","path":"scripts/scr_flavortext/scr_flavortext.yy",},},
     {"id":{"name":"scr_getachievement","path":"scripts/scr_getachievement/scr_getachievement.yy",},},
     {"id":{"name":"scr_getachievementdescriptions","path":"scripts/scr_getachievementdescriptions/scr_getachievementdescriptions.yy",},},
     {"id":{"name":"scr_getachievementname","path":"scripts/scr_getachievementname/scr_getachievementname.yy",},},
@@ -1122,6 +1124,7 @@
     {"roomId":{"name":"room_chilifields_e","path":"rooms/room_chilifields_e/room_chilifields_e.yy",},},
     {"roomId":{"name":"room_demoending","path":"rooms/room_demoending/room_demoending.yy",},},
     {"roomId":{"name":"room_findher","path":"rooms/room_findher/room_findher.yy",},},
+    {"roomId":{"name":"room_extras_gallery","path":"rooms/room_extras_gallery/room_extras_gallery.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

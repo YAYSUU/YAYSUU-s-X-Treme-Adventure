@@ -1,23 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
+if goback
+	return
 if global.key_rightp
 {
 	if image_index=image_number-1
 		image_index=0
-	else
+	else {
 		image_index++
+		audio_play_sound(snd_pageflip,1,false,global.sndvol)
+	}
 }
 if global.key_leftp
 {
 	if image_index=0
 		image_index=image_number-1
-	else
+	else {
 		image_index--
+		audio_play_sound(snd_pageflip,1,false,global.sndvol)
+	}
 }
-else if global.key_dash
+else if global.key_dash || global.key_start || (global.inputtype=3 && keyboard_check_pressed(vk_backspace))
 {
+	goback=true
 	audio_play_sound(snd_nahnvm,1,false,global.sndvol)
-	instance_destroy()
+	loadroom(room_extras,loadtype.menu)
 }
 switch image_index
 {
@@ -57,9 +64,4 @@ switch image_index
 	default:
 	description="WOAH! UNUSED TEXT."
 	break;
-}
-if global.key_start
-{
-	audio_play_sound(snd_nahnvm,1,false,global.sndvol)
-	instance_destroy()
 }

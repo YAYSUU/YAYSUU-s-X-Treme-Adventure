@@ -36,7 +36,7 @@ if global.key_upp
 	audio_play_sound(snd_move,1,false,global.sndvol)
 }
 
-lastitem = 7
+lastitem = 8
 if chos > lastitem chos = 1 else if chos < 1 chos = lastitem
 switch chos
 {
@@ -61,10 +61,6 @@ switch chos
 		instance_deactivate_object(obj_extras)
 		instance_create_depth(x,y,depth,obj_cheats)
 	}
-	else if global.key_menuaccept
-	{
-		audio_play_sound(snd_nicetry,1,false,global.sndvol)
-	}
 	break;
 	case 4:
 	if global.key_menuaccept && extrasunlock
@@ -88,18 +84,20 @@ switch chos
 	}
 	break;
 	case 6:
-	if global.key_menuaccept && global.inputtype!=3
+	if global.key_menuaccept
 	{
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		instance_deactivate_object(obj_extras)
-		instance_create_depth(x,y,depth,obj_gallery)
-	}
-	else if global.key_menuaccept && global.inputtype=3
-	{
-		audio_play_sound(snd_nicetry,1,false,global.sndvol)
+		loadroom(room_extras_gallery,loadtype.menu)
 	}
 	break;
 	case 7:
+	if global.key_menuaccept
+	{
+		audio_play_sound(snd_confirm,1,false,global.sndvol)
+		url_open("https://discord.gg/DeenG6Q8Er")
+	}
+	break;
+	case 8:
 	if global.key_menuaccept
 	{
 		audio_stop_sound(mus_extras)

@@ -12,5 +12,6 @@ if uwt>0
 else {
 	sprite_index=spr_logo
 	y=160+sin(current_time / 170)*4 // thanks onsku!!!
-	scr_windowtitle("YAYSUU's X-Treme Adventure!")
 }
+if uwt=1
+	scr_windowtitle("YAYSUU's X-Treme Adventure!")

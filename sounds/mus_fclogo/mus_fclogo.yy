@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":6.008167,
+  "duration":7.4971457,
   "exportDir":"",
   "name":"mus_fclogo",
   "parent":{

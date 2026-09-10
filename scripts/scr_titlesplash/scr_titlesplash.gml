@@ -21,8 +21,9 @@ function get_titlesplash(){
 	"Who's X-Treme Adventure? Oh yeah...",
 	"OWO what's this?",
 	"Badum-tsss... Wait, wrong thing. Uhhhh...",
-	"Is it a sonic? Is it a pizza tower? No, it's a...",
+	"Is it a hedgehog? Is it an italian? No, it's...",
 	"Coming straight from YOUR pc...",
 	"...What?",
-	"With code taken from a skibidi-based mod...")
+	"With code taken from a skibidi-based mod...",
+	"It's like some kind of...")
 }

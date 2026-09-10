@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_gallery",
-    "path":"sprites/spr_gallery/spr_gallery.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

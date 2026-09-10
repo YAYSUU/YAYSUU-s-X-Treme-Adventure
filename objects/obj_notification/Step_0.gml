@@ -43,6 +43,7 @@ if selectable && !byebye
 					choice=1
 				else if choice=1
 					choice=0
+				audio_play_sound(snd_move,1,false,global.sndvol)
 			}
 			if global.key_downp
 			{
@@ -50,6 +51,7 @@ if selectable && !byebye
 					choice=1
 				else if choice=1
 					choice=0
+				audio_play_sound(snd_move,1,false,global.sndvol)
 			}
 			choice=clamp(choice,0,1)
 		}

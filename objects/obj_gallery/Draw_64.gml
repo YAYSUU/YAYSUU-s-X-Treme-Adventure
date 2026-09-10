@@ -14,5 +14,5 @@ var promptext = "\n"+keytostring(global.p1_dashkey)+" - Exit  Left/Right - Cycle
 if global.inputtype=2
 	promptext="\n`d  - Exit  Left/Right - Cycle"
 if global.inputtype=3
-	promptext="\nBack - Exit  Left/Right - Cycle"
+	promptext="\nBack - Exit"
 draw_text_yxa(16,16,(string(image_index+1))+"/"+(string(image_number))+"\n"+description+promptext,"white",false,624,global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons,5)
