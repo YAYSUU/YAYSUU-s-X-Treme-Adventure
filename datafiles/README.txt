@@ -95,4 +95,4 @@ CHEATS
 "jaspernap" - The programmer takes a nap. Hold out! Programmer!
 =============================================================================================================================
 JOIN MY DISCORD - Jasper's Furry Jamboree
-https://discord.gg/8CBfRdwS53
+https://discord.gg/DeenG6Q8Er

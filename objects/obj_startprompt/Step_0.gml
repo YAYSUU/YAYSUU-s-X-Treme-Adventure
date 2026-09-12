@@ -24,7 +24,7 @@ else if st==0 && !instance_exists(obj_notification)
 		global.inputtype=2
 		started = true
 	}
-	if keyboard_check_pressed(vk_escape)
+	if keyboard_check_pressed(vk_escape) || (global.mobile && keyboard_check_pressed(vk_backspace))
 	{
 		with instance_create_depth(0,0,0,obj_notification)
 		{
