@@ -40,5 +40,6 @@ else if st==0 && !instance_exists(obj_notification)
 		audio_stop_sound(mus_title)
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
 		image_speed=2
+		room_goto(room_scaryerror)
 	}
 }
