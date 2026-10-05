@@ -25,7 +25,7 @@ function opt_flavortext(){
 		case 9:
 		return "REVERT ALL OPTIONS TO DEFAULT"
 		case 10:
-		return "EXPERIMENT WITH CONTROLS USING YAYSUU AND TEDDY"
+		return "EXPERIMENT WITH CONTROLS USING YAYSUU"
 		case 11:
 		return "SAVE ALL CHANGED OPTIONS AND RETURN TO GAME"
 	}

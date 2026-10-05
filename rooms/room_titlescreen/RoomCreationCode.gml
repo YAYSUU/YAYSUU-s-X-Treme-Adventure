@@ -1,2 +1,2 @@
-scr_windowtitle(get_titlesplash())
+scr_windowtitle("")
 global.currentsong = mus_title

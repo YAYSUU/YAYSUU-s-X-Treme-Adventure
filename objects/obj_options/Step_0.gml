@@ -132,7 +132,7 @@ switch chos
 	if global.key_menuaccept
 	{
 		audio_play_sound(snd_confirm,1,false,global.sndvol)
-		global.multiplayer= !(global.mobile)
+		global.multiplayer= false
 		global.char = "Y"
 		global.p2char = "T"
 		loadnewstage(420, room_options_test)

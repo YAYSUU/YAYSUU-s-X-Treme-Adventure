@@ -3,16 +3,10 @@
 switch (global.prevroom)
 {
 	default:
-		if (global.trial)
-			chos=2
-		else
-			chos=1
+		chos=2
 		break
 	case room_options:
 		chos=3
-		break
-	case room_extras:
-		chos=4
 		break
 }
 image_speed=0

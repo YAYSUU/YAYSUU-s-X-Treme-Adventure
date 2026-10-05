@@ -133,11 +133,6 @@ else if !instance_exists(obj_notification)
 				scr_setupcharacter(global.char, global.skin)
 		}
 	}
-	if ((global.p2_key_menuaccept || global.p2_key_jump) && !global.multiplayer && !global.mobile && (global.trial || global.arcade))
-	{
-		global.multiplayer=true
-		audio_play_sound(snd_confirm,1,false,global.sndvol)
-	}
 	else if global.key_menuquit
 	{
 		if !selected

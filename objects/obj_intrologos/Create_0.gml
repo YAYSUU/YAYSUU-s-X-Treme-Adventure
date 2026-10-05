@@ -3,7 +3,8 @@
 if room=room_fclogo
 {
 	sprite_index=spr_fclogo
-	nextroom=room_sagelogo
+	nextroom=room_titlescreen
+	glitchtimer=60
 }
 if room=room_sagelogo
 {

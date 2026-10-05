@@ -28,7 +28,7 @@ else if st==0 && !instance_exists(obj_notification)
 	{
 		with instance_create_depth(0,0,0,obj_notification)
 		{
-			text="Are you sure you want to quit the game?"
+			text="And just where do you think YOU'RE going?"
 			color="white"
 			choicer=true
 			notifid=6

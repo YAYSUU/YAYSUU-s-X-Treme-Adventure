@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":1.0710312,
+  "duration":0.62696874,
   "exportDir":"",
   "name":"snd_nicetry",
   "parent":{

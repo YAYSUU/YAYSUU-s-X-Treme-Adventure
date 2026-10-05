@@ -32,19 +32,19 @@ else if global.key_downp && selected=false
 	audio_play_sound(snd_move,1,false,global.sndvol)
 }
 
-lastitem = 4
-if chos > lastitem chos = 1 else if chos < 1 chos = lastitem
+lastitem = 3
+if chos > lastitem chos = 2 else if chos < 2 chos = lastitem
 switch (chos)
 {
 	case 1:
 		x=122
 		y=118
-		menustring="Experience the story of YAYSUU's X-Treme Adventure. "
+		menustring="Lalala You shouldn't BE ABLE TO REACH THIS. "
 		break
 	case 2:
 		x=158
 		y=182
-		menustring="Go for a highscore or a record time in Trial Mode! "
+		menustring="The beginning of the end. "
 		break
 	case 3:
 		x=194
@@ -54,25 +54,15 @@ switch (chos)
 	case 4:
 		x=230
 		y=310
-		menustring="Access cheats, and other such extra doodads! "
+		menustring="What are you gonna do? Extras the demon to death? "
 		break
 }
 if (global.key_menuaccept) && selected=false
 {
 	switch (chos)
 	{
-		case 1:
-			global.trial=false
-			nextroom=room_charselect
-			image_alpha=1
-			image_speed=1
-			delay=60 
-			selected=true
-			global.extras = false
-			audio_play_sound(snd_confirm,1,false,global.sndvol)
-			break
 		case 2:
-			global.trial=true
+			global.trial=false
 			nextroom=room_charselect
 			image_alpha=1
 			image_speed=1
@@ -83,14 +73,6 @@ if (global.key_menuaccept) && selected=false
 			break
 		case 3:
 			nextroom=room_options
-			image_alpha=1
-			image_speed=1
-			delay=60 
-			selected=true
-			audio_play_sound(snd_confirm,1,false,global.sndvol)
-			break
-		case 4:
-			nextroom=room_extras
 			image_alpha=1
 			image_speed=1
 			delay=60 

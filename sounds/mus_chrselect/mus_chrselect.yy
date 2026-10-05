@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":80.039185,
+  "duration":66.246544,
   "exportDir":"",
   "name":"mus_chrselect",
   "parent":{
