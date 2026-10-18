@@ -107,4 +107,7 @@ else {
 	gamepad_set_vibration(global.p1_controlslot, 0, 0)
 	gamepad_set_vibration(global.p2_controlslot, 0, 0)
 }
-camera_set_view_pos(view_camera[cameraid], actualcamx - 320, (actualcamy - 240) + shakey)
+var cameraoffset=0
+if instance_exists(obj_player_cutscene1)
+	cameraoffset=obj_player_cutscene1.cameraoffset
+camera_set_view_pos(view_camera[cameraid], actualcamx - 320+cameraoffset, (actualcamy - 240) + shakey)

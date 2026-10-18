@@ -6,7 +6,7 @@ if global.char="T"
 {
 	if global.inputtype=2
 	{
-		subtitle = "Press `d   mid-air to stomp the enemies!"
+		subtitle = "Press DOWN mid-air to stomp the enemies!"
 		button = global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 		subimg = 2
 	}

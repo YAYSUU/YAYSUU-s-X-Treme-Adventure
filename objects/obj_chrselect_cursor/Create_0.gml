@@ -5,13 +5,14 @@ chos2=2
 selected=false
 delay=0
 global.multiplayer = false
-global.arcade = false
+global.arcade = true
 global.char="Y"
 teddyavailable = true
 prevchos = 0
 draw_set_font(global.font)
 charname="YAYSUU"
 p2charname="AND TEDDY"
+chardescription="PRACEHOLDUH"
 charlife=0
 ini_open("savedata.ini")
 savelives[0]=ini_read_real("fileY","lives",3)

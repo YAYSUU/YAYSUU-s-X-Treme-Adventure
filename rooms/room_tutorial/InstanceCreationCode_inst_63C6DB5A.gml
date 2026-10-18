@@ -1,6 +1,6 @@
 if global.inputtype=2
 {
-	subtitle="Press `d  while grounded to attack the enemy!"
+	subtitle="Press B while grounded to attack the enemy!"
 	button=global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 	subimg=5
 }

@@ -338,7 +338,6 @@ if place_meeting(x, y, obj_lava) && state!=playerstates.dead && state!=playersta
 		if (!global.splitscreen && !isotherplayer) || (!global.multiplayer)
 		audio_stop_all()
 		audio_play_sound(mus_dead,1,false,global.sndvol)
-		global.lives--
 	}
 	else {
 		newstate = playerstates.fireass
@@ -398,8 +397,6 @@ if (ouchies)
 				depth = obj_seecret.depth-1
 			if !instance_exists(obj_stageclear)
 			{
-				if (global.lives > 0)
-					global.lives--
 			    vsp = -abs(vsp)
 				if (!isotherplayer && !global.splitscreen) || !global.multiplayer
 					audio_stop_all()

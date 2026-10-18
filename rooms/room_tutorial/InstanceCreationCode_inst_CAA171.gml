@@ -1,6 +1,6 @@
 if global.inputtype=2
 {
-	subtitle="Press `d  to jump!"
+	subtitle="Press A to jump!"
 	button=global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 	subimg=4
 }

@@ -2,7 +2,7 @@ if global.char="Y"
 {
 	if global.inputtype=2
 	{
-		subtitle = "Airdash over the gap by pressing `d   mid-air!"
+		subtitle = "Airdash over the gap by pressing B mid-air!"
 		button = global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 		subimg = 5
 	}

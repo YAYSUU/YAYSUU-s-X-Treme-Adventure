@@ -2,7 +2,7 @@ if global.char="Y"
 {
 	if global.inputtype=2
 	{
-		subtitle = "Press `d  in the air to perform a bounce!"
+		subtitle = "Press DOWN in the air to perform a bounce!"
 		button=global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 		subimg=2
 	}
@@ -21,7 +21,7 @@ if global.char="T"
 {
 	if global.inputtype=2
 	{
-		subtitle = "Press `d  again to perform a double-jump!"
+		subtitle = "Press A again to perform a double-jump!"
 		button=global.buttonsprite ? spr_playstationbuttons : spr_xboxbuttons
 		subimg=4
 	}

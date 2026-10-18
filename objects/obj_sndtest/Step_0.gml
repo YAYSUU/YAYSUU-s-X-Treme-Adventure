@@ -68,7 +68,7 @@ switch select
 		loopthis=true
 	break;
 	case 3:
-		currentsound=mus_tutorial
+		currentsound=mus_a
 		sndname="Tutorial - YXA OST"
 		loopthis=true
 	break;

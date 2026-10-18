@@ -2,15 +2,17 @@
 // You can write your code in this editor
 switch chos
 {
+	case 0:
+	charname="COTTON"
+	break;
 	case 1:
 	charname="YAYSUU"
+	chardescription="SPEED: A / HANDLING: B / POWER: C\nThe one and only, plucked from his home into a void that seems all too familiar to him. His speed and bounciness might make escaping easy, but can he truly finish what he started...?"
 	charlife=0
-	break;
-	case 1.5:
-	charname="COTTON"
 	break;
 	case 2:
 	charname="TEDDY"
+	chardescription="SPEED: C / HANDLING: A / POWER: B\nThe big brother, but rather out-of-the-loop in this new predicament. Destructive power and parkour ability make him adept at finding new paths, but he doesn't truly know what he's up against..."
 	charlife=1
 	break;
 }

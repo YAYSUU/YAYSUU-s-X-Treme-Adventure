@@ -90,10 +90,6 @@ if (global.pause)
 						audio_play_sound(snd_nicetry,1,false,global.sndvol)
 					else
 					{
-						if (!global.trial)
-							global.lives--
-						else
-							global.lives=3
 						global.checkpoint=false
 						audio_stop_all()
 						audio_play_sound(snd_confirm,1,false,global.sndvol)
@@ -150,8 +146,6 @@ if (global.pause)
 				audio_play_sound(snd_nicetry,1,false,global.sndvol)
 			else
 			{
-				if (!global.trial)
-					global.lives--
 				global.checkpoint=false
 				audio_stop_all()
 				audio_play_sound(snd_confirm,1,false,global.sndvol)

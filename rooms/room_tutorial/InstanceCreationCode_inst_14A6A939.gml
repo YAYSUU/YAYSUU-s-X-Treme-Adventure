@@ -1,1 +1,1 @@
-subtitle = "Watch out for the spike! Touching it will hurt you and remove one of your pizza slices. It will also deduct 50 coins."
+subtitle = "You're not supposed to be here, are you?"
