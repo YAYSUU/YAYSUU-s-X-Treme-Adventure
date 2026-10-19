@@ -27,7 +27,7 @@ if talking && !pancamera
 		switch dialogueprogress
 		{
 			case 1:
-			saydialogue("...Oh. It's YOU.","red","???")
+			saydialogue("...Oh. It's YOU.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 2:
 			saydialogue("You better BELIEVE it's me, punk.","white","YAYSUU")
@@ -39,10 +39,10 @@ if talking && !pancamera
 			obj_player.sprite_index=spr_yaysuu_idle
 			break;
 			case 4:
-			saydialogue("That look... Something about the way you...","red","???")
+			saydialogue("That look... Something about the way you...","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 5:
-			saydialogue("...You... recognized me...?","red","???")
+			saydialogue("...You... recognized me...?","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
 			break;
 			case 6:
@@ -50,7 +50,7 @@ if talking && !pancamera
 			obj_player.sprite_index=spr_yaysuu_talk_mad
 			break;
 			case 7: 
-			saydialogue("Ufufufu... Perhaps your memory has been jogged after all.","red","???")
+			saydialogue("Ufufufu... Now this is interesting.","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
 			obj_player.sprite_index=spr_yaysuu_idle
 			audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
@@ -61,36 +61,36 @@ if talking && !pancamera
 			obj_player.sprite_index=spr_yaysuu_talk_confused
 			break;
 			case 9:
-			saydialogue("This place...?","red","???")
+			saydialogue("This place...?","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
 			obj_player.sprite_index=spr_yaysuu_idle
 			break;
 			case 10:
-			saydialogue("It's what's left of the `cyold world.","red","???")
+			saydialogue("It's what's left of the `cyold world.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 11:
-			saydialogue("When the fabric of reality tore into pieces...","red","???")
+			saydialogue("When the fabric of reality tore into pieces...","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 12:
-			saydialogue("When the `cbtwo deities `crfought for control...","red","???")
+			saydialogue("When the `cbtwo deities `crfought for control...","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 13:
-			saydialogue("This little shard was abandoned.","red","???")
+			saydialogue("This little shard was abandoned.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 14:
-			saydialogue("And now it's my little world.","red","???")
+			saydialogue("And now it's my little world.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 15:
-			saydialogue("You and your friends...","red","???")
+			saydialogue("You and your friends...","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 16:
-			saydialogue("You came from another world, just like it.","red","???")
+			saydialogue("You came from another world, just like it.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 17:
-			saydialogue("On a bustling little island, leading different lives.","red","???")
+			saydialogue("On a bustling little island, leading different lives.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 18:
-			saydialogue("So... HOW... did you REMEMBER??","red","???")
+			saydialogue("So... HOW... did you REMEMBER??","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
 			break;
 			case 19:
@@ -98,14 +98,14 @@ if talking && !pancamera
 			obj_player.sprite_index=spr_yaysuu_talk_confused
 			break;
 			case 20:
-			saydialogue("Oh. Of `sCOURSE `uit's some chicanery like that.","red","???")
+			saydialogue("Oh. Of `sCOURSE `uit's some chicanery like that. It all makes sense now.","red","???",spr_dialoguebox_yoknovist)
 			obj_player.sprite_index=spr_yaysuu_idle
 			break;
 			case 21:
-			saydialogue("Of `scourse `uyou didn't die. Of `scourse `uyou lived on, somewhere else `sENTIRELY.","red","???")
+			saydialogue("Of `scourse `uyou didn't die. Of `scourse `uyou lived on, somewhere else `sENTIRELY.","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 22:
-			saydialogue("What else could I expect from the little `sCOCKROACH `uwho brought me into being?","red","???")
+			saydialogue("What else could I expect from the little `sCOCKROACH `uwho brought me into being?","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
 			break;
 			case 23:
@@ -118,29 +118,30 @@ if talking && !pancamera
 			break;
 			case 25:
 			instance_create_depth(x,y,obj_yoknovist_cutscene1.depth+1,obj_yoknovistmessage)
-			obj_player.sprite_index=spr_yaysuu_idle
 			break;
 			case 26:
-			saydialogue("Why so in a rush, INGRATE?","red","???")
+			saydialogue("Why so in a rush, INGRATE?","red","???",spr_dialoguebox_yoknovist)
+			obj_player.image_alpha=1
+			obj_player.sprite_index=spr_yaysuu_idle
 			break;
 			case 27:
-			saydialogue("Can't you indulge me just this final time?","red","???")
+			saydialogue("Won't you indulge me just this once?","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 28:
-			saydialogue("One final game, in this lonesome, crumbling, dying world...?","red","???")
+			saydialogue("One final game, in this lonesome, crumbling, dying world...?","red","???",spr_dialoguebox_yoknovist)
 			break;
 			case 29:
-			saydialogue("...I DO fancy me a dangerous, deadly game...","white","YAYSUU")
+			saydialogue("...Doesn't sound like I have much of a choice, do I?","white","YAYSUU")
 			obj_player.sprite_index=spr_yaysuu_talk_surprised
 			break;
 			case 30:
-			saydialogue("Ufufufu...","red","???")
+			saydialogue("Ufufufu...","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
 			obj_player.sprite_index=spr_yaysuu_idle
 			audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
 			break;
 			case 31:
-			saydialogue("Then I'll see you up ahead.","red","???")
+			saydialogue("Then I'll see you up ahead.","red","???",spr_dialoguebox_yoknovist)
 			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
 			break;
 			case 32:

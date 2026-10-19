@@ -12,3 +12,4 @@ dialoguesound=snd_dialogue_default
 playaudiosingle=false
 name=""
 nobox=false
+boxsprite=spr_dialoguebox

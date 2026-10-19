@@ -4,6 +4,7 @@ if glitchtimer=0
 {
 	sprite_index=spr_fclogo_corrupt
 	y+=30
+	window_set_caption(casescramble("Fishcat Studio!"))
 }
 if glitchtimer>0
 	glitchtimer--

@@ -479,8 +479,12 @@ if (state == playerstates.dead) && ((!global.splitscreen && !isotherplayer) || (
 	{
 	    if (global.lives > 0)
 		{
-			if (room == room_chilifields_b || room == room_chilifields_c || room == room_chilifields_d || room == room_chilifields_e)
-				loadroom(room_chilifields_a, loadtype.respawn) //i'm EVIL
+			if (room == room_tutorial)
+			{
+				window_set_caption("Coward")
+				show_message("That's what I thought.")
+				game_end() //i'm EVILER
+			}
 			else
 				loadroom(room, loadtype.respawn)
 		}

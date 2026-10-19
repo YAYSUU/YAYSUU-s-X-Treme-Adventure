@@ -3,7 +3,7 @@
 draw_set_halign(fa_left)
 if !nobox
 {
-	draw_sprite(spr_dialoguebox,0,0,0)
+	draw_sprite(boxsprite,0,0,0)
 }
 draw_text_yxa(16,327,name,"white",true)
 if (finished)
