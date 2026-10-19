@@ -168,7 +168,7 @@ function draw_text_yxa(x,y,textstring,color,dropshadow,maxlength = 640,sprite = 
 					colorhex = #FFFFFF 
 					break;
 					default:
-					show_error("Hey! Dumbass! That's not a PICO 8 Color!!! Refer to draw_text_yxa for more details.",true)
+					colorhex = #FFFFFF 
 					break;
 				}
 				i++

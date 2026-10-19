@@ -2,19 +2,160 @@
 // You can write your code in this editor
 if !instance_exists(obj_stageclear)  
 {
-	if touchingplayer(x, y) && global.mainplayer.grounded && !(instance_exists(obj_dialoguebox)) && (!global.multiplayer)
+	if touchingplayer(x, y) && global.mainplayer.grounded && !(instance_exists(obj_dialoguebox)) && (!global.multiplayer) && !talking && !talked
 	{
 		dialogueprogress=0
+		pancamera=true
 		talking=true
 		global.mainplayer.newstate = playerstates.inactive
 		global.mainplayer.facingdirection = 1 // look in front of you stupid
 		global.mainplayer.sprite_index = global.mainplayer.playersprites[playersprite.idle]
 	}
 }
-if talking && dialogueprogress=0
+if talking && pancamera
 {
-	if cameraoffset<240
+	if camera_get_view_x(view_camera[0])<8050
 		cameraoffset+=4
-	if cameraoffset=240
-		dialogueprogress=1
+	else
+		pancamera=false
+}
+if talking && !pancamera
+{
+	if !instance_exists(obj_dialoguebox)
+	{
+		dialogueprogress++
+		switch dialogueprogress
+		{
+			case 1:
+			saydialogue("...Oh. It's YOU.","red","???")
+			break;
+			case 2:
+			saydialogue("You better BELIEVE it's me, punk.","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_mad
+			break;
+			case 3:
+			instance_create_depth(obj_yoknovist_cutscene1.x,obj_yoknovist_cutscene1.y-64,obj_yoknovist_cutscene1.depth,obj_speechbubble)
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+			obj_player.sprite_index=spr_yaysuu_idle
+			break;
+			case 4:
+			saydialogue("That look... Something about the way you...","red","???")
+			break;
+			case 5:
+			saydialogue("...You... recognized me...?","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+			break;
+			case 6:
+			saydialogue("I'd recognize an old nemesis anywhere, reject.","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_mad
+			break;
+			case 7: 
+			saydialogue("Ufufufu... Perhaps your memory has been jogged after all.","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
+			obj_player.sprite_index=spr_yaysuu_idle
+			audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
+			break;
+			case 8:
+			saydialogue("Yeah, yeah, get to the POINT. Where are we?","white","YAYSUU")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+			obj_player.sprite_index=spr_yaysuu_talk_confused
+			break;
+			case 9:
+			saydialogue("This place...?","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+			obj_player.sprite_index=spr_yaysuu_idle
+			break;
+			case 10:
+			saydialogue("It's what's left of the `cyold world.","red","???")
+			break;
+			case 11:
+			saydialogue("When the fabric of reality tore into pieces...","red","???")
+			break;
+			case 12:
+			saydialogue("When the `cbtwo deities `crfought for control...","red","???")
+			break;
+			case 13:
+			saydialogue("This little shard was abandoned.","red","???")
+			break;
+			case 14:
+			saydialogue("And now it's my little world.","red","???")
+			break;
+			case 15:
+			saydialogue("You and your friends...","red","???")
+			break;
+			case 16:
+			saydialogue("You came from another world, just like it.","red","???")
+			break;
+			case 17:
+			saydialogue("On a bustling little island, leading different lives.","red","???")
+			break;
+			case 18:
+			saydialogue("So... HOW... did you REMEMBER??","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+			break;
+			case 19:
+			saydialogue("You're not the only one who can break that there 4th wall, y'know.","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_confused
+			break;
+			case 20:
+			saydialogue("Oh. Of `sCOURSE `uit's some chicanery like that.","red","???")
+			obj_player.sprite_index=spr_yaysuu_idle
+			break;
+			case 21:
+			saydialogue("Of `scourse `uyou didn't die. Of `scourse `uyou lived on, somewhere else `sENTIRELY.","red","???")
+			break;
+			case 22:
+			saydialogue("What else could I expect from the little `sCOCKROACH `uwho brought me into being?","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+			break;
+			case 23:
+			saydialogue("Woah, there, take it easy. I thought you were a 'changed demon' now...","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_relax
+			break;
+			case 24:
+			saydialogue("Anyways, can we wrap this up? I got stages to be.","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_confused
+			break;
+			case 25:
+			instance_create_depth(x,y,obj_yoknovist_cutscene1.depth+1,obj_yoknovistmessage)
+			obj_player.sprite_index=spr_yaysuu_idle
+			break;
+			case 26:
+			saydialogue("Why so in a rush, INGRATE?","red","???")
+			break;
+			case 27:
+			saydialogue("Can't you indulge me just this final time?","red","???")
+			break;
+			case 28:
+			saydialogue("One final game, in this lonesome, crumbling, dying world...?","red","???")
+			break;
+			case 29:
+			saydialogue("...I DO fancy me a dangerous, deadly game...","white","YAYSUU")
+			obj_player.sprite_index=spr_yaysuu_talk_surprised
+			break;
+			case 30:
+			saydialogue("Ufufufu...","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
+			obj_player.sprite_index=spr_yaysuu_idle
+			audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
+			break;
+			case 31:
+			saydialogue("Then I'll see you up ahead.","red","???")
+			obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+			break;
+			case 32:
+			talking=false
+			talked=true
+			break;
+		}
+	}
+}
+if talked && cameraoffset>0
+	cameraoffset-=4
+if talked && cameraoffset=0
+{
+	instance_destroy()
+	instance_destroy(inst_cutscenewall)
+	instance_destroy(obj_yoknovist_cutscene1)
+	obj_player.newstate=playerstates.normal
 }
