@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":141.42696,
+  "duration":43.180416,
   "exportDir":"",
   "name":"mus_chillfields_1",
   "parent":{

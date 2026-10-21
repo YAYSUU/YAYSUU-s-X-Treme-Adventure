@@ -122,6 +122,36 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.healthicon] = spr_pancake
 		playersprites[playersprite.lookahead] = spr_teddy_lookahead
 	}
+	else if (char == "C")
+	{
+		playersprites[playersprite.idle] = spr_cotton_idle
+		playersprites[playersprite.wait] = spr_cotton_wait
+		playersprites[playersprite.walk] = spr_cotton_walk
+		playersprites[playersprite.run] = spr_cotton_run
+		playersprites[playersprite.brake] = spr_cotton_brake
+		playersprites[playersprite.jumpstart] = spr_cotton_jump
+		playersprites[playersprite.jumploop] = spr_cotton_jump
+		playersprites[playersprite.fall] = spr_cotton_fall
+		playersprites[playersprite.runjump] = spr_cotton_jump
+		playersprites[playersprite.runfall] = spr_cotton_fall
+		playersprites[playersprite.crouch] = spr_cotton_crouch
+		playersprites[playersprite.dash] = spr_teddy_dash
+		playersprites[playersprite.slide] = spr_cotton_slide
+		playersprites[playersprite.stomp] = spr_cotton_ball
+		playersprites[playersprite.ouchie] = spr_cotton_ouchie
+		playersprites[playersprite.deaded] = spr_cotton_dieded
+		playersprites[playersprite.bounce] = spr_cotton_ball
+		playersprites[playersprite.win] = spr_cotton_win
+		playersprites[playersprite.launched] = spr_cotton_dieded
+		playersprites[playersprite.golfstop] = spr_cotton_ball
+		playersprites[playersprite.hangglide] = spr_teddy_hangglide
+		playersprites[playersprite.fireass] = spr_teddy_fireass
+		playersprites[playersprite.wallslide] = spr_teddy_wallslide
+		playersprites[playersprite.lifeicon] = spr_teddylifeicon
+		playersprites[playersprite.lifemonitor] = spr_lifemonitor_c
+		playersprites[playersprite.healthicon] = spr_carrot
+		playersprites[playersprite.lookahead] = spr_teddy_lookahead
+	}
 	else
 	{
 		scr_debugmessage(char + " is not a valid character!")

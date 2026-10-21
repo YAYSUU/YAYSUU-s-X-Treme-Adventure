@@ -1093,7 +1093,7 @@ else
 if (sprite_index == playersprites[playersprite.walk])
 {
 	walktimer++
-	if walktimer=24
+	if walktimer=(char="C"?16:24)
 	{
 		walktimer=0
 		audio_play_sound(snd_footstep,1,false,global.sndvol,0,random_range(1,1.2))

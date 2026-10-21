@@ -4,6 +4,7 @@ switch chos
 {
 	case 0:
 	charname="COTTON"
+	chardescription="SPEED: C / HANDLING: A / POWER: B\nA slimy forest critter, and birthday girl. Unfortunately, the first witness to the horror. Can get out of 'sticky' situations, but the demon's favor may not be enough..."
 	break;
 	case 1:
 	charname="YAYSUU"
@@ -12,7 +13,7 @@ switch chos
 	break;
 	case 2:
 	charname="TEDDY"
-	chardescription="SPEED: C / HANDLING: A / POWER: B\nThe big brother, but rather out-of-the-loop in this new predicament. Destructive power and parkour ability make him adept at finding new paths, but he doesn't truly know what he's up against..."
+	chardescription="SPEED: B / HANDLING: C / POWER: A\nThe big brother, but rather out-of-the-loop in this new predicament. Destructive power and parkour ability make him adept at finding new paths, but he doesn't truly know what he's up against..."
 	charlife=1
 	break;
 }
@@ -119,16 +120,19 @@ else if !instance_exists(obj_notification)
 			delay=120
 			selected=true
 			audio_play_sound(snd_confirm,1,false,global.sndvol)
+			if (chos == 0)
+			{
+				global.char = "C"
+				audio_play_sound(snd_cottonselect,1,false,global.sndvol*global.voicelines)
+			}
 			if (chos == 1)
 			{
 				global.char = "Y"
-				global.p2char = "T"
 				audio_play_sound(snd_yaysuuselect,1,false,global.sndvol*global.voicelines)
 			}
 			else if (chos == 2)
 			{
 				global.char = "T"
-				global.p2char = "Y"
 				audio_play_sound(snd_teddyselect,1,false,global.sndvol*global.voicelines)
 			}
 			with (global.mainplayer)
@@ -159,29 +163,18 @@ else if !instance_exists(obj_notification)
 	else if ((global.key_rightp) || (global.p2_key_rightp && global.multiplayer)) && !selected
 	{
 		audio_play_sound(snd_move,1,false,global.sndvol)
-		if chos=1
+		if chos<2
 			chos++
 		else if chos=2
-			chos--
-		chos2=chos=1 ? 2 : 1
+			chos=0
 	}
 	else if ((global.key_leftp) || (global.p2_key_leftp && global.multiplayer)) && !selected
 	{
 		audio_play_sound(snd_move,1,false,global.sndvol)
-		if chos=1
-			chos++
-		else if chos=2
+		if chos>0
 			chos--
-		chos2=chos=1 ? 2 : 1
-	}
-	else if ((global.key_upp) || (global.key_downp)) && !selected && !global.trial
-	{
-		global.arcade=!global.arcade
-		if !global.arcade
-		{
-			global.multiplayer=false
-		}
-		audio_play_sound(snd_move,1,false,global.sndvol)
+		else if chos=0
+			chos=2
 	}
 	/*else if global.key_upp
 	{
@@ -197,16 +190,12 @@ else if !instance_exists(obj_notification)
 		chos = prevchos
 	}*/
 	
-	chos=clamp(chos,1,2)
+	chos=clamp(chos,0,2)
 	chos2=clamp(chos2,1,2)
 	if chos=1
 		x=224
-	//else if chos=1.5
-	//	x=320
+	else if chos=0
+		x=38
 	else
 		x=416
-	if chos2=1
-		p2x=224
-	else
-		p2x=416
 }

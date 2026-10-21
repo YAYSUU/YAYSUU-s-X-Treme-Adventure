@@ -1,13 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teddy",
+  "%Name":"obj_yoknovist",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_teddy",
+  "name":"obj_yoknovist",
   "overriddenProperties":[],
   "parent":{
     "name":"players",
@@ -32,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_teddy_die",
-    "path":"sprites/spr_teddy_die/spr_teddy_die.yy",
+    "name":"spr_yoknovist_idle",
+    "path":"sprites/spr_yoknovist_idle/spr_yoknovist_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
