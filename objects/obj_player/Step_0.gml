@@ -1084,6 +1084,7 @@ switch (state)
 		break;
 	case playerstates.fly:
 		newsprite = playersprites[playersprite.fly]
+		image_xscale = facingdirection
 		break;
 	case playerstates.debug:
 		newsprite = object_get_sprite(selecteddebugobject)
