@@ -26,7 +26,8 @@ enum playersprite
 	lifeicon,
 	lifemonitor,
 	healthicon,
-	lookahead
+	lookahead,
+	fly
 }
 function scr_setupcharacter(char, skin)
 {
@@ -151,6 +152,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_c
 		playersprites[playersprite.healthicon] = spr_carrot
 		playersprites[playersprite.lookahead] = spr_teddy_lookahead
+		playersprites[playersprite.fly] = spr_cotton_fly
 	}
 	else
 	{

@@ -15,7 +15,8 @@ enum playerstates
 	hangglide,
 	fireass,
 	debug,
-	elevate
+	elevate,
+	fly
 }
 
 if (!global.inlevel) || (global.inlevel && isotherplayer && !global.multiplayer)
@@ -42,7 +43,7 @@ else if (inwater)
 	grv = watergrav
 	maxfallspeed = normmaxfall
 }
-else if (state == playerstates.normal && !grounded && !djump && char == "C")
+else if (state == playerstates.fly)
 {
 	grv = floatgrav
 	maxfallspeed = floatmaxfall
@@ -244,15 +245,27 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 	}
 	else if !grounded && djump
 	{
-		if (inwater)
-			vsp = wdjmp
+		if (char == "C")
+		{
+			vsp = flyjmp
+			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
+			djump = false
+			newstate = playerstates.fly
+		}
 		else
-			vsp = char="T" ? djmp : djmp*3.5/4
-		audio_play_sound(snd_doublejump, 1, false, global.sndvol)
-		djump = false
-		newstate = playerstates.normal
-		image_index = 0
-		sprite_index = playersprites[playersprite.bounce]
+		{
+			if (inwater)
+				vsp = wdjmp
+			else if (char=="T")
+				vsp = djmp
+			else
+				vsp = sdjmp
+			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
+			djump = false
+			newstate = playerstates.normal
+			//image_index = 0
+			//sprite_index = playersprites[playersprite.bounce]
+		}
 	}
 	else if grounded
 	{
@@ -260,12 +273,14 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			vsp = wjmp
 		else
 			vsp = jmp
-		if (key_run) && (char = "Y")
+		if (key_run && char == "Y")
 		{
 			audio_play_sound(snd_dashpad, 1, false, global.sndvol*3/4,0,1.2)
-			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
+			audio_play_sound(snd_doublejump_c, 1, false, global.sndvol)
 			hsp += move * smashbump
 		}
+		else if (char == "T")
+			audio_play_sound(snd_jump_c, 1, false, global.sndvol)
 		else
 			audio_play_sound(snd_jump, 1, false, global.sndvol)
 		grounded = false
@@ -281,6 +296,11 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 		vsp = wbop
 		audio_play_sound(snd_waterswim, 1, false, global.sndvol)
 	}
+}
+if (state == playerstates.fly && newstate == state)
+{
+	if (grounded && vsp > 0)
+		newstate = playerstates.normal
 }
 
 if (state == playerstates.golfstop && newstate == state)
@@ -994,7 +1014,9 @@ switch (state)
 		}
 		else
 		{
-			if (canwalljump)
+			if (grv == floatgrav)
+				newsprite = playersprites[playersprite.fly]
+			else if (canwalljump)
 				newsprite = playersprites[playersprite.wallslide]
 			else if (abs(hsp) > walkspeed)
 			{
@@ -1055,6 +1077,9 @@ switch (state)
 		break;
 	case playerstates.fireass:
 		newsprite = playersprites[playersprite.fireass]
+		break;
+	case playerstates.fly:
+		newsprite = playersprites[playersprite.fly]
 		break;
 	case playerstates.debug:
 		newsprite = object_get_sprite(selecteddebugobject)
