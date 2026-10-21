@@ -263,8 +263,8 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 			djump = false
 			newstate = playerstates.normal
-			//image_index = 0
-			//sprite_index = playersprites[playersprite.bounce]
+			image_index = 0
+			sprite_index = playersprites[playersprite.bounce]
 		}
 	}
 	else if grounded
