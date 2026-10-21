@@ -668,6 +668,7 @@
     {"id":{"name":"spr_cotton_fly","path":"sprites/spr_cotton_fly/spr_cotton_fly.yy",},},
     {"id":{"name":"spr_cotton_idle","path":"sprites/spr_cotton_idle/spr_cotton_idle.yy",},},
     {"id":{"name":"spr_cotton_jump","path":"sprites/spr_cotton_jump/spr_cotton_jump.yy",},},
+    {"id":{"name":"spr_cotton_lookahead","path":"sprites/spr_cotton_lookahead/spr_cotton_lookahead.yy",},},
     {"id":{"name":"spr_cotton_ouchie","path":"sprites/spr_cotton_ouchie/spr_cotton_ouchie.yy",},},
     {"id":{"name":"spr_cotton_run","path":"sprites/spr_cotton_run/spr_cotton_run.yy",},},
     {"id":{"name":"spr_cotton_slide","path":"sprites/spr_cotton_slide/spr_cotton_slide.yy",},},

@@ -151,7 +151,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.lifeicon] = spr_teddylifeicon
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_c
 		playersprites[playersprite.healthicon] = spr_carrot
-		playersprites[playersprite.lookahead] = spr_teddy_lookahead
+		playersprites[playersprite.lookahead] = spr_cotton_lookahead
 		playersprites[playersprite.fly] = spr_cotton_fly
 	}
 	else

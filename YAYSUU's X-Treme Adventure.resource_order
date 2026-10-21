@@ -593,6 +593,7 @@
     {"name":"spr_cotton_fall","order":5,"path":"sprites/spr_cotton_fall/spr_cotton_fall.yy",},
     {"name":"spr_cotton_fly","order":6,"path":"sprites/spr_cotton_fly/spr_cotton_fly.yy",},
     {"name":"spr_cotton_jump","order":7,"path":"sprites/spr_cotton_jump/spr_cotton_jump.yy",},
+    {"name":"spr_cotton_lookahead","order":14,"path":"sprites/spr_cotton_lookahead/spr_cotton_lookahead.yy",},
     {"name":"spr_cotton_ouchie","order":8,"path":"sprites/spr_cotton_ouchie/spr_cotton_ouchie.yy",},
     {"name":"spr_cotton_run","order":11,"path":"sprites/spr_cotton_run/spr_cotton_run.yy",},
     {"name":"spr_cotton_slide","order":9,"path":"sprites/spr_cotton_slide/spr_cotton_slide.yy",},
