@@ -142,7 +142,7 @@ if (grounded && ((abs(hsp) > walkspeed && key_downp) || key_dashp) && (state == 
 }
 
 //stomp
-if ((!grounded) && key_downp && newstate == state && (state == playerstates.normal || state == playerstates.dash))
+if ((!grounded) && key_downp && newstate == state && (state == playerstates.normal || state == playerstates.dash || state == playerstates.fly))
 {	
 	vsp = 15
 	//yearnedhsp = 15
@@ -230,7 +230,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 	}
 }
 
-canwalljump = !grounded && char="T" && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0
+canwalljump = !grounded && (char="T" || char="C") && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0
 // jumping
 if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && !forcecrouch)
 {
@@ -255,6 +255,7 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 			djump = false
 			newstate = playerstates.fly
+			flymtr=60*3
 		}
 		else
 		{
@@ -280,13 +281,11 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 		if (key_run && char == "Y")
 		{
 			audio_play_sound(snd_dashpad, 1, false, global.sndvol*3/4,0,1.2)
-			audio_play_sound(snd_doublejump_c, 1, false, global.sndvol)
+			audio_play_sound(snd_doublejump, 1, false, global.sndvol) // NO COTTON SOUNDS IN MY YAYSUU
 			hsp += move * smashbump
 		}
-		else if (char == "T")
-			audio_play_sound(snd_jump_c, 1, false, global.sndvol)
 		else
-			audio_play_sound(snd_jump, 1, false, global.sndvol)
+			audio_play_sound(snd_jump, 1, false, global.sndvol) // STAAAAHHHPPP
 		grounded = false
 		prevgrounded = false
 		slopey = false
@@ -303,7 +302,11 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 }
 if (state == playerstates.fly && newstate == state)
 {
-	if (grounded && vsp > 0)
+	if flymtr>0
+		flymtr--
+	if (key_jumpp)
+		vsp=jmp*0.5
+	if (grounded && vsp > 0) || flymtr=0 || (key_dashp)
 		newstate = playerstates.normal
 }
 
