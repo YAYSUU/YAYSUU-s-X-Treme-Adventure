@@ -158,7 +158,11 @@ else if (grounded && state == playerstates.stomp && newstate == state)
 		audio_play_sound(snd_stompland, 1, false, global.sndvol)
 	}
 	else
+	{
 		event_user(0)
+		if (char == "C")
+			djump = true
+	}
 	hsp += move * smashbump
 }
 else if (state == playerstates.bounce && newstate == state)

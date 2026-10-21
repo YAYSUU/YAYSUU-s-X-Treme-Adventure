@@ -8,7 +8,7 @@ function collisionupdate_rubble(player){
 		checkoffsetx = player.hsp * 2
 		checkoffsety = player.vsp * 2
 	}
-	else if (!strong || player.char != "Y")
+	else if (!strong || player.char == "T")
 	{
 		if (!player.vulnerable)
 		{
