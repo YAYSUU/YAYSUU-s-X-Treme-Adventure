@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_hfail.mp3",
+  "soundFile":"snd_hfail.wav",
   "volume":1.0,
 }

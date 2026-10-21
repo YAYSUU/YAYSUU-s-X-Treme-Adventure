@@ -9,7 +9,7 @@ if (!donotannoymewhiletesting)
 		{
 			with instance_create_depth(0,0,depth,obj_hintdialoguebox)
 			{
-				text=other.subtitle
+				text=breaktext(999)
 				playaudiosingle=true
 				dialoguesound=choose(snd_tutorialvo1,snd_tutorialvo2_y,snd_tutorialvo3_y,snd_tutorialvo4_y,snd_tutorialvo5_y,snd_tutorialvo6,snd_tutorialvo7)
 				sprite=other.button
