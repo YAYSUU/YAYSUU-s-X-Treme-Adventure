@@ -312,7 +312,7 @@ if (state == playerstates.fly && newstate == state)
 		flymtr--
 		//audio_play_sound(snd_waterswim, 1, false, global.sndvol)
 	}
-	if (grounded && vsp > 0) || (key_dashp)
+	if (grounded || key_dashp)
 		newstate = playerstates.normal
 }
 
