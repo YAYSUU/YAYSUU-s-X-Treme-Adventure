@@ -7,6 +7,7 @@ function scr_layerobjects(){
 	layerthese(obj_water)
 	//moving stuff like characters
 	layerthese(obj_player)
+	layerthese(obj_yoknovist)
 	layerthese(obj_devnote)
 	layerthese(obj_text)
 	layerthese(obj_boss)
