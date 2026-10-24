@@ -230,7 +230,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 	}
 }
 
-canwalljump = !grounded && (char="T" || char="C") && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0
+canwalljump = !grounded && (char="T" || char="C") && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0 && state != playerstates.fly
 // jumping
 if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && !forcecrouch)
 {
@@ -251,11 +251,10 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 	{
 		if (char == "C")
 		{
-			vsp = flyjmp
 			audio_play_sound(snd_doublejump, 1, false, global.sndvol)
 			djump = false
 			newstate = playerstates.fly
-			flymtr=60*3
+			flymtr=60*2
 		}
 		else
 		{
@@ -302,11 +301,18 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 }
 if (state == playerstates.fly && newstate == state)
 {
-	if flymtr>0
+	if (key_jump && flymtr>0)
+	{
+		if (vsp > flymax)
+		{
+			vsp+=flyaccel-grv
+			if (vsp < flymax)
+				vsp=flymax
+		}
 		flymtr--
-	if (key_jumpp)
-		vsp=jmp*0.5
-	if (grounded && vsp > 0) || flymtr=0 || (key_dashp)
+		//audio_play_sound(snd_waterswim, 1, false, global.sndvol)
+	}
+	if (grounded && vsp > 0) || (key_dashp)
 		newstate = playerstates.normal
 }
 
@@ -1021,9 +1027,7 @@ switch (state)
 		}
 		else
 		{
-			if (grv == floatgrav)
-				newsprite = playersprites[playersprite.fly]
-			else if (canwalljump)
+			if (canwalljump)
 				newsprite = playersprites[playersprite.wallslide]
 			else if (abs(hsp) > walkspeed)
 			{
@@ -1086,7 +1090,10 @@ switch (state)
 		newsprite = playersprites[playersprite.fireass]
 		break;
 	case playerstates.fly:
-		newsprite = playersprites[playersprite.fly]
+		if (flymtr == 0)
+			newsprite = playersprites[playersprite.flutter]
+		else
+			newsprite = playersprites[playersprite.fly]
 		image_xscale = facingdirection
 		break;
 	case playerstates.debug:
@@ -1153,6 +1160,14 @@ else if !audio_is_paused(runningsound)
 	audio_pause_sound(runningsound)
 	image_speed = 1
 }
+if (sprite_index == playersprites[playersprite.flutter])
+{
+	if (!audio_is_playing(snd_flutter))
+		audio_play_sound(snd_flutter, 1, true, global.sndvol)
+}
+else if (audio_is_playing(snd_flutter))
+	audio_stop_sound(snd_flutter)
+
 if abs(hsp)>walkspeed && state=playerstates.normal // forgor, the sequel
 {
 	runtrailtimer++

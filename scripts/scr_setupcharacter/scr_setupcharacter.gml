@@ -27,7 +27,8 @@ enum playersprite
 	lifemonitor,
 	healthicon,
 	lookahead,
-	fly
+	fly,
+	flutter
 }
 function scr_setupcharacter(char, skin)
 {
@@ -147,12 +148,13 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.golfstop] = spr_cotton_ball
 		playersprites[playersprite.hangglide] = spr_teddy_hangglide
 		playersprites[playersprite.fireass] = spr_teddy_fireass
-		playersprites[playersprite.wallslide] = spr_teddy_wallslide
+		playersprites[playersprite.wallslide] = spr_cotton_wallslide
 		playersprites[playersprite.lifeicon] = spr_teddylifeicon
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_c
 		playersprites[playersprite.healthicon] = spr_carrot
 		playersprites[playersprite.lookahead] = spr_cotton_lookahead
 		playersprites[playersprite.fly] = spr_cotton_fly
+		playersprites[playersprite.flutter] = spr_cotton_flutter
 	}
 	else
 	{
