@@ -441,6 +441,8 @@ if (ouchies)
 					audio_play_sound(mus_dead, 1, false, global.sndvol)
 				}
 			}
+			if instance_exists(obj_yoknovist) // ONE LINE. I DON'T KNOW WHY,
+				obj_yoknovist.active = false
 		}
 	}
 	if fratricide

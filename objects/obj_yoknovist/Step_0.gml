@@ -49,19 +49,29 @@
 //}
 if !active
 {
-	if image_alpha<1
-		image_alpha+=(1/60)
+	image_speed = 0
+	if (global.hp == 0)
+	{
+		if (image_alpha>0)
+			image_alpha-=(1/60)
+	}
 	else
-		active=true
+	{
+		if (image_alpha<1)
+			image_alpha+=(1/60)
+		else
+			active=true
+	}
 }
 else if active
 {
-	depth = obj_player.depth+1;
+	//depth = obj_player.depth+1;
 	ds_queue_enqueue(followingqueue, obj_player.x);
 	ds_queue_enqueue(followingqueue, obj_player.y);
 	ds_queue_enqueue(followingqueue, obj_player.sprite_index);
 	ds_queue_enqueue(followingqueue, obj_player.image_index);
 	ds_queue_enqueue(followingqueue, obj_player.image_xscale);
+	ds_queue_enqueue(followingqueue, obj_player.image_speed);
     
 	if (ds_queue_size(followingqueue)) > 360
 	{
@@ -70,6 +80,7 @@ else if active
 		sprite_index= ds_queue_dequeue(followingqueue)
 		image_index= ds_queue_dequeue(followingqueue)
 		image_xscale= ds_queue_dequeue(followingqueue)
+		image_speed= ds_queue_dequeue(followingqueue)
 	}
 	if touchingplayer(x, y)
 	{
