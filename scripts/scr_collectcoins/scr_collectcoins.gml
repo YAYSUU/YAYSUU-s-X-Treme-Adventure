@@ -8,30 +8,11 @@ function scr_collectcoins(amount){
 		global.combometer += 10
 	if (amount > 0)
 	{
-		if room == room_glowstickcity
-			audio_play_sound(snd_uncannycoin,1,false,global.sndvol)
-		else if (global.char == "C")
-			audio_play_sound(snd_balloon,1,false,global.sndvol)
-		else
-			audio_play_sound(snd_coin,1,false,global.sndvol)
+		audio_play_sound(snd_coin,1,false,global.sndvol)
 	}
 	if (global.coins >= global.coingoal)
 	{
 		global.coingoal += 100
-		with (instance_create_layer(320+(instance_number(obj_itemdefault)*32),416,"gui",obj_itemdefault))
-		{
-			depth = global.itempopupdepth
-			if global.char = "Y"
-			{
-				sprite_index=spr_itemlife_y
-			}
-			else if global.char = "T"
-			{
-				sprite_index=spr_itemlife_t
-			}
-			audio_pause_sound(global.currentsong)
-			audio_play_sound(snd_extralife,1,false,global.sndvol)
-		}
 	}
 	if (global.coins >= global.healgoal)
 	{

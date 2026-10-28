@@ -22,30 +22,13 @@ if global.inlevel && !global.inhub
 		}
 		else
 		{
-			draw_text(96,64,string(global.score+global.scoreadd))
-			draw_sprite(spr_stopwatch,0,32,96)
-			draw_text(64, 96, timerstring)
-			if room=room_glowstickcity
-				draw_sprite(spr_uncannycoin,0,32,128)
-			else
-				draw_sprite(spr_yaysuucoinicon,0,32,128)
-			draw_text(64,128,global.coins)
-			if inwidescreen() // duplicate hud for player 2
-			{
-				draw_sprite(spr_stopwatch,0,32+640,96)
-				draw_text(64+640, 96, timerstring)
-				if room=room_glowstickcity
-					draw_sprite(spr_uncannycoin,0,32+640,128)
-				else
-					draw_sprite(spr_yaysuucoinicon,0,32+640,128)
-				draw_text(64+640,128,global.coins)
-			}
+			draw_sprite(spr_yaysuucoinicon,0,32,96)
+			draw_text(64,96,global.coins)
 		}
 		if !global.multiplayer
 		{
 			draw_sprite(global.mainplayer.playersprites[playersprite.lifeicon],global.hp,32,32)
 			health_system_hearts(global.mainplayer.playersprites[playersprite.healthicon], global.hp, global.maxhp, 96, 32)
-			draw_text(96+(32*global.maxhp),32,global.lives)
 		}
 		else if global.multiplayer {
 			if inwidescreen()
@@ -64,13 +47,6 @@ if global.inlevel && !global.inhub
 				health_system_hearts(global.otherplayer.playersprites[playersprite.healthicon], global.p2hp, global.p2maxhp, 96, 384)
 				draw_text(96+(32*global.maxhp),32,global.lives)
 			}
-		}
-		if (comboshowtimer > 0)
-		{
-			draw_combometer(false)
-			if inwidescreen()
-				draw_combometer(true)
-			draw_set_halign(fa_left)
 		}
 	}
 	if inwidescreen()

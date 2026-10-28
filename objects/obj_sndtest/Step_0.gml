@@ -73,7 +73,7 @@ switch select
 		loopthis=true
 	break;
 	case 4:
-		currentsound=mus_chillfields_1
+		currentsound=mus_run
 		sndname="Chill Fields Stage 1 - YXA OST"
 		loopthis=true
 	break;
@@ -83,7 +83,7 @@ switch select
 		loopthis=true
 	break;
 	case 6:
-		currentsound=mus_chillfields_boss
+		currentsound=mus_boss_pt2
 		sndname="Vs. Electrobot - YXA OST"
 		loopthis=true
 	break;

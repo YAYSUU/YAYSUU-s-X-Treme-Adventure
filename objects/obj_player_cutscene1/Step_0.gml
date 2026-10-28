@@ -246,6 +246,7 @@ if talking && !pancamera
 				case 2:
 				talking=false
 				talked=true
+				break;
 			}
 		}
 	}

@@ -43,7 +43,7 @@ if (global.cutscenestate=7 && !audio_is_playing(snd_elecboss7vo_y) && !audio_is_
 	global.cutscenestate=8
 	audio_stop_sound(mus_cutscene)
 	sprite_index=spr_electrobot_idle
-	global.currentsong=mus_chillfields_boss
+	global.currentsong=mus_boss_pt2
 	audio_play_sound(global.currentsong,1,true,global.musvol)
 	alarm_set(0,15)
 }
