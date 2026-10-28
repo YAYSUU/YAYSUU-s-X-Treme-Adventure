@@ -92,6 +92,7 @@ function scr_setupcharacter(char, skin)
 			playersprites[playersprite.lifemonitor] = spr_lifemonitor_y
 			playersprites[playersprite.healthicon] = spr_pizza
 			playersprites[playersprite.lookahead] = spr_yaysuu_lookahead
+			playersprites[playersprite.flutter] = spr_cotton_flutter
 		}
 	}
 	else if (char == "T")
@@ -123,6 +124,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_t
 		playersprites[playersprite.healthicon] = spr_pancake
 		playersprites[playersprite.lookahead] = spr_teddy_lookahead
+		playersprites[playersprite.flutter] = spr_cotton_flutter
 	}
 	else if (char == "C")
 	{
@@ -185,6 +187,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_t
 		playersprites[playersprite.healthicon] = spr_yaetceehp
 		playersprites[playersprite.lookahead] = spr_yaetcee
+		playersprites[playersprite.flutter] = spr_cotton_flutter
 	}
 	else
 	{

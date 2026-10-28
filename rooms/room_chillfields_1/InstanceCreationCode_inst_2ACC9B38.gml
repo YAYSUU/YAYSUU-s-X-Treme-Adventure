@@ -1,2 +1,0 @@
-sprite_index = spr_secrettile_chill
-topsprite = spr_secrettile_chillgrass
