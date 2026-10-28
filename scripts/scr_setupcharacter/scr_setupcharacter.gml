@@ -149,12 +149,42 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.hangglide] = spr_teddy_hangglide
 		playersprites[playersprite.fireass] = spr_teddy_fireass
 		playersprites[playersprite.wallslide] = spr_cotton_wallslide
-		playersprites[playersprite.lifeicon] = spr_teddylifeicon
+		playersprites[playersprite.lifeicon] = spr_cottonlifeicon
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_c
 		playersprites[playersprite.healthicon] = spr_carrot
 		playersprites[playersprite.lookahead] = spr_cotton_lookahead
 		playersprites[playersprite.fly] = spr_cotton_fly
 		playersprites[playersprite.flutter] = spr_cotton_flutter
+	}
+	else if (char == "E")
+	{
+		playersprites[playersprite.idle] = spr_yaetcee
+		playersprites[playersprite.wait] = spr_yaetcee
+		playersprites[playersprite.walk] = spr_yaetcee
+		playersprites[playersprite.run] = spr_yaetcee
+		playersprites[playersprite.brake] = spr_yaetcee
+		playersprites[playersprite.jumpstart] = spr_yaetcee
+		playersprites[playersprite.jumploop] = spr_yaetcee
+		playersprites[playersprite.fall] = spr_yaetcee
+		playersprites[playersprite.runjump] = spr_yaetcee
+		playersprites[playersprite.runfall] = spr_yaetcee
+		playersprites[playersprite.crouch] = spr_yaetcee
+		playersprites[playersprite.dash] = spr_yaetcee
+		playersprites[playersprite.slide] = spr_yaetcee
+		playersprites[playersprite.stomp] = spr_yaetcee
+		playersprites[playersprite.ouchie] = spr_yaetcee
+		playersprites[playersprite.deaded] = spr_yaetcee
+		playersprites[playersprite.bounce] = spr_yaetcee
+		playersprites[playersprite.win] = spr_yaetcee
+		playersprites[playersprite.launched] = spr_yaetcee
+		playersprites[playersprite.golfstop] = spr_yaetcee
+		playersprites[playersprite.hangglide] = spr_yaetcee
+		playersprites[playersprite.fireass] = spr_yaetcee
+		playersprites[playersprite.wallslide] = spr_yaetcee
+		playersprites[playersprite.lifeicon] = spr_yaetcee
+		playersprites[playersprite.lifemonitor] = spr_lifemonitor_t
+		playersprites[playersprite.healthicon] = spr_yaetceehp
+		playersprites[playersprite.lookahead] = spr_yaetcee
 	}
 	else
 	{
