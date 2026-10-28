@@ -1,5 +1,5 @@
-myname = "BOUNS"
+myname = "boss"
 myfunc = function()
 {
-    loadroom(room_extrastages, loadtype.menu)
+    loadnewstage(3,room_chillfields_boss)
 }

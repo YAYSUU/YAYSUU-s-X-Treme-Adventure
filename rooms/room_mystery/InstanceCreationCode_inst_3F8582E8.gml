@@ -1,6 +1,5 @@
-myname = "lvlsltl"
+myname = "prologue"
 myfunc = function()
 {
-	global.trial=true // Is she stupid?
-    loadroom(room_trialmenu, loadtype.menu)
+    loadroom(room_tutorial, loadtype.newlevel)
 }

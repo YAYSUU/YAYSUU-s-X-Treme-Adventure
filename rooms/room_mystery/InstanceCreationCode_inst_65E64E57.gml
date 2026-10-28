@@ -1,5 +1,5 @@
-myname = "fun dev room!"
+myname = "run"
 myfunc = function()
 {
-    loadroom(room_dev, loadtype.newlevel)
+    loadroom(room_chillfields_1, loadtype.newlevel)
 }

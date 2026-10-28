@@ -1,10 +1,10 @@
 if global.trial || global.arcade || global.levelloadtype=loadtype.respawn
 {
-	global.currentsong=mus_chillfields_boss
+	global.currentsong=mus_boss_pt2
 }
 else {
 	global.currentsong=-1
 }
-global.ambiencesound=snd_ambient_night
-scr_windowtitle("A Dastardly Creation... VS. Electro-Bot!")
+global.ambiencesound=-1
+scr_windowtitle("Fight")
 obj_parallax.indoors=true
