@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_chillfields_1",
+  "%Name":"mus_run",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":43.180416,
   "exportDir":"",
-  "name":"mus_chillfields_1",
+  "name":"mus_run",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":48000,
-  "soundFile":"mus_chillfields_1.mp3",
+  "soundFile":"mus_run.mp3",
   "volume":1.0,
 }
