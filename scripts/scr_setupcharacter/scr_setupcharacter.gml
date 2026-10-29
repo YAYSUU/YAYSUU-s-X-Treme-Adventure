@@ -183,7 +183,7 @@ function scr_setupcharacter(char, skin)
 		playersprites[playersprite.hangglide] = spr_yaetcee
 		playersprites[playersprite.fireass] = spr_yaetcee
 		playersprites[playersprite.wallslide] = spr_yaetcee
-		playersprites[playersprite.lifeicon] = spr_yaetcee
+		playersprites[playersprite.lifeicon] = spr_yaetceelifeicon
 		playersprites[playersprite.lifemonitor] = spr_lifemonitor_t
 		playersprites[playersprite.healthicon] = spr_yaetceehp
 		playersprites[playersprite.lookahead] = spr_yaetcee

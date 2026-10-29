@@ -11,7 +11,7 @@ if touchingplayer(x, y, 2) && sprite_index == normsprite
 		sprite_index = popsprite
 		audio_play_sound(snd_balloonpop,1,false,global.sndvol)
 	}
-	else if (whichplayer.state == playerstates.stomp && whichchar != "C")
+	else if (whichplayer.state == playerstates.stomp)
 	{
 		whichplayer.newstate = playerstates.bounce
 		if (vbounce != 0 && obj_player.vsp*image_yscale > vbounce*image_yscale)

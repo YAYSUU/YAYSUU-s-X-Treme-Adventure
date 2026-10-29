@@ -73,7 +73,7 @@ if (state != playerstates.hurt && state != playerstates.dead && state != players
 {
 	if (state == playerstates.crouch || state == playerstates.inactive || state == playerstates.win)
 		wsp = 0
-	else if (key_run && !(state == playerstates.stomp && char == "T"))
+	else if (key_run && !(state == playerstates.stomp && char == "T") && char != "E")
 		wsp = runspeed
 	else
 		wsp = walkspeed
@@ -86,7 +86,7 @@ if (state != playerstates.hurt && state != playerstates.dead && state != players
 if (grounded || state == playerstates.golfstop)
 {
 	dshed = false
-	djump = true // now YAYSUU can djump!
+	djump = (char="E"?false:true) // now YAYSUU can djump!
 	lastwall = 0
 }
 
@@ -110,7 +110,7 @@ if (candodashdo)
 }
 
 //airdash
-if ((!grounded) && key_dashp && (state == playerstates.normal || state == playerstates.bounce || state == playerstates.stomp) && newstate == state && !dshed && candodashdo && char != "C")
+if ((!grounded) && key_dashp && (state == playerstates.normal || state == playerstates.bounce || state == playerstates.stomp) && newstate == state && !dshed && candodashdo && char != "C" && char != "E")
 {
 	if (global.skibispin)
 	{
@@ -142,7 +142,7 @@ if (grounded && ((abs(hsp) > walkspeed && key_downp) || key_dashp) && (state == 
 }
 
 //stomp
-if ((!grounded) && key_downp && newstate == state && (state == playerstates.normal || state == playerstates.dash || state == playerstates.fly))
+if ((!grounded) && key_downp && newstate == state && (state == playerstates.normal || state == playerstates.dash || state == playerstates.fly)) && char != "E"
 {	
 	vsp = 15
 	//yearnedhsp = 15
@@ -181,7 +181,7 @@ else if (state == playerstates.bounce && newstate == state)
 }
 
 //dash run
-if (key_runp && !key_down && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char != "C" && !inwater)
+if (key_runp && !key_down && state == playerstates.normal && newstate == state && !amiwalled(hsp) && char != "C" && char != "E" && !inwater)
 {
 	yearnedhsp = facingdirection * runspeed
 	if (abs(hsp) < (yearnedhsp) || sign(hsp) != sign(yearnedhsp)) //you will not slow down if you start a run
@@ -232,7 +232,7 @@ if (grounded && key_runp && state = playerstates.crouch && (newstate == state ||
 
 canwalljump = !grounded && (char="T" || char="C") && facingdirection != lastwall && place_meeting(x+(facingdirection*8),y,obj_playercollision) && !place_meeting(x+(facingdirection*8),y,obj_wallsoap) && move != 0 && state != playerstates.fly
 // jumping
-if key_jumpp && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && !forcecrouch)
+if (key_jumpp || (grounded && char="E")) && (state != playerstates.inactive && state != playerstates.win && state != playerstates.golfstop && newstate != playerstates.golfstop && state != playerstates.dead && state != playerstates.hangglide && !forcecrouch)
 {
 	if (canwalljump) // WALL JUMP
 	{
@@ -284,7 +284,7 @@ if key_jumpp && (state != playerstates.inactive && state != playerstates.win && 
 			hsp += move * smashbump
 		}
 		else
-			audio_play_sound(snd_jump, 1, false, global.sndvol) // STAAAAHHHPPP
+			audio_play_sound((char="E"?snd_jump_e:snd_jump), 1, false, global.sndvol) // STAAAAHHHPPP
 		grounded = false
 		prevgrounded = false
 		slopey = false
@@ -1132,7 +1132,7 @@ if isotherplayer && distance_to_object(global.mainplayer)>=320
 	offscreentimer++
 else
 	offscreentimer = 0
-if (sprite_index == playersprites[playersprite.walk])
+if (sprite_index == playersprites[playersprite.walk] && char != "E")
 {
 	walktimer++
 	if walktimer=(char="C"?16:24)
@@ -1148,7 +1148,7 @@ if grounded && !prevgrounded && state=playerstates.normal
 	audio_play_sound(snd_foot,1,false,global.sndvol,0,random_range(1,1.2))
 if (!audio_exists(runningsound))
 	runningsound = audio_play_sound(snd_run, 1, true, global.sndvol)
-if (sprite_index == playersprites[playersprite.run])
+if (sprite_index == playersprites[playersprite.run] && char != "E")
 {
 	if audio_is_paused(runningsound)
 		audio_resume_sound(runningsound)

@@ -46,6 +46,12 @@ if (global.inlevel) && (!isotherplayer || (isotherplayer && global.multiplayer))
 				smashbump = 1
 				airdashboost = 20
 			}
+			else if (char == "E")
+			{
+				rundamagespeed = 12
+				smashbump = 6
+				airdashboost = 20
+			}
 			if (room == room_tutorial)
 				whooshcolor = #C2C3C7
 			else
