@@ -84,12 +84,22 @@ else if active
 	}
 	if touchingplayer(x, y)
 	{
-		global.firstplayertouch.ouchies = true
-		global.firstplayertouch.deathies = true
-		if (global.secondplayertouch != noone)
+		if !(global.firstplayertouch.state=playerstates.hurt)
 		{
-			global.secondplayertouch.ouchies = true
-			global.secondplayertouch.deathies = true
+			global.firstplayertouch.ouchies = true
+			global.firstplayertouch.deathies = true
+			if (global.secondplayertouch != noone)
+			{
+				global.secondplayertouch.ouchies = true
+				global.secondplayertouch.deathies = true
+			}
 		}
+	}
+	if voicelinetimer>0
+		voicelinetimer--
+	if voicelinetimer=0
+	{
+		sayscarymessage(choose(0,1,2,3))
+		voicelinetimer=floor(random_range(10*60,100*60))
 	}
 }

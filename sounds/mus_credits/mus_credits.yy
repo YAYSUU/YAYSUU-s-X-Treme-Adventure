@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":182.43918,
+  "duration":44.5649,
   "exportDir":"",
   "name":"mus_credits",
   "parent":{

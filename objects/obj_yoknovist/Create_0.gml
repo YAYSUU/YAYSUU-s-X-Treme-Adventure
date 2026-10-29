@@ -19,6 +19,7 @@ yearnedx=x
 yearnedy=y
 image_alpha=0
 active=false
+voicelinetimer=floor(random_range(10*60,100*60))
 if global.fuckoffnovist
 	instance_destroy()
 sprite_index=global.mainplayer.playersprites[playersprite.idle]
