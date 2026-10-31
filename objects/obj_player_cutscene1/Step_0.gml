@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if !instance_exists(obj_stageclear)  
 {
-	if touchingplayer(x, y) && global.mainplayer.grounded && !(instance_exists(obj_dialoguebox)) && (!global.multiplayer) && !talking && !talked
+	if touchingplayer(x, y) && (global.mainplayer.grounded || global.mainplayer.char == "E") && !(instance_exists(obj_dialoguebox)) && (!global.multiplayer) && !talking && !talked
 	{
 		dialogueprogress=0
 		pancamera=true
@@ -232,6 +232,143 @@ if talking && !pancamera
 				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
 				break;
 				case 19:
+				talking=false
+				talked=true
+				break;
+			}
+			break;
+			case "C":
+			switch dialogueprogress
+			{
+				case 1:
+				saydialogue("Ah... I've been expecting you.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 2:
+				saydialogue("...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 3:
+				saydialogue("Hm. Not much for words, are you?","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 4:
+				saydialogue("Or... could it be that someone ELSE... is doing the talking for you?","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+				break;
+				case 5:
+				saydialogue("Whatever. I'm not picky about the details.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+				break;
+				case 6: 
+				saydialogue("Ufufufu...","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
+				audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
+				break;
+				case 7:
+				saydialogue("You may be wondering where you are right now.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+				break;
+				case 8:
+				saydialogue("This strange void you see before you... A few days after YOUR birthday...","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+				break;
+				case 9:
+				saydialogue("It's what's left of the `cyold world.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 10:
+				saydialogue("When the fabric of reality tore into pieces...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 11:
+				saydialogue("When the `cbtwo deities `crfought for control...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 12:
+				saydialogue("This little shard was abandoned.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 13:
+				saydialogue("And now it's my little world.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 14:
+				saydialogue("You...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 15:
+				saydialogue("You're a mute alternate, not of your world at all.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 16:
+				saydialogue("You were only ever a vessel for a gift.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 17:
+				saydialogue("So... Maybe I shouldn't be wasting my breath.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+				break;
+				case 18:
+				saydialogue("I just wanted to see you again for one last festivity.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 19:
+				saydialogue("You see... This world is crumbling. And the memories it brought will soon be forgotten too.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 20:
+				saydialogue("Just like me.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 21:
+				saydialogue("But what can I say?","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+				break;
+				case 22:
+				saydialogue("I was never one to take death lying down.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+				break;
+				case 23:
+				saydialogue("So if you want to end this horrible dream once and for all...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 24:
+				saydialogue("Ufufufu...","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
+				obj_player.sprite_index=spr_yaysuu_idle
+				audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
+				break;
+				case 25:
+				saydialogue("Then follow me.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+				break;
+				case 26:
+				talking=false
+				talked=true
+				break;
+			}
+			break;
+			case "E":
+			switch dialogueprogress
+			{
+				case 1:
+				saydialogue("Wh- ...YOU?!","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 2:
+				saydialogue("Hello It Is Me","white","YAETCEE")
+				break;
+				case 3:
+				saydialogue("Damn it all...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 4:
+				saydialogue("My blind rage...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 5:
+				saydialogue("I never accounted for you making it out here, but I brought you here all the same...","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 6: 
+				saydialogue("Ufufufu... Wait a minute...","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_laugh
+				audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
+				break;
+				case 7:
+				saydialogue("You won't even MAKE it past here.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle_close
+				break;
+				case 8:
+				saydialogue("By all means, WIMP.","red","???",spr_dialoguebox_yoknovist)
+				obj_yoknovist_cutscene1.sprite_index=spr_yoknovist_idle
+				break;
+				case 9:
+				saydialogue("Let's see if your precious angel can save you this time.","red","???",spr_dialoguebox_yoknovist)
+				break;
+				case 10:
 				talking=false
 				talked=true
 				break;

@@ -9,21 +9,3 @@ else if sprite_index=selectedsprite && obj_chrselect_cursor.selected=false
 {
 	sprite_index=unselectedsprite
 }
-var pos
-if (verticalshift)
-	pos = y
-else
-	pos = x
-if (obj_chrselect_cursor.chos == 1.5)
-{
-	pos = ((pos - shiftedpos) / 1.5) + shiftedpos
-}
-else
-{
-	pos = ((pos - normalpos) / 1.5) + normalpos
-}
-
-if (verticalshift)
-	y = pos
-else
-	x = pos

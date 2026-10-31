@@ -28,7 +28,8 @@ if global.inlevel && !global.inhub
 		if !global.multiplayer
 		{
 			draw_sprite(global.mainplayer.playersprites[playersprite.lifeicon],global.hp,32,32)
-			health_system_hearts(global.mainplayer.playersprites[playersprite.healthicon], global.hp, global.maxhp, 96, 32)
+			if global.mainplayer.char != "E"
+				health_system_hearts(global.mainplayer.playersprites[playersprite.healthicon], global.hp, global.maxhp, 96, 32)
 		}
 		else if global.multiplayer {
 			if inwidescreen()

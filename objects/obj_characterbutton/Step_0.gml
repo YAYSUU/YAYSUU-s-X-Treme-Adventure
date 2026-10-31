@@ -2,6 +2,10 @@ if (position_meeting(mouse_x, mouse_y, self) && mouse_check_button_pressed(mb_le
 {
 	global.char = mychar
 	global.p2char = mychar="Y"?"T":"Y"
+	if global.char="E"
+		global.bobcat=true
+	else
+		global.bobcat=false
 	with (obj_player)
 		scr_setupcharacter(other.mychar, global.skin)
 	audio_play_sound(snd_slip, 1, false)

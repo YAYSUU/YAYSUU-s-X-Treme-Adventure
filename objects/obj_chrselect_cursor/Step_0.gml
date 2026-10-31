@@ -4,17 +4,21 @@ switch chos
 {
 	case 0:
 	charname="COTTON"
-	chardescription="SPEED: C / HANDLING: A / POWER: B\nA slimy forest critter, and birthday girl. Unfortunately, the first witness to the horror. Can get out of 'sticky' situations, but the demon's favor may not be enough..."
+	chardescription="`crSPEED: C / HANDLING: A / POWER: B\n`clA slimy forest critter, and birthday girl. Unfortunately, the first witness to the horror. Can get out of 'sticky' situations, but the demon's favor may not be enough..."
 	break;
 	case 1:
 	charname="YAYSUU"
-	chardescription="SPEED: A / HANDLING: B / POWER: C\nThe one and only, plucked from his home into a void that seems all too familiar to him. His speed and bounciness might make escaping easy, but can he truly finish what he started...?"
+	chardescription="`crSPEED: A / HANDLING: B / POWER: C\n`clThe one and only, plucked from his home into a void that seems all too familiar to him. `crHis speed and bounciness might make escaping easy, but can he truly finish what he started...?"
 	charlife=0
 	break;
 	case 2:
 	charname="TEDDY"
-	chardescription="SPEED: B / HANDLING: C / POWER: A\nThe big brother, but rather out-of-the-loop in this new predicament. Destructive power and parkour ability make him adept at finding new paths, but he doesn't truly know what he's up against..."
+	chardescription="`crSPEED: B / HANDLING: C / POWER: A\n`clThe big brother, but rather out-of-the-loop in this new predicament. Destructive power and parkour ability make him adept at finding new paths, but he doesn't truly know what he's up against..."
 	charlife=1
+	break;
+	case 3:
+	charname="YAETCEE"
+	chardescription="`crSPEED: F / HANDLING: F / POWER: F\n`clA poor imitation, abused for most of his life as the company's pet. Not very good at doing anything besides jumping. GOD have mercy."
 	break;
 }
 switch chos2
@@ -123,17 +127,22 @@ else if !instance_exists(obj_notification)
 			if (chos == 0)
 			{
 				global.char = "C"
-				audio_play_sound(snd_cottonselect,1,false,global.sndvol*global.voicelines)
+				global.bobcat = false
 			}
-			if (chos == 1)
+			else if (chos == 1)
 			{
 				global.char = "Y"
-				audio_play_sound(snd_yaysuuselect,1,false,global.sndvol*global.voicelines)
+				global.bobcat = false
 			}
 			else if (chos == 2)
 			{
 				global.char = "T"
-				audio_play_sound(snd_teddyselect,1,false,global.sndvol*global.voicelines)
+				global.bobcat = false
+			}
+			else if (chos == 3)
+			{
+				global.char = "E"
+				global.bobcat = true
 			}
 			with (global.mainplayer)
 				scr_setupcharacter(global.char, global.skin)
@@ -163,9 +172,9 @@ else if !instance_exists(obj_notification)
 	else if ((global.key_rightp) || (global.p2_key_rightp && global.multiplayer)) && !selected
 	{
 		audio_play_sound(snd_move,1,false,global.sndvol)
-		if chos<2
+		if chos<3
 			chos++
-		else if chos=2
+		else if chos=3
 			chos=0
 	}
 	else if ((global.key_leftp) || (global.p2_key_leftp && global.multiplayer)) && !selected
@@ -174,7 +183,7 @@ else if !instance_exists(obj_notification)
 		if chos>0
 			chos--
 		else if chos=0
-			chos=2
+			chos=3
 	}
 	/*else if global.key_upp
 	{
@@ -190,12 +199,14 @@ else if !instance_exists(obj_notification)
 		chos = prevchos
 	}*/
 	
-	chos=clamp(chos,0,2)
+	chos=clamp(chos,0,3)
 	chos2=clamp(chos2,1,2)
-	if chos=1
-		x=224
-	else if chos=0
-		x=38
-	else
+	if chos=0
+		x=84
+	else if chos=1
+		x=242
+	else if chos=2
 		x=416
+	else if chos=3
+		x=560
 }
