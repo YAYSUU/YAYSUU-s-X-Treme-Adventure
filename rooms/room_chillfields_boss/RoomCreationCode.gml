@@ -1,10 +1,4 @@
-if global.trial || global.arcade || global.levelloadtype=loadtype.respawn
-{
-	global.currentsong=mus_boss_pt2
-}
-else {
-	global.currentsong=-1
-}
+global.currentsong=mus_welcome
 global.ambiencesound=-1
-scr_windowtitle("Fight")
+scr_windowtitle("ACT III - FIGHT")
 obj_parallax.indoors=true

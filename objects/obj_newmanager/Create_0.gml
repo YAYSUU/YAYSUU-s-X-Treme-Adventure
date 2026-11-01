@@ -14,6 +14,7 @@ global.font=font_add_sprite_ext(spr_text,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.,
 global.subtitlefont=font_add_sprite_ext(spr_subtitlefont, "()[]!#$%'*,.:-/+?@^abcdefghijklmnopqrstuvwxyz~{}0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
 global.optfont=font_add_sprite_ext(spr_text_options,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.,:!?-",false,0)
 global.smalloptfont=font_add_sprite_ext(spr_smalloptionstext,"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?:-_()+%'abcdefghijklmnopqrstuvwxyz✓✗",false,0)
+global.yokfont=font_add_sprite_ext(spr_text_yoknovist,"IKNOVSTY",false,0)
 global.inlevel = false
 global.nextroom = room_fclogo
 axislh = gamepad_axis_value(global.p1_controlslot,gp_axislh)

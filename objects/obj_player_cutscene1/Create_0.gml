@@ -13,6 +13,12 @@ switch global.char
 	case "T":
 	endialog=19
 	break;
+	case "C":
+	endialog=26
+	break;
+	case "E":
+	endialog=10
+	break;
 	default:
 	endialog=2
 	break;

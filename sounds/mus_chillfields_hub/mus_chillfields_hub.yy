@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":7,
   "conversionMode":0,
-  "duration":101.98204,
+  "duration":33.982292,
   "exportDir":"",
   "name":"mus_chillfields_hub",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":48000,
-  "soundFile":"mus_chillfields_hub.mp3",
+  "soundFile":"mus_chillfields_hub.wav",
   "volume":1.0,
 }

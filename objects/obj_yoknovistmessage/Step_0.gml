@@ -3,6 +3,8 @@
 window_set_caption(casescramble(text))
 if (room=room_tutorial)
 	obj_player.image_alpha=0
+if (room=room_chillfields_boss)
+	obj_player_bosscutscene.image_alpha=0
 if !audio_is_paused(global.currentsong) && audio_is_playing(voiceline)
 	audio_pause_sound(global.currentsong)
 if !audio_is_playing(voiceline)

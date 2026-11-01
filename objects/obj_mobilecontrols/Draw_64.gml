@@ -40,7 +40,7 @@ if global.inputtype = 3 && hide=false && !instance_exists(obj_stageclear) && !(i
 		}
 	}
 	if global.inlevel {
-		if instance_exists(obj_electrobot_bosscutscene1)
+		if instance_exists(obj_yoknovist_bosscutscene_old)
 		{
 			draw_sprite_ext(spr_resume,0,544+global.controldistance,384,1,1,0,c_white,global.controlalpha-(global.controlalpha*0.5*global.key_run))
 		}
