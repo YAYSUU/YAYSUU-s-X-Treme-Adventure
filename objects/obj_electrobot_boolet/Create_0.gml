@@ -2,4 +2,4 @@
 // You can write your code in this editor
 audio_play_sound(snd_thunderstrike,0,false,global.sndvol)
 image_xscale=obj_yoknovist_boss.image_xscale
-bulletspeed = 7
+bulletspeed = 11

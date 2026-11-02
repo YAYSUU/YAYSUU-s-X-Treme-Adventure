@@ -437,6 +437,9 @@ if (ouchies)
 				{
 					audio_play_sound(snd_jumpscare,1,false,global.sndvol)
 				}
+				else if char="E" {
+					audio_play_sound(mus_dead_yaetcee, 1, false, global.sndvol)
+				}
 				else {
 					audio_play_sound(mus_dead, 1, false, global.sndvol)
 				}
@@ -510,7 +513,7 @@ if touchingplayer(x,y) && !vulnerable
 //the death fade
 if (state == playerstates.dead) && ((!global.splitscreen && !isotherplayer) || (!global.multiplayer))
 {
-	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
+	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !audio_is_playing(mus_dead_yaetcee) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
 	    if (global.lives > 0)
 		{
@@ -529,7 +532,7 @@ if (state == playerstates.dead) && ((!global.splitscreen && !isotherplayer) || (
 }
 if (state == playerstates.dead) && ((global.splitscreen && global.multiplayer) || (!global.splitscreen && isotherplayer))
 {
-	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
+	if (!audio_is_playing(mus_dead) && !audio_is_playing(snd_jumpscare) && !audio_is_playing(mus_dead_yaetcee) && !obj_fadeblack.fading && !instance_exists(obj_stageclear)) // anti-dying when you beat the stage check
 	{
 		if (global.lives == 0) // DEATH COMES FOR US ALL
 			loadroom(room_gameover, loadtype.menu)
@@ -1065,6 +1068,8 @@ switch (state)
 	case playerstates.inactive:
 		break;
 	case playerstates.dead:
+		if char="E"
+			image_alpha=0
 		newsprite = playersprites[playersprite.deaded]
 		visualrotation += hsp
 		break;
@@ -1208,7 +1213,7 @@ else
 if !(global.inboss) {
 	if (inbackground && image_alpha > 0.5)
 		image_alpha -= 0.05
-	else if (!inbackground && image_alpha < 1)
+	else if (!inbackground && image_alpha < 1) && char!="E"
 		image_alpha += 0.05
 }
 

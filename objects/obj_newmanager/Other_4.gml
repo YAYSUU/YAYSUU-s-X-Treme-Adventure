@@ -3,7 +3,7 @@ if (global.currentsong == -1)
 else if !audio_is_playing(global.currentsong)
 {
 	audio_stop_all()
-	if global.currentsong=mus_title || room=room_gameover || room=room_fclogo || room=room_sagelogo
+	if global.currentsong=mus_title || room=room_gameover || room=room_fclogo || room=room_sagelogo || room=room_credits
 	{
 		global.currentsongplay = audio_play_sound(global.currentsong, 1, false, global.musvol);
 	}
@@ -41,8 +41,8 @@ if (global.levelloadtype == loadtype.newlevel || global.levelloadtype == loadtyp
 	global.healgoal=50
 	if global.inboss
 	{
-		global.bosshp = 6
-		global.maxbosshp = 6
+		global.bosshp = 12
+		global.maxbosshp = 12
 	}
 }
 if (global.inlevel)

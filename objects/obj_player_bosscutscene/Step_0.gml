@@ -11,12 +11,13 @@ else if !talking {
 	sprite_index = global.mainplayer.playersprites[playersprite.idle]
 	x=160
 }
-if talking && !pancamera
+if talking && !pancamera && !talked
 {
 	if global.key_runp
 	{
 		instance_destroy(obj_dialoguebox)
 		dialogueprogress=endialog-1
+		skipped=true
 	}
 	if !instance_exists(obj_dialoguebox)
 	{
@@ -362,7 +363,7 @@ if talking && !pancamera
 				break;
 				case 28:
 				audio_stop_sound(mus_welcome)
-				saydialogue("`sI'LL END YOUR MISERABLE EXISTENCE RIGHT NOW!!!!","red","",spr_fadeblack)
+				saydialogue("`sWHY DON'T I JUST END YOUR MISERABLE EXISTENCE SWIFTLY?!","red","",spr_fadeblack)
 				break;
 				case 29:
 				talking=false
@@ -384,12 +385,13 @@ if talking && !pancamera
 		}
 	}
 }
-if talked
+if talked && !flower
 {
-	instance_destroy()
+	flower=true
 	audio_stop_sound(mus_welcome)
 	sprite_index=spr_yoknovist_idle
-	global.currentsong=mus_boss_pt2
-	audio_play_sound(global.currentsong,1,true,global.musvol*2)
-	event_perform(ev_alarm,1)
+	if skipped
+		event_perform(ev_alarm,1)
+	else
+		instance_create_depth(0,0,obj_hud.depth-1,obj_yoknovist_flower)
 }

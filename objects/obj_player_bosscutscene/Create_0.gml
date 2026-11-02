@@ -5,11 +5,13 @@
 event_inherited();
 cameraoffset=0
 pancamera=false
-walked=false
+skipped=false
+flower=false
 if global.trial || global.levelloadtype=loadtype.respawn // skip the walk
 {
 	x=160
 	talked=true
+	skipped=true
 }
 else {
 	x=-64
@@ -25,6 +27,9 @@ switch global.char
 	break;
 	case "C":
 	endialog=8
+	break;
+	case "E":
+	endialog=29
 	break;
 	default:
 	endialog=2

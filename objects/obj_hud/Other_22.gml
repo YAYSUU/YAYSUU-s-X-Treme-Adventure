@@ -17,7 +17,7 @@ if global.inlevel && !global.inhub
 			else
 				phase=0
 			draw_sprite(spr_electrobothead,phase,544,32)
-			boss_health_hearts(spr_fringleglasses)
+			boss_health_hearts(spr_yoknoheart)
 			healthheight = 32
 		}
 		else

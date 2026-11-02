@@ -12,11 +12,17 @@ enum electrobotstates
 	damaged,
 	shoot,
 	dying,
-	fuckingdead
+	fuckingdead,
 }
 
 event_user(10)
-
+if global.hp=0 && state != electrobotstates.inactive
+{
+	shadowclonejutsu()
+	y=288
+	sprite_index=spr_yoknovist_laugh
+	state = electrobotstates.inactive
+}
 switch (state)
 {
 	case electrobotstates.idle:
@@ -48,7 +54,7 @@ switch (state)
 					global.bosshp--
 					scr_shake(30, false)
 					hasdamaged = true
-					if (global.bosshp == 3) //it gets HARDERS!?
+					if (global.bosshp == 6) //it gets HARDERS!?
 					{
 						idledelay = 90
 						attackamount = 7
@@ -73,7 +79,8 @@ switch (state)
 			switch (state) //ah yes switch statements in switch statements
 			{
 				case electrobotstates.jump:
-					vsp = -22
+					shadowclonejutsu()
+					y = -48
 					grounded = false
 					break;
 				case electrobotstates.spin:
@@ -81,9 +88,11 @@ switch (state)
 					vsp = -3
 					break;
 				case electrobotstates.shoot:
+					shadowclonejutsu()
 					sprite_index = spr_electrobot_shoot
+					x=(global.mainplayer.x>320?32:608)
 					image_index = 2
-					delay = 15
+					delay = 30
 					break;
 			}
 		}
@@ -121,7 +130,7 @@ switch (state)
 			{
 				delay = 20
 				attackcount--
-				instance_create_depth(global.mainplayer.x-16,-64,depth,obj_electrobot_warning)
+				instance_create_depth(random_range(0,608),-64,depth,obj_electrobot_warning)
 				if global.multiplayer
 					instance_create_depth(global.otherplayer.x-16,-64,depth,obj_electrobot_warning)
 			}
@@ -151,6 +160,7 @@ switch (state)
 		}
 		break;
 	case electrobotstates.shoot:
+		y=global.mainplayer.y
 		if (delay > 0)
 			delay--
 		else
@@ -170,7 +180,7 @@ switch (state)
 					image_xscale = -1
 				with (instance_create_depth(x,y,depth+1,obj_electrobot_boolet))
 					image_xscale = other.image_xscale	
-				delay = 25
+				delay = 20
 				attackcount--
 			}
 		}
@@ -183,14 +193,13 @@ switch (state)
 			if (global.bosshp == 0)
 			{
 				state = electrobotstates.dying
-				sayvoiceline(snd_elecboss8vo,"DAISY, DAISY...","red","Electro-Bot")
 				delay = 150
 				kablooeyjrtimer=0
 				audio_stop_sound(global.currentsong)
 			}
 			else
 			{
-				idledamagedelay = 30
+				idledamagedelay = 15
 				state = electrobotstates.idle
 				delay = idledelay
 				vulnerable = false
@@ -201,25 +210,15 @@ switch (state)
 		break;
 	case electrobotstates.dying:
 		hsp = 0
-		delay--
-		if (delay > 0)
+		window_set_caption("ERROR")
+		for (var i = 0; i<8; i++)
 		{
-			if (kablooeyjrtimer > 0)
-				kablooeyjrtimer--
-			else
-			{
-				var sanke = obj_camera.vshakeoffset;
-				instance_create_depth(x+random_range(-16,16),y+random_range(-16,16),depth-1,obj_explode_jr)
-				obj_camera.vshakeoffset = sanke //negates the shaking obj_explode_jr causes
-				kablooeyjrtimer = 5
-			}
+			audio_play_sound(snd_nicetry,0,false,global.sndvol,0,1+(i*0.1))
+			show_message("Error at line 41808")
 		}
-		else
-		{
-			instance_create_depth(x,y,depth,obj_explode)
-			state = electrobotstates.fuckingdead
-			visible = false
-		}
+		global.inlevel=false
+		global.inboss=false
+		room_goto(room_credits)
 		break;
 	case electrobotstates.fuckingdead:
 		if (!instance_exists(obj_explode) && !instance_exists(obj_goalflag))

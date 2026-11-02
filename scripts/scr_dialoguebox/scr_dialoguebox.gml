@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function saydialogue(txt="",txtcolor="white",txtname="",txtboxsprite=spr_dialoguebox,sound=snd_dialogue_default,playsingle=false,txtnobox=false,txtsprite=-1,txtsubimg=0)
 {
-	with instance_create_depth(0,0,depth,obj_dialoguebox)
+	with instance_create_depth(0,0,obj_hud.depth-1,obj_dialoguebox)
 	{
 		text=txt
 		color=txtcolor
