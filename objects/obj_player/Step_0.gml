@@ -1137,7 +1137,7 @@ if isotherplayer && distance_to_object(global.mainplayer)>=320
 	offscreentimer++
 else
 	offscreentimer = 0
-if (sprite_index == playersprites[playersprite.walk] && char != "E")
+if (sprite_index == playersprites[playersprite.walk] && char != "E" && state=playerstates.normal)
 {
 	walktimer++
 	if walktimer=(char="C"?16:24)

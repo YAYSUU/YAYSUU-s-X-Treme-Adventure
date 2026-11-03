@@ -321,7 +321,6 @@ if talking && !pancamera
 				case 24:
 				saydialogue("Ufufufu...","red","???",spr_dialoguebox_yoknovist)
 				obj_yoknovist_cutscene.sprite_index=spr_yoknovist_laugh
-				obj_player.sprite_index=spr_yaysuu_idle
 				audio_play_sound(snd_ufufu,0,false,global.sndvol*4)
 				break;
 				case 25:
