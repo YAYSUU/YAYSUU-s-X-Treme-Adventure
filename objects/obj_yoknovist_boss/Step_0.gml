@@ -89,7 +89,7 @@ switch (state)
 					break;
 				case electrobotstates.shoot:
 					shadowclonejutsu()
-					sprite_index = spr_electrobot_shoot
+					sprite_index = spr_yoknovist_shoot
 					x=(global.mainplayer.x>320?32:608)
 					image_index = 2
 					delay = 30
@@ -175,11 +175,11 @@ switch (state)
 				var target = scr_closestplayer()
 				image_index = 0
 				if (target.x > x)
-					image_xscale = 1
-				else if (target.x < x)
 					image_xscale = -1
+				else if (target.x < x)
+					image_xscale = 1
 				with (instance_create_depth(x,y,depth+1,obj_electrobot_boolet))
-					image_xscale = other.image_xscale	
+					image_xscale = -(other.image_xscale)
 				delay = 20
 				attackcount--
 			}
@@ -211,10 +211,10 @@ switch (state)
 	case electrobotstates.dying:
 		hsp = 0
 		window_set_caption("ERROR")
-		for (var i = 0; i<8; i++)
+		for (var i = 0; i<9; i++)
 		{
 			audio_play_sound(snd_nicetry,0,false,global.sndvol,0,1+(i*0.1))
-			show_message("Error at line 41808")
+			show_message(choose("ERROR at line 41808","YOU DIDN'T SAY THE MAGIC WORD!","Plondles not reducted successfully","UNIVERSE COLLAPSE IMPENDING","SHIT! FUCK! PISS!","Call Fazmade for assistance.","What the freak?"))
 		}
 		global.inlevel=false
 		global.inboss=false
@@ -246,19 +246,19 @@ switch (state)
 			sprite_index = spr_yoknovist_idle
 		break;
 	case electrobotstates.jump:
-		sprite_index = spr_electrobot_jump
+		sprite_index = spr_yoknovist_idle
 		break;
 	case electrobotstates.spin:
 		sprite_index = spr_yoknovist_run
 		break;
 	case electrobotstates.damaged:
-		sprite_index = spr_electrobot_hurt
+		sprite_index = spr_yoknovist_hurt
 		break;
 	case electrobotstates.shoot:
-		sprite_index = spr_electrobot_shoot
+		sprite_index = spr_yoknovist_shoot
 		break;
 	case electrobotstates.dying:
-		sprite_index = spr_electrobot_dying
+		sprite_index = spr_yoknovist_idle
 		break;
 }
 if (sprite_index != oldsprite)

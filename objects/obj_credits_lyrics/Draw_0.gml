@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_set_halign(fa_center)
-draw_text(16,0,slide)
 switch slide
 {
 	case 1:
@@ -14,7 +13,7 @@ switch slide
 	draw_text_yxa(320,400,"Claims back","white",false)
 	break;
 	case 4:
-	draw_text_yxa(320,400,"The world of color that was","dgray",false)
+	draw_text_yxa(320,400,"The world of color that was","white",false)
 	break;
 	case 5:
 	draw_text_yxa(320,400,"No rhyme or reason","white",false)

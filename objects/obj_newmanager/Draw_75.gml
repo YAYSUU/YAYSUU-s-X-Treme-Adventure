@@ -4,29 +4,16 @@ if global.jumpscare
 //draw_rectangle(0,0,-10000,480,false)
 //draw_rectangle(display_get_gui_width,0,10000+display_get_gui_width,480,false)
 //draw_set_color(c_white)
-if window_get_fullscreen() && global.borders && !inwidescreen()
+if window_get_fullscreen() && global.borders && !inwidescreen() && !instance_exists(obj_yoknovist_flower)
 {
 	switch room
 	{
 		case room_chillfields_1:
-		case room_chillfields_2:
-		case room_chillfields_2b:
-		case room_chillfields_2c:
-		case room_chillfields_2d:
-		case room_chillfields_boss:
+		case room_tutorial:
 		draw_sprite(spr_chillfields_border,0,0,0)
 		break;
-		case room_mysticmanor_1:
-		case room_mysticmanor_1b:
-		case room_mysticmanor_1c:
-		case room_mysticmanor_2:
-		case room_mysticmanor_2b:
-		case room_mysticmanor_2c:
-		case room_mysticmanor_2d:
+		case room_chillfields_boss:
 		draw_sprite(spr_mysticmanor_border,0,0,0)
-		break;
-		case room_tutorial:
-		draw_sprite(spr_tutorial_border,0,0,0)
 		break;
 		case room_glowstickcity:
 		draw_sprite(spr_glowstickcity_border,0,0,0)
